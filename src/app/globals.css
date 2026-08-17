@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f6f3;
+  --foreground: #2c2f33;
+  --muted: #6b716c;
+  --surface: #ffffff;
+  --surface-soft: #f0efe9;
+  --border: #e4e2db;
+  --accent: #94bfbe;
+  --accent-deep: #6fa3a2;
+  --accent-dark: #4f8483;
+  --accent-soft: #e6f2f2;
+  --slate: #94a0ab;
+  --slate-soft: #eef1f3;
+  --beige: #e8e2d6;
+  --charcoal: #2c2f33;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-soft: var(--accent-soft);
+  --color-slate: var(--slate);
+  --color-slate-soft: var(--slate-soft);
+  --color-beige: var(--beige);
+  --color-charcoal: var(--charcoal);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.hero-atmosphere {
+  background:
+    radial-gradient(ellipse 70% 55% at 72% 18%, rgba(148, 191, 190, 0.22), transparent 55%),
+    radial-gradient(ellipse 45% 35% at 12% 78%, rgba(148, 160, 171, 0.14), transparent 50%),
+    radial-gradient(ellipse 35% 28% at 88% 72%, rgba(232, 226, 214, 0.55), transparent 45%),
+    linear-gradient(165deg, #faf9f6 0%, #f3f1eb 45%, #eef2f1 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
