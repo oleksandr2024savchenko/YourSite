@@ -53,7 +53,7 @@ export default function Benefits() {
         </div>
 
         <Reveal delay={0.12} className="mt-14">
-          <p className="mx-auto max-w-3xl border-l-2 border-accent pl-6 text-xl font-medium leading-relaxed tracking-tight text-charcoal sm:text-2xl">
+          <p className="text-center text-base font-medium leading-relaxed tracking-tight text-charcoal sm:text-lg lg:text-xl lg:whitespace-nowrap">
             {t.benefits.closing}
           </p>
         </Reveal>
