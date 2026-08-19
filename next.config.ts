@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
         assetPrefix: `${basePath}/`,
       }
     : {}),
+  // Expose basePath to client components (needed for public/ image URLs)
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     // Required for static export (next/image optimizer is unavailable on GitHub Pages)
     unoptimized: true,
