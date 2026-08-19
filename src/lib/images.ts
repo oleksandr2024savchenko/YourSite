@@ -1,12 +1,13 @@
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 /** Prefix local public assets with basePath for GitHub Pages. */
-function localAsset(path: string) {
+export function localAsset(path: string) {
   return `${basePath}${path}`;
 }
 
 export const images = {
-  hero: localAsset("/images/hero.jpg"),
+  // Use Direct link from Postimages (i.postimg.cc/...), not the page URL (postimg.cc/...)
+  hero: "https://i.postimg.cc/ZTvV6k2y/IMG-7697.jpg",
   about:
     "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
   services: [
