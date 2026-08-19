@@ -80,25 +80,35 @@ export const dictionaries = {
     },
     services: {
       eyebrow: "Services",
-      title: "Engineering capabilities that move your business forward",
+      title: "The right website for your business",
       description:
-        "From greenfield products to legacy modernization — we assemble the right team for every challenge.",
+        "From a compact onepager to a full online shop — we build the solution that fits your goals.",
       discuss: "Discuss this service",
+      gainLabel: "What you gain:",
       items: [
         {
-          title: "Web Development",
+          title: "Onepage Website",
           description:
-            "Modern web applications, customer portals, and platform builds engineered for performance, security, and scale.",
+            "Your most important information on one modern page.",
+          gain: ["More trust", "more enquiries", "more customers"],
         },
         {
-          title: "Mobile Apps",
+          title: "Landing Page",
           description:
-            "Native and cross-platform mobile products with polished UX — ready for App Store and Google Play release.",
+            "A website focused entirely on one specific action.",
+          gain: ["More enquiries", "more leads", "more sales"],
         },
         {
-          title: "Custom Software",
+          title: "Corporate Website",
           description:
-            "Tailored internal tools, integrations, and enterprise systems designed around your processes and goals.",
+            "A professional website for your entire company.",
+          gain: ["More trust", "more customers", "more revenue"],
+        },
+        {
+          title: "Online Shop",
+          description:
+            "Sell your products directly online — around the clock.",
+          gain: ["More buyers", "more orders", "more revenue"],
         },
       ],
     },
@@ -197,13 +207,11 @@ export const dictionaries = {
       },
       links: {
         about: "About",
+        benefits: "Benefits",
         services: "Services",
         process: "Process",
         pricing: "Pricing",
         contact: "Contact",
-        web: "Web Development",
-        mobile: "Mobile Apps",
-        custom: "Custom Software",
         privacy: "Privacy Policy",
         impressum: "Impressum",
         terms: "Terms of Service",
@@ -289,25 +297,35 @@ export const dictionaries = {
     },
     services: {
       eyebrow: "Leistungen",
-      title: "Engineering-Kompetenz, die Ihr Business voranbringt",
+      title: "Die passende Website für Ihr Unternehmen",
       description:
-        "Von Greenfield-Produkten bis zur Modernisierung bestehender Systeme — wir stellen das passende Team für jede Herausforderung.",
+        "Von der kompakten Onepage bis zum Online-Shop – wir entwickeln die Lösung, die zu Ihren Zielen passt.",
       discuss: "Leistung besprechen",
+      gainLabel: "Damit gewinnen Sie:",
       items: [
         {
-          title: "Webentwicklung",
+          title: "Onepage Website",
           description:
-            "Moderne Webanwendungen, Kundenportale und Plattformen — entwickelt für Performance, Sicherheit und Skalierbarkeit.",
+            "Ihre wichtigsten Informationen auf einer modernen Seite.",
+          gain: ["Mehr Vertrauen", "mehr Anfragen", "mehr Kunden"],
         },
         {
-          title: "Mobile Apps",
+          title: "Landing Page",
           description:
-            "Native und plattformübergreifende Mobile-Produkte mit hochwertigem UX — bereit für App Store und Google Play.",
+            "Eine Website, die gezielt auf eine Aktion ausgerichtet ist.",
+          gain: ["Mehr Anfragen", "mehr Leads", "mehr Verkäufe"],
         },
         {
-          title: "Individuelle Software",
+          title: "Corporate Website",
           description:
-            "Maßgeschneiderte interne Tools, Integrationen und Enterprise-Systeme — ausgerichtet auf Ihre Prozesse und Ziele.",
+            "Eine professionelle Website für Ihr gesamtes Unternehmen.",
+          gain: ["Mehr Vertrauen", "mehr Kunden", "mehr Umsatz"],
+        },
+        {
+          title: "Online-Shop",
+          description:
+            "Verkaufen Sie Ihre Produkte direkt online – rund um die Uhr.",
+          gain: ["Mehr Käufer", "mehr Bestellungen", "mehr Umsatz"],
         },
       ],
     },
@@ -406,13 +424,11 @@ export const dictionaries = {
       },
       links: {
         about: "Über uns",
+        benefits: "Vorteile",
         services: "Leistungen",
         process: "Prozess",
         pricing: "Preise",
         contact: "Kontakt",
-        web: "Webentwicklung",
-        mobile: "Mobile Apps",
-        custom: "Individuelle Software",
         privacy: "Datenschutz",
         impressum: "Impressum",
         terms: "AGB",

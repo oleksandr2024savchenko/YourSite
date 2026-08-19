@@ -8,17 +8,17 @@ export default function Footer() {
 
   const footerLinks = {
     [t.footer.groups.company]: [
-      { label: t.footer.links.about, href: "#about" },
+      { label: t.footer.links.benefits, href: "#benefits" },
       { label: t.footer.links.services, href: "#services" },
+      { label: t.footer.links.about, href: "#about" },
       { label: t.footer.links.process, href: "#process" },
       { label: t.footer.links.pricing, href: "#pricing" },
       { label: t.footer.links.contact, href: "#contact" },
     ],
-    [t.footer.groups.services]: [
-      { label: t.footer.links.web, href: "#services" },
-      { label: t.footer.links.mobile, href: "#services" },
-      { label: t.footer.links.custom, href: "#services" },
-    ],
+    [t.footer.groups.services]: t.services.items.map((item) => ({
+      label: item.title,
+      href: "#services",
+    })),
     [t.footer.groups.legal]: [
       { label: t.footer.links.privacy, href: "#" },
       { label: t.footer.links.impressum, href: "#" },
