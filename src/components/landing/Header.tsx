@@ -49,10 +49,10 @@ export default function Header() {
   const { t } = useLanguage();
 
   const navLinks = [
+    { href: "#about", label: t.nav.about },
     { href: "#services", label: t.nav.services },
     { href: "#process", label: t.nav.process },
     { href: "#pricing", label: t.nav.pricing },
-    { href: "#about", label: t.nav.about },
   ];
 
   return (

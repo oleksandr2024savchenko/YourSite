@@ -1,5 +1,6 @@
 export { default as Header } from "./Header";
 export { default as Hero } from "./Hero";
+export { default as Benefits } from "./Benefits";
 export { default as ValueProposition } from "./ValueProposition";
 export { default as Services } from "./Services";
 export { default as Process } from "./Process";

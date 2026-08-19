@@ -26,6 +26,28 @@ export const dictionaries = {
       imageCaption: "Vienna, Austria",
       imageTitle: "Crafted for clarity, quality, and lasting business impact.",
     },
+    benefits: {
+      title: "Your business can reach more customers.",
+      description:
+        "Many companies have great products and services — but online they don't show their full potential. A professional website can change exactly that.",
+      items: [
+        {
+          title: "More Visibility",
+          description: "Reach potential customers online as well.",
+        },
+        {
+          title: "More Trust",
+          description:
+            "Show at first glance why customers should choose you.",
+        },
+        {
+          title: "More Enquiries",
+          description: "Turn website visitors into real prospects.",
+        },
+      ],
+      closing:
+        "Your website is not just a business card. It can be an important part of your sales.",
+    },
     about: {
       eyebrow: "Why YourSite",
       title: "Built for companies that expect more",
@@ -211,6 +233,28 @@ export const dictionaries = {
       secondaryCta: "Leistungen ansehen",
       imageCaption: "Wien, Österreich",
       imageTitle: "Gestaltet für Klarheit, Qualität und nachhaltigen Geschäftserfolg.",
+    },
+    benefits: {
+      title: "Ihr Unternehmen kann mehr Kunden erreichen.",
+      description:
+        "Viele Unternehmen haben großartige Produkte und Dienstleistungen – aber online zeigen sie nicht ihr volles Potenzial. Eine professionelle Website kann genau das ändern.",
+      items: [
+        {
+          title: "Mehr Sichtbarkeit",
+          description: "Erreichen Sie potenzielle Kunden auch online.",
+        },
+        {
+          title: "Mehr Vertrauen",
+          description:
+            "Zeigen Sie auf den ersten Blick, warum Kunden sich für Sie entscheiden sollten.",
+        },
+        {
+          title: "Mehr Anfragen",
+          description: "Machen Sie aus Website-Besuchern echte Interessenten.",
+        },
+      ],
+      closing:
+        "Ihre Website ist nicht nur eine Visitenkarte. Sie kann ein wichtiger Teil Ihres Vertriebs sein.",
     },
     about: {
       eyebrow: "Warum YourSite",
