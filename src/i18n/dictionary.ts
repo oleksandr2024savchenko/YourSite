@@ -118,23 +118,29 @@ export const dictionaries = {
       eyebrow: "How It Works",
       title: "A clear path from idea to production",
       description:
-        "Three focused stages designed for clients who value predictability and partnership.",
+        "Four clear stages with transparent payment terms — 50% to start, 50% on approval.",
       stepLabel: "Step",
+      milestone: "Milestone",
       steps: [
         {
-          title: "Discovery & Planning",
+          title: "Discovery & Scope",
           description:
-            "We align on goals, scope, and architecture. You get a clear roadmap, timeline, and team composition before a single line of code.",
+            "We analyze your goals, agree on features, and provide a fixed-price proposal with no hidden costs.",
         },
         {
-          title: "Agile Development",
+          title: "Agreement & 50% Kickoff Deposit",
           description:
-            "Iterative sprints with weekly demos, transparent progress, and continuous feedback — so you stay in control throughout delivery.",
+            "Once the scope and timeline are approved and the agreement is signed, a 50% deposit secures your dedicated development team and immediately initiates the project.",
         },
         {
-          title: "Delivery & Support",
+          title: "Development & Staging",
           description:
-            "Production-ready handoff with documentation, knowledge transfer, and ongoing support options tailored to your needs.",
+            "We build your project using modern standards with rigorous QA. You receive access to a staging link to review live progress.",
+        },
+        {
+          title: "Final Review & Launch",
+          description:
+            "Test the finished product. Once everything is approved, the remaining 50% is settled, and we deploy your site with full source code handover.",
         },
       ],
     },
@@ -337,23 +343,29 @@ export const dictionaries = {
       eyebrow: "So arbeiten wir",
       title: "Ein klarer Weg von der Idee bis zur Produktion",
       description:
-        "Drei fokussierte Phasen für Kunden, die Planbarkeit und Partnerschaft schätzen.",
+        "Vier klare Phasen mit transparenten Zahlungsbedingungen — 50% zum Start, 50% nach Abnahme.",
       stepLabel: "Schritt",
+      milestone: "Meilenstein",
       steps: [
         {
-          title: "Discovery & Planung",
+          title: "Erstgespräch & Planung",
           description:
-            "Wir klären Ziele, Scope und Architektur. Sie erhalten Roadmap, Zeitplan und Teamzusammensetzung — bevor die erste Zeile Code entsteht.",
+            "Wir analysieren Ihre Ziele, definieren den Projektumfang und erstellen ein Festpreisangebot ohne versteckte Kosten.",
         },
         {
-          title: "Agile Entwicklung",
+          title: "Vereinbarung & 50% Anzahlung",
           description:
-            "Iterative Sprints mit wöchentlichen Demos, transparentem Fortschritt und kontinuierlichem Feedback — Sie behalten die Kontrolle.",
+            "Nach Freigabe des Konzepts und Vertragsunterzeichnung sichert eine Anzahlung von 50% Ihr dediziertes Entwicklerteam und startet das Projekt sofort.",
         },
         {
-          title: "Lieferung & Support",
+          title: "Entwicklung & Staging",
           description:
-            "Produktionsreife Übergabe mit Dokumentation, Wissenstransfer und optionalem Support — individuell auf Ihre Bedürfnisse abgestimmt.",
+            "Wir entwickeln Ihr Projekt nach modernen Standards inklusive strengem QA. Sie erhalten Zugriff auf einen Staging-Link zur Echtzeit-Prüfung.",
+        },
+        {
+          title: "Abnahme & Go-Live",
+          description:
+            "Sie testen das fertige Produkt. Nach Ihrer finalen Freigabe wird der Restbetrag von 50% fällig, und wir übertragen das Projekt live inklusive aller Rechte.",
         },
       ],
     },

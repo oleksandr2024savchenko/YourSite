@@ -1,10 +1,11 @@
 "use client";
 
-import { Search, Code2, Rocket } from "lucide-react";
+import { Search, FileSignature, Code2, Rocket } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import Reveal from "./Reveal";
 
-const stepIcons = [Search, Code2, Rocket];
+const stepIcons = [Search, FileSignature, Code2, Rocket];
+const MILESTONE_INDEX = 1;
 
 export default function Process() {
   const { t } = useLanguage();
@@ -24,36 +25,49 @@ export default function Process() {
           </p>
         </Reveal>
 
-        <div className="relative mt-16 grid gap-10 md:grid-cols-3 md:gap-8">
-          <div
-            className="pointer-events-none absolute top-10 right-[16%] left-[16%] hidden h-px bg-gradient-to-r from-transparent via-border to-transparent md:block"
-            aria-hidden
-          />
-
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {t.process.steps.map((step, index) => {
             const Icon = stepIcons[index];
             const number = String(index + 1).padStart(2, "0");
+            const milestone = index === MILESTONE_INDEX;
+
             return (
-              <Reveal
-                key={step.title}
-                delay={0.08 * index}
-                className="relative text-center md:px-4"
-              >
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-accent/25 bg-surface shadow-sm">
-                  <Icon
-                    className="h-6 w-6 text-accent-deep"
-                    strokeWidth={1.75}
-                  />
+              <Reveal key={step.title} delay={0.08 * index} className="h-full">
+                <div
+                  className={`relative flex h-full flex-col rounded-2xl border p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${
+                    milestone
+                      ? "border-accent bg-accent-soft/50"
+                      : "border-border/80 bg-surface"
+                  }`}
+                >
+                  {milestone && (
+                    <span className="absolute -top-3 left-8 rounded-xl bg-accent-deep px-3 py-1 text-xs font-medium tracking-wide text-white">
+                      {t.process.milestone}
+                    </span>
+                  )}
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-semibold tracking-tight text-accent-deep">
+                      {number}
+                    </span>
+                    <span
+                      className={`inline-flex h-11 w-11 items-center justify-center rounded-2xl ${
+                        milestone
+                          ? "bg-accent text-charcoal"
+                          : "bg-accent-soft text-accent-deep"
+                      }`}
+                    >
+                      <Icon className="h-5 w-5" strokeWidth={1.75} />
+                    </span>
+                  </div>
+
+                  <h3 className="mt-6 text-lg font-semibold tracking-tight text-charcoal">
+                    {step.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">
+                    {step.description}
+                  </p>
                 </div>
-                <p className="text-xs font-semibold tracking-[0.2em] text-slate uppercase">
-                  {t.process.stepLabel} {number}
-                </p>
-                <h3 className="mt-3 text-xl font-semibold tracking-tight text-charcoal">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-                  {step.description}
-                </p>
               </Reveal>
             );
           })}
