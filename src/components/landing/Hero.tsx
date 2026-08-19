@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
@@ -78,14 +77,16 @@ export default function Hero() {
           transition={{ duration: 0.65, delay: 0.18, ease }}
           className="relative lg:col-span-5"
         >
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-sm">
-            <Image
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-accent-soft shadow-sm">
+            {/* Native img: more reliable than next/image for GitHub Pages static export */}
+            <img
               src={images.hero}
               alt={t.hero.imageCaption}
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 420px"
-              className="object-cover"
+              width={1024}
+              height={1280}
+              decoding="async"
+              fetchPriority="high"
+              className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-transparent" />
             <div className="absolute inset-x-6 bottom-6">
