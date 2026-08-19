@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { ShieldCheck, Users, MessageCircle, BadgeEuro } from "lucide-react";
+import { Palette, LayoutGrid, Target, BadgeEuro } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { images } from "@/lib/images";
 import Reveal from "./Reveal";
 
-const featureIcons = [ShieldCheck, Users, MessageCircle, BadgeEuro];
+const featureIcons = [Palette, LayoutGrid, Target, BadgeEuro];
 const featureTones = [
   "bg-accent-soft text-accent-deep",
   "bg-slate-soft text-slate",
@@ -68,6 +68,12 @@ export default function ValueProposition() {
             );
           })}
         </div>
+
+        <Reveal delay={0.12} className="mt-14">
+          <p className="text-center text-base font-medium leading-relaxed tracking-tight text-charcoal sm:text-lg lg:text-xl lg:whitespace-nowrap">
+            {t.about.closing}
+          </p>
+        </Reveal>
       </div>
     </section>
   );

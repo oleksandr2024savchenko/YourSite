@@ -53,23 +53,23 @@ export const dictionaries = {
       eyebrow: "Why YourSite",
       title: "Built for companies that expect more",
       description:
-        "We are a premium Austrian software engineering agency — combining rigorous local standards with senior talent, clear communication, and reliable delivery.",
+        "We are a premium Austrian web engineering agency — combining rigorous local standards with senior talent, clear communication, and reliable delivery.",
       imageAlt: "Modern minimalist office workspace",
       features: [
         {
-          title: "Austrian Quality Assurance",
+          title: "Modern Design",
           description:
-            "Every engagement is led from Vienna with rigorous QA standards, clear accountability, and delivery you can trust.",
+            "Websites that look professional and fit your business.",
         },
         {
-          title: "Senior Engineering Talent",
+          title: "Clear & Simple",
           description:
-            "Work with carefully selected senior engineers — skilled, experienced, and focused on shipping production-ready software.",
+            "Clear structures, understandable content, and simple user guidance.",
         },
         {
-          title: "Seamless Communication",
+          title: "Focus on Results",
           description:
-            "Dedicated project leads, fluent English and German, and CET-aligned collaboration that feels local and responsive.",
+            "We build websites that not only look good, but guide customers to the right action.",
         },
         {
           title: "Transparent Pricing",
@@ -77,6 +77,8 @@ export const dictionaries = {
             "Clear scopes, predictable rates, and no hidden fees — premium outcomes with full commercial clarity.",
         },
       ],
+      closing:
+        "A website should not just look good. It should work for your business.",
     },
     services: {
       eyebrow: "Services",
@@ -268,25 +270,25 @@ export const dictionaries = {
     },
     about: {
       eyebrow: "Warum YourSite",
-      title: "Für Unternehmen, die mehr erwarten",
+      title: "Warum Unternehmen mit uns zusammenarbeiten",
       description:
-        "Wir sind eine Premium-Softwareengineering-Agentur aus Österreich — mit strengen lokalen Standards, erfahrenen Talenten, klarer Kommunikation und verlässlicher Lieferung.",
+        "Wir verbinden modernes Design, klare Kommunikation und Websites, die Ihr Unternehmen professionell präsentieren und neue Kunden erreichen.",
       imageAlt: "Modernes, minimalistisches Büro",
       features: [
         {
-          title: "Österreichische Qualitätssicherung",
+          title: "Modernes Design",
           description:
-            "Jedes Projekt wird aus Wien geführt — mit strengen QA-Standards, klarer Verantwortung und verlässlicher Lieferung.",
+            "Websites, die professionell aussehen und zu Ihrem Unternehmen passen.",
         },
         {
-          title: "Erfahrene Engineering-Talente",
+          title: "Klar & einfach",
           description:
-            "Arbeiten Sie mit sorgfältig ausgewählten Senior-Engineers — kompetent, erfahren und fokussiert auf produktionsreife Software.",
+            "Klare Strukturen, verständliche Inhalte und eine einfache Nutzerführung.",
         },
         {
-          title: "Nahtlose Kommunikation",
+          title: "Fokus auf Ergebnisse",
           description:
-            "Dedizierte Projektleitung, fließendes Deutsch und Englisch sowie Zusammenarbeit in der MEZ — lokal und reaktionsschnell.",
+            "Wir entwickeln Websites, die nicht nur gut aussehen, sondern Kunden zur richtigen Handlung führen.",
         },
         {
           title: "Transparente Preise",
@@ -294,6 +296,8 @@ export const dictionaries = {
             "Klare Scopes, planbare Konditionen und keine versteckten Kosten — Premium-Ergebnisse mit voller kommerzieller Transparenz.",
         },
       ],
+      closing:
+        "Eine Website sollte nicht nur gut aussehen. Sie sollte für Ihr Unternehmen arbeiten.",
     },
     services: {
       eyebrow: "Leistungen",
