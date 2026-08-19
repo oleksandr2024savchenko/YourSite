@@ -3,7 +3,7 @@ export type Locale = "en" | "de";
 export const dictionaries = {
   en: {
     meta: {
-      title: "YourSite — Premium Software Engineering from Austria",
+      title: "YourSite — Modern Websites That Grow Your Business",
       description:
         "Vienna-based B2B software engineering agency. Premium quality, transparent delivery, and trusted partnership for European businesses.",
     },
@@ -189,9 +189,9 @@ export const dictionaries = {
   },
   de: {
     meta: {
-      title: "YourSite — Premium Software Engineering aus Österreich",
+      title: "YourSite — Moderne Websites, die Ihr Unternehmen voranbringen",
       description:
-        "Wiener B2B-Softwareengineering-Agentur. Erstklassige Qualität, transparente Lieferung und verlässliche Partnerschaft für europäische Unternehmen.",
+        "Wir entwickeln professionelle Websites für Unternehmen, Selbstständige und lokale Betriebe – von der ersten Idee bis zum erfolgreichen Launch.",
     },
     nav: {
       services: "Leistungen",
@@ -204,10 +204,10 @@ export const dictionaries = {
     },
     hero: {
       brand: "YourSite",
-      headline: "Premium Software Engineering für europäische Unternehmen",
+      headline: "Moderne Websites, die mehr Kunden für Ihr Unternehmen gewinnen.",
       subheadline:
-        "Ihr Wiener Engineering-Partner für außergewöhnliche Qualität, nahtlose Zusammenarbeit und kosteneffiziente Umsetzung — ohne Kompromisse.",
-      primaryCta: "Projekt starten",
+        "Wir entwickeln professionelle Websites für Unternehmen, Selbstständige und lokale Betriebe - von der ersten Idee bis zum erfolgreichen Launch.",
+      primaryCta: "Kostenlose Erstberatung",
       secondaryCta: "Leistungen ansehen",
       imageCaption: "Wien, Österreich",
       imageTitle: "Gestaltet für Klarheit, Qualität und nachhaltigen Geschäftserfolg.",

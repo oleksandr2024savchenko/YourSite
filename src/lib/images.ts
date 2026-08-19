@@ -1,5 +1,5 @@
 export const images = {
-  hero: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+  hero: "/images/hero.jpg",
   about:
     "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
   services: [
