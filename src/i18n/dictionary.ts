@@ -224,11 +224,55 @@ export const dictionaries = {
       },
       note: "All prices are starting prices. The final price depends on scope, design and the features you need.",
     },
-    cta: {
-      title: "Ready to build with confidence?",
+    faq: {
+      eyebrow: "FAQ",
+      title: "Frequently Asked Questions",
       description:
-        "Book a free consultation with our Vienna team. We’ll assess your needs and outline a clear path to accelerate your roadmap.",
-      primary: "Book a Consultation",
+        "Everything you need to know before we start working together.",
+      items: [
+        {
+          question: "How long does it take to build a website?",
+          answer:
+            "How long the project takes depends on its scope. After the initial consultation you receive a clear estimate of the time required.",
+        },
+        {
+          question: "What does a website cost?",
+          answer:
+            "Our projects start from €1,499. The final price depends on scope, design and the features you need.",
+        },
+        {
+          question: "Is the website optimised for smartphones?",
+          answer:
+            "Yes. All our websites are optimised for smartphone, tablet and desktop.",
+        },
+        {
+          question: "Do you take care of domain and hosting?",
+          answer:
+            "Yes. On request we support you with domain, hosting and the technical launch of your website.",
+        },
+        {
+          question: "Can I make changes to my website later?",
+          answer:
+            "Yes. Depending on the project, we can provide you with a simple system to manage your content.",
+        },
+        {
+          question: "What happens after my enquiry?",
+          answer:
+            "We discuss your project, your goals and your requirements. You then receive an individual proposal.",
+        },
+        {
+          question: "Can I talk to you first before deciding?",
+          answer:
+            "Of course. The initial consultation is free and without obligation.",
+        },
+      ],
+    },
+    cta: {
+      title: "Ready for a website that works for your business?",
+      description:
+        "Tell us briefly about your project. We discuss your goals and show you which solution fits your business best.",
+      primary: "Book a Free Consultation",
+      reassurance: "Free · No obligation · Personal",
     },
     footer: {
       tagline:
@@ -477,11 +521,56 @@ export const dictionaries = {
       },
       note: "Alle Preise verstehen sich als Startpreise. Der finale Preis hängt vom Umfang, Design und den gewünschten Funktionen ab.",
     },
-    cta: {
-      title: "Bereit, mit Vertrauen zu bauen?",
+    faq: {
+      eyebrow: "FAQ",
+      title: "Häufig gestellte Fragen",
       description:
-        "Vereinbaren Sie eine kostenlose Beratung mit unserem Wiener Team. Wir analysieren Ihren Bedarf und skizzieren einen klaren Weg zur Beschleunigung Ihrer Roadmap.",
-      primary: "Beratung buchen",
+        "Alles, was Sie wissen sollten, bevor wir zusammenarbeiten.",
+      items: [
+        {
+          question: "Wie lange dauert die Erstellung einer Website?",
+          answer:
+            "Wie lange die Umsetzung dauert, hängt vom Umfang des Projekts ab. Nach dem Erstgespräch erhalten Sie eine klare Einschätzung der benötigten Zeit.",
+        },
+        {
+          question: "Was kostet eine Website?",
+          answer:
+            "Unsere Projekte starten ab €1.499. Der finale Preis hängt vom Umfang, Design und den gewünschten Funktionen ab.",
+        },
+        {
+          question: "Ist die Website für Smartphones optimiert?",
+          answer:
+            "Ja. Alle unsere Websites werden für Smartphone, Tablet und Desktop optimiert.",
+        },
+        {
+          question: "Kümmern Sie sich um Domain und Hosting?",
+          answer:
+            "Ja. Auf Wunsch unterstützen wir Sie bei Domain, Hosting und dem technischen Start Ihrer Website.",
+        },
+        {
+          question: "Kann ich später Änderungen an meiner Website vornehmen?",
+          answer:
+            "Ja. Je nach Projekt können wir Ihnen ein einfaches System zur Verwaltung Ihrer Inhalte bereitstellen.",
+        },
+        {
+          question: "Was passiert nach der Anfrage?",
+          answer:
+            "Wir besprechen Ihr Projekt, Ihre Ziele und Ihre Anforderungen. Anschließend erhalten Sie ein individuelles Angebot.",
+        },
+        {
+          question:
+            "Kann ich zuerst mit Ihnen sprechen, bevor ich mich entscheide?",
+          answer:
+            "Natürlich. Das Erstgespräch ist kostenlos und unverbindlich.",
+        },
+      ],
+    },
+    cta: {
+      title: "Bereit für eine Website, die für Ihr Unternehmen arbeitet?",
+      description:
+        "Erzählen Sie uns kurz von Ihrem Projekt. Wir besprechen Ihre Ziele und zeigen Ihnen, welche Lösung am besten zu Ihrem Unternehmen passt.",
+      primary: "Kostenloses Erstgespräch vereinbaren",
+      reassurance: "Kostenlos · Unverbindlich · Persönlich",
     },
     footer: {
       tagline:

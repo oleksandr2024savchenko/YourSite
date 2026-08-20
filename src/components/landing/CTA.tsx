@@ -8,7 +8,7 @@ export default function CTA() {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="scroll-mt-20 px-6 pb-24 lg:px-8 lg:pb-32">
+    <section id="contact" className="scroll-mt-20 px-6 py-24 lg:px-8 lg:py-32">
       <Reveal>
         <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl bg-gradient-to-br from-charcoal via-[#353a3f] to-[#3a4a49] px-8 py-16 text-center sm:px-12 lg:px-16 lg:py-20">
           <div className="mx-auto max-w-2xl">
@@ -21,20 +21,18 @@ export default function CTA() {
             <p className="mt-5 text-lg leading-relaxed text-white/70">
               {t.cta.description}
             </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+
+            <div className="mt-10 flex flex-col items-center">
               <a
                 href="mailto:hello@yoursite.at"
-                className="inline-flex items-center gap-2 rounded-2xl bg-accent px-7 py-3.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-soft"
+                className="inline-flex items-center gap-2.5 rounded-2xl bg-accent px-8 py-4 text-base font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-soft hover:shadow-md"
               >
                 {t.cta.primary}
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-5 w-5" />
               </a>
-              <a
-                href="mailto:hello@yoursite.at"
-                className="inline-flex items-center rounded-2xl border border-white/20 px-7 py-3.5 text-sm font-medium text-white/90 transition-all duration-300 hover:border-white/40 hover:bg-white/5"
-              >
-                hello@yoursite.at
-              </a>
+              <p className="mt-5 text-sm tracking-wide text-white/60">
+                {t.cta.reassurance}
+              </p>
             </div>
           </div>
         </div>
