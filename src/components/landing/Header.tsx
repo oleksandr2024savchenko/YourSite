@@ -54,6 +54,7 @@ export default function Header() {
     { href: "#about", label: t.nav.about },
     { href: "#process", label: t.nav.process },
     { href: "#pricing", label: t.nav.pricing },
+    { href: "#faq", label: t.nav.faq },
   ];
 
   return (
@@ -68,7 +69,7 @@ export default function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -80,7 +81,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <LanguageToggle />
           <a
             href="#contact"
@@ -92,7 +93,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-xl p-2 text-charcoal transition-all duration-300 hover:bg-surface-soft md:hidden"
+          className="inline-flex items-center justify-center rounded-xl p-2 text-charcoal transition-all duration-300 hover:bg-surface-soft lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
           aria-expanded={open}
@@ -102,7 +103,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border/60 bg-background px-6 py-4 md:hidden">
+        <div className="border-t border-border/60 bg-background px-6 py-4 lg:hidden">
           <nav className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <a

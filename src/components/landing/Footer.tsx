@@ -13,6 +13,7 @@ export default function Footer() {
       { label: t.footer.links.about, href: "#about" },
       { label: t.footer.links.process, href: "#process" },
       { label: t.footer.links.pricing, href: "#pricing" },
+      { label: t.footer.links.faq, href: "#faq" },
       { label: t.footer.links.contact, href: "#contact" },
     ],
     [t.footer.groups.services]: t.services.items.map((item) => ({
