@@ -5,7 +5,7 @@ export const dictionaries = {
     meta: {
       title: "YourSite — Modern Websites That Grow Your Business",
       description:
-        "Vienna-based B2B software engineering agency. Premium quality, transparent delivery, and trusted partnership for European businesses.",
+        "We build professional websites for companies, freelancers and local businesses – from the first idea to a successful launch.",
     },
     nav: {
       services: "Services",
@@ -19,10 +19,10 @@ export const dictionaries = {
     },
     hero: {
       brand: "YourSite",
-      headline: "Premium Software Engineering for European Businesses",
+      headline: "Modern websites that win more customers for your business.",
       subheadline:
-        "A Vienna-based engineering partner delivering exceptional quality, seamless collaboration, and cost-efficient execution — without compromise.",
-      primaryCta: "Start a Project",
+        "We build professional websites for companies, freelancers and local businesses – from the first idea to a successful launch.",
+      primaryCta: "Free Initial Consultation",
       secondaryCta: "View Services",
       imageCaption: "Vienna, Austria",
       imageTitle: "Crafted for clarity, quality, and lasting business impact.",
@@ -51,9 +51,9 @@ export const dictionaries = {
     },
     about: {
       eyebrow: "Why YourSite",
-      title: "Built for companies that expect more",
+      title: "Why companies work with us",
       description:
-        "We are a premium Austrian web engineering agency — combining rigorous local standards with senior talent, clear communication, and reliable delivery.",
+        "We combine modern design, clear communication and websites that present your company professionally and reach new customers.",
       imageAlt: "Modern minimalist office workspace",
       features: [
         {
@@ -74,7 +74,7 @@ export const dictionaries = {
         {
           title: "Transparent Pricing",
           description:
-            "Clear scopes, predictable rates, and no hidden fees — premium outcomes with full commercial clarity.",
+            "Clear scope, predictable conditions and no hidden costs — premium results with full transparency.",
         },
       ],
       closing:
@@ -101,7 +101,7 @@ export const dictionaries = {
           gain: ["More enquiries", "more leads", "more sales"],
         },
         {
-          title: "Corporate Website",
+          title: "Business Website",
           description:
             "A professional website for your entire company.",
           gain: ["More trust", "more customers", "more revenue"],
@@ -123,9 +123,9 @@ export const dictionaries = {
       milestone: "Milestone",
       steps: [
         {
-          title: "Discovery & Scope",
+          title: "Discovery & Planning",
           description:
-            "We analyze your goals, agree on features, and provide a fixed-price proposal with no hidden costs.",
+            "We analyse your goals, define the project scope and provide a fixed-price proposal with no hidden costs.",
         },
         {
           title: "Agreement & 50% Kickoff Deposit",
@@ -138,15 +138,15 @@ export const dictionaries = {
             "We build your project using modern standards with rigorous QA. You receive access to a staging link to review live progress.",
         },
         {
-          title: "Final Review & Launch",
+          title: "Final Review & Go-Live",
           description:
-            "Test the finished product. Once everything is approved, the remaining 50% is settled, and we deploy your site with full source code handover.",
+            "You test the finished product. After your final approval the remaining 50% is due, and we take the project live including all rights.",
         },
       ],
     },
     pricing: {
       eyebrow: "Pricing",
-      title: "Transparent packages for every stage of your business",
+      title: "Transparent packages for every business",
       description:
         "Clear starting prices in EUR. Every project is scoped precisely — so you always know what you are investing in.",
       popular: "Most Popular",
@@ -292,7 +292,7 @@ export const dictionaries = {
     },
     footer: {
       tagline:
-        "A premium Austrian software engineering agency — delivering clarity, quality, and lasting business impact from Vienna.",
+        "Professional websites for companies, freelancers and local businesses — designed and built in Vienna.",
       address: "Musterstraße 12/3\n1010 Vienna, Austria",
       copyright: "All rights reserved.",
       location: "Vienna, Austria · FN 000000a",
@@ -334,7 +334,7 @@ export const dictionaries = {
       brand: "YourSite",
       headline: "Moderne Websites, die mehr Kunden für Ihr Unternehmen gewinnen.",
       subheadline:
-        "Wir entwickeln professionelle Websites für Unternehmen, Selbstständige und lokale Betriebe - von der ersten Idee bis zum erfolgreichen Launch.",
+        "Wir entwickeln professionelle Websites für Unternehmen, Selbstständige und lokale Betriebe – von der ersten Idee bis zum erfolgreichen Launch.",
       primaryCta: "Kostenlose Erstberatung",
       secondaryCta: "Leistungen ansehen",
       imageCaption: "Wien, Österreich",
@@ -387,7 +387,7 @@ export const dictionaries = {
         {
           title: "Transparente Preise",
           description:
-            "Klare Scopes, planbare Konditionen und keine versteckten Kosten — Premium-Ergebnisse mit voller kommerzieller Transparenz.",
+            "Klarer Leistungsumfang, planbare Konditionen und keine versteckten Kosten — Premium-Ergebnisse mit voller Transparenz.",
         },
       ],
       closing:
@@ -414,7 +414,7 @@ export const dictionaries = {
           gain: ["Mehr Anfragen", "mehr Leads", "mehr Verkäufe"],
         },
         {
-          title: "Corporate Website",
+          title: "Business Website",
           description:
             "Eine professionelle Website für Ihr gesamtes Unternehmen.",
           gain: ["Mehr Vertrauen", "mehr Kunden", "mehr Umsatz"],
@@ -606,7 +606,7 @@ export const dictionaries = {
     },
     footer: {
       tagline:
-        "Eine Premium-Softwareengineering-Agentur aus Österreich — für Klarheit, Qualität und nachhaltigen Geschäftserfolg aus Wien.",
+        "Professionelle Websites für Unternehmen, Selbstständige und lokale Betriebe — entwickelt in Wien.",
       address: "Musterstraße 12/3\n1010 Wien, Österreich",
       copyright: "Alle Rechte vorbehalten.",
       location: "Wien, Österreich · FN 000000a",
