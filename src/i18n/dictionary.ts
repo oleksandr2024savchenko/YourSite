@@ -273,6 +273,22 @@ export const dictionaries = {
         "Tell us briefly about your project. We discuss your goals and show you which solution fits your business best.",
       primary: "Book a Free Consultation",
       reassurance: "Free · No obligation · Personal",
+      form: {
+        name: "Your Name",
+        email: "Email",
+        company: "Company",
+        projectType: "Which website do you need?",
+        projectTypePlaceholder: "Please select",
+        projectTypeOptions: [
+          "Onepage",
+          "Landing Page",
+          "Business Website",
+          "Online Shop",
+          "I'm not sure yet",
+        ],
+        message: "Tell us briefly about your project",
+        submit: "Send Enquiry",
+      },
     },
     footer: {
       tagline:
@@ -571,6 +587,22 @@ export const dictionaries = {
         "Erzählen Sie uns kurz von Ihrem Projekt. Wir besprechen Ihre Ziele und zeigen Ihnen, welche Lösung am besten zu Ihrem Unternehmen passt.",
       primary: "Kostenloses Erstgespräch vereinbaren",
       reassurance: "Kostenlos · Unverbindlich · Persönlich",
+      form: {
+        name: "Ihr Name",
+        email: "E-Mail",
+        company: "Unternehmen",
+        projectType: "Welche Website benötigen Sie?",
+        projectTypePlaceholder: "Bitte auswählen",
+        projectTypeOptions: [
+          "Onepage",
+          "Landing Page",
+          "Business Website",
+          "Online Shop",
+          "Ich bin mir noch nicht sicher",
+        ],
+        message: "Erzählen Sie uns kurz von Ihrem Projekt",
+        submit: "Anfrage senden",
+      },
     },
     footer: {
       tagline:
