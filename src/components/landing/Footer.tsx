@@ -1,24 +1,33 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { homeHref, sectionHref } from "@/lib/links";
+import { serviceHref, serviceSlugs } from "@/lib/services";
+
+type FooterLink = { label: string; href: string; route?: boolean };
 
 export default function Footer() {
   const { t } = useLanguage();
+  const pathname = usePathname();
+  const anchor = (id: string) => sectionHref(pathname, id);
 
-  const footerLinks = {
+  const footerLinks: Record<string, FooterLink[]> = {
     [t.footer.groups.company]: [
-      { label: t.footer.links.benefits, href: "#benefits" },
-      { label: t.footer.links.services, href: "#services" },
-      { label: t.footer.links.about, href: "#about" },
-      { label: t.footer.links.process, href: "#process" },
-      { label: t.footer.links.pricing, href: "#pricing" },
-      { label: t.footer.links.faq, href: "#faq" },
-      { label: t.footer.links.contact, href: "#contact" },
+      { label: t.footer.links.benefits, href: anchor("benefits") },
+      { label: t.footer.links.services, href: anchor("services") },
+      { label: t.footer.links.about, href: anchor("about") },
+      { label: t.footer.links.process, href: anchor("process") },
+      { label: t.footer.links.pricing, href: anchor("pricing") },
+      { label: t.footer.links.faq, href: anchor("faq") },
+      { label: t.footer.links.contact, href: anchor("contact") },
     ],
-    [t.footer.groups.services]: t.services.items.map((item) => ({
+    [t.footer.groups.services]: t.services.items.map((item, index) => ({
       label: item.title,
-      href: "#services",
+      href: serviceHref(serviceSlugs[index]),
+      route: true,
     })),
     [t.footer.groups.legal]: [
       { label: t.footer.links.privacy, href: "#" },
@@ -32,7 +41,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <a href="#" className="inline-flex items-center gap-2.5">
+            <a href={homeHref()} className="inline-flex items-center gap-2.5">
               <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent-soft">
                 <span className="h-2.5 w-2.5 rounded-full bg-accent-deep" />
               </span>
@@ -75,12 +84,21 @@ export default function Footer() {
               <ul className="mt-4 space-y-2.5">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-sm text-muted transition-all duration-300 hover:text-charcoal"
-                    >
-                      {link.label}
-                    </a>
+                    {link.route ? (
+                      <Link
+                        href={link.href}
+                        className="text-sm text-muted transition-all duration-300 hover:text-charcoal"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-sm text-muted transition-all duration-300 hover:text-charcoal"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

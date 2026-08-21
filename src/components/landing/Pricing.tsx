@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { serviceHref, serviceSlugs } from "@/lib/services";
 import Reveal from "./Reveal";
 
 const FEATURED_INDEX = 3;
@@ -105,6 +107,14 @@ export default function Pricing() {
                     {tier.cta}
                     <ArrowRight className="h-4 w-4 shrink-0" />
                   </a>
+
+                  <Link
+                    href={serviceHref(serviceSlugs[index])}
+                    className="mt-2.5 inline-flex items-center justify-center gap-1.5 rounded-2xl px-5 py-2.5 text-center text-sm font-medium text-accent-dark transition-all duration-300 hover:bg-accent-soft/60"
+                  >
+                    {t.pricing.details}
+                    <ArrowRight className="h-4 w-4 shrink-0" />
+                  </Link>
                 </div>
               </Reveal>
             );

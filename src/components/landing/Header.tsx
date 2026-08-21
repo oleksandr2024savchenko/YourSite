@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { homeHref, sectionHref } from "@/lib/links";
 import type { Locale } from "@/i18n/dictionary";
 
 function LanguageToggle({ compact = false }: { compact?: boolean }) {
@@ -47,20 +49,22 @@ function LanguageToggle({ compact = false }: { compact?: boolean }) {
 export default function Header() {
   const [open, setOpen] = useState(false);
   const { t } = useLanguage();
+  const pathname = usePathname();
+  const anchor = (id: string) => sectionHref(pathname, id);
 
   const navLinks = [
-    { href: "#benefits", label: t.nav.benefits },
-    { href: "#services", label: t.nav.services },
-    { href: "#about", label: t.nav.about },
-    { href: "#process", label: t.nav.process },
-    { href: "#pricing", label: t.nav.pricing },
-    { href: "#faq", label: t.nav.faq },
+    { href: anchor("benefits"), label: t.nav.benefits },
+    { href: anchor("services"), label: t.nav.services },
+    { href: anchor("about"), label: t.nav.about },
+    { href: anchor("process"), label: t.nav.process },
+    { href: anchor("pricing"), label: t.nav.pricing },
+    { href: anchor("faq"), label: t.nav.faq },
   ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-8">
-        <a href="#" className="group flex items-center gap-2.5">
+        <a href={homeHref()} className="group flex items-center gap-2.5">
           <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent-soft transition-all duration-300 group-hover:bg-accent/25">
             <span className="h-2.5 w-2.5 rounded-full bg-accent-deep" />
           </span>
@@ -84,7 +88,7 @@ export default function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageToggle />
           <a
-            href="#contact"
+            href={anchor("contact")}
             className="inline-flex items-center rounded-2xl bg-accent px-5 py-2.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
           >
             {t.nav.cta}
@@ -117,7 +121,7 @@ export default function Header() {
             ))}
             <LanguageToggle compact />
             <a
-              href="#contact"
+              href={anchor("contact")}
               className="mt-1 inline-flex items-center justify-center rounded-2xl bg-accent px-5 py-2.5 text-sm font-medium text-charcoal transition-all duration-300 hover:bg-accent-deep hover:text-white"
               onClick={() => setOpen(false)}
             >

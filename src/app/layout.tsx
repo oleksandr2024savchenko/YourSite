@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
+import { dictionaries } from "@/i18n/dictionary";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,9 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "YourSite — Premium Software Engineering from Austria",
-  description:
-    "Vienna-based B2B software engineering agency. Premium quality, transparent delivery, and trusted partnership for European businesses.",
+  title: dictionaries.en.meta.title,
+  description: dictionaries.en.meta.description,
 };
 
 export default function RootLayout({
@@ -28,7 +29,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans">{children}</body>
+      <body className="flex min-h-full flex-col font-sans">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

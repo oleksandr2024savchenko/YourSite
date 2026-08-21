@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { images } from "@/lib/images";
+import { serviceHref, serviceSlugs } from "@/lib/services";
 import Reveal from "./Reveal";
 
 const accents = [
@@ -38,8 +40,7 @@ export default function Services() {
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {t.services.items.map((service, index) => (
             <Reveal key={service.title} delay={0.08 * index} className="h-full">
-              <a
-                href="#contact"
+              <div
                 className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/80 bg-gradient-to-b ${accents[index % accents.length]} shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md`}
               >
                 <div className="relative h-44 overflow-hidden">
@@ -92,12 +93,24 @@ export default function Services() {
                     </div>
                   </div>
 
-                  <span className="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-accent-deep transition-all duration-300 group-hover:text-charcoal">
-                    {t.services.discuss}
-                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </span>
+                  <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
+                    <Link
+                      href={serviceHref(serviceSlugs[index])}
+                      className="inline-flex items-center justify-center gap-2 rounded-2xl bg-accent px-5 py-2.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
+                    >
+                      {t.services.details}
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                    <a
+                      href="#contact"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-deep transition-all duration-300 hover:text-charcoal"
+                    >
+                      {t.services.discuss}
+                      <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  </div>
                 </div>
-              </a>
+              </div>
             </Reveal>
           ))}
         </div>

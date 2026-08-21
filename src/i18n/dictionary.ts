@@ -87,6 +87,7 @@ export const dictionaries = {
       description:
         "From a relaunch of your current site to a full online shop — we build the solution that fits your goals.",
       discuss: "Discuss this service",
+      details: "View details",
       gainLabel: "What you gain:",
       items: [
         {
@@ -248,7 +249,282 @@ export const dictionaries = {
           "We advise you free of charge and find the right website for your goals together.",
         cta: "Book a Free Consultation",
       },
+      details: "View details",
       note: "All prices are starting prices. The final price depends on scope, design and the features you need.",
+    },
+    serviceDetail: {
+      eyebrow: "Service",
+      back: "All services",
+      backHome: "Back to homepage",
+      startingPrice: "Starting price",
+      timelineLabel: "Typical timeline",
+      paymentLabel: "Payment",
+      payment: "50% to start · 50% on approval",
+      idealForTitle: "Who this is for",
+      includedTitle: "What is included",
+      deliverablesTitle: "In detail",
+      conditionsTitle: "Terms and conditions",
+      pricingTitle: "Prices and options",
+      pricingDescription:
+        "The starting price covers the full package below. Options are added only if you need them.",
+      addonsTitle: "Optional extras",
+      basePriceLabel: "Package price",
+      noteTitle: "Good to know",
+      note: "All prices are net starting prices. You receive a fixed-price proposal before we begin, so there are no surprises.",
+      requestCta: "Order by email",
+      questionsCta: "Ask a question by email",
+      consultationCta: "Request a free consultation",
+      midCtaTitle: "Ready to start this package?",
+      midCtaDescription:
+        "Send us a short email and you will receive a fixed-price proposal for exactly this scope.",
+      finalCtaTitle: "Order this package now",
+      finalCtaDescription:
+        "One click opens a prefilled email. Add a sentence about your company and send it — we reply with the next steps.",
+      contactHint: "Or write to us directly:",
+      mailSubject: "Enquiry",
+      mailIntro:
+        "Hello YourSite team,\n\nI would like to order the following package:",
+      mailQuestionIntro:
+        "Hello YourSite team,\n\nI have a question about the following package:",
+      mailFields:
+        "\n\nMy company:\nMy website (if any):\nMy goal:\n\nBest regards,",
+      items: {
+        relaunch: {
+          positioning: "A fresh presence without starting over",
+          summary:
+            "Your website already exists — it simply no longer matches the quality of your work. We keep what works, modernise design and technology, and turn the page into a presence that convinces again.",
+          timeline: "approx. 1–2 weeks",
+          idealFor: [
+            "Companies whose website looks several years old",
+            "Pages that are slow or awkward on smartphones",
+            "Businesses that want a fresh look without a full rebuild",
+          ],
+          deliverables: [
+            "Review of your current pages, structure and texts",
+            "New, modern design based on your existing content",
+            "Technical refresh: speed, mobile view, contact paths",
+            "Clearer structure with a visible call-to-action",
+            "Go-live including transfer of all files and access",
+          ],
+          conditions: [
+            {
+              title: "Scope",
+              description:
+                "Modernising your existing website with up to five pages. Additional pages can be added as an option.",
+            },
+            {
+              title: "What we need from you",
+              description:
+                "Access to your current website and hosting, plus your logo and existing texts or images.",
+            },
+            {
+              title: "Payment",
+              description:
+                "50% on signing the agreement, the remaining 50% after your final approval — before go-live.",
+            },
+            {
+              title: "After go-live",
+              description:
+                "You own all files and access. Ongoing maintenance is available on request as a monthly option.",
+            },
+          ],
+          addons: [
+            { label: "Additional page", price: "+€149" },
+            { label: "Rewriting your texts", price: "+€199" },
+            { label: "Logo refresh", price: "+€249" },
+            { label: "Domain and hosting migration", price: "+€99" },
+            { label: "Maintenance", price: "from €39/month" },
+          ],
+        },
+        onepage: {
+          positioning: "Digital business card and status",
+          summary:
+            "One modern page that carries everything a potential customer needs: who you are, what you offer and how to reach you. Fast, clear and built to be taken seriously.",
+          timeline: "approx. 1–2 weeks",
+          idealFor: [
+            "Independent professionals and small teams",
+            "Companies that need a presence, not a large site",
+            "Anyone who wants to go online quickly and cleanly",
+          ],
+          deliverables: [
+            "Custom design in your colours and style",
+            "All key information on one page, in a clear order",
+            "Presentation of your services with a focus on trust",
+            "Contact section with a form and direct call-to-action",
+            "Optimised for smartphone, tablet and desktop",
+          ],
+          conditions: [
+            {
+              title: "Scope",
+              description:
+                "One page with up to six sections, including contact form and legal pages.",
+            },
+            {
+              title: "What we need from you",
+              description:
+                "Your logo, images and a rough idea of your content — we structure the rest with you.",
+            },
+            {
+              title: "Payment",
+              description:
+                "50% on signing the agreement, the remaining 50% after your final approval — before go-live.",
+            },
+            {
+              title: "After go-live",
+              description:
+                "You receive all files and access. Later extensions are always possible.",
+            },
+          ],
+          addons: [
+            { label: "Additional section", price: "+€149" },
+            { label: "Copywriting for your texts", price: "+€249" },
+            { label: "Second language", price: "+€299" },
+            { label: "Blog or news area", price: "+€399" },
+            { label: "Maintenance", price: "from €39/month" },
+          ],
+        },
+        "landing-page": {
+          positioning: "Lead-generation tool for advertising",
+          summary:
+            "A page with exactly one job: turning visitors from your ads into enquiries. Every element — headline, proof, form — is built around that single action.",
+          timeline: "approx. 1–2 weeks",
+          idealFor: [
+            "Companies running Google or social media ads",
+            "One specific service, product or offer",
+            "Teams that want measurable enquiries, not just traffic",
+          ],
+          deliverables: [
+            "Page structure built around one customer action",
+            "Persuasive design with strong calls-to-action",
+            "Clear presentation of a single offer, without distraction",
+            "Enquiry form optimised for mobile devices",
+            "Ready for your ad campaigns from day one",
+          ],
+          conditions: [
+            {
+              title: "Scope",
+              description:
+                "One campaign page including form, thank-you state and legal pages.",
+            },
+            {
+              title: "What we need from you",
+              description:
+                "Your offer, your target group and any existing ad material or images.",
+            },
+            {
+              title: "Payment",
+              description:
+                "50% on signing the agreement, the remaining 50% after your final approval — before go-live.",
+            },
+            {
+              title: "After go-live",
+              description:
+                "You can keep running the page for new campaigns. Further variants are available as an option.",
+            },
+          ],
+          addons: [
+            { label: "Second variant for A/B testing", price: "+€349" },
+            { label: "Tracking and conversion setup", price: "+€199" },
+            { label: "Copywriting for your texts", price: "+€249" },
+            { label: "Second language", price: "+€299" },
+            { label: "Maintenance", price: "from €39/month" },
+          ],
+        },
+        "business-website": {
+          positioning: "The full presence for your company",
+          summary:
+            "Several pages that present your company in the way it deserves: services, team, references and clear contact paths — a website that supports your sales work every day.",
+          timeline: "approx. 3–5 weeks",
+          idealFor: [
+            "Established companies with several services",
+            "Businesses that want to show references and their team",
+            "Anyone whose website should be more than a business card",
+          ],
+          deliverables: [
+            "Custom web design across multiple pages",
+            "Individual pages for your services",
+            "References or project showcase",
+            "Contact and enquiry forms",
+            "Structure built for search engines and clear navigation",
+          ],
+          conditions: [
+            {
+              title: "Scope",
+              description:
+                "Up to eight pages including contact forms and legal pages. Additional pages as an option.",
+            },
+            {
+              title: "What we need from you",
+              description:
+                "Your logo, images and content for the individual pages — we advise you on structure and wording.",
+            },
+            {
+              title: "Payment",
+              description:
+                "50% on signing the agreement, the remaining 50% after your final approval — before go-live.",
+            },
+            {
+              title: "After go-live",
+              description:
+                "On request you receive a simple system to manage your own content.",
+            },
+          ],
+          addons: [
+            { label: "Additional page", price: "+€199" },
+            { label: "Multiple languages", price: "from €499" },
+            { label: "Blog or news area", price: "+€399" },
+            { label: "Online appointment booking", price: "+€349" },
+            { label: "Maintenance", price: "from €59/month" },
+          ],
+        },
+        "online-shop": {
+          positioning: "Sell around the clock",
+          summary:
+            "Your own shop with a purchase process that customers actually complete: clear products, simple checkout, reliable payments. Built to sell while you sleep.",
+          timeline: "approx. 5–8 weeks",
+          idealFor: [
+            "Companies that want to sell products online",
+            "Local businesses expanding beyond their region",
+            "Anyone who needs a professional purchase process",
+          ],
+          deliverables: [
+            "Custom shop design in your brand style",
+            "Product catalogue with categories and search",
+            "Cart and a checkout with as few steps as possible",
+            "Online payments and shipping settings",
+            "Mobile-optimised purchase process",
+          ],
+          conditions: [
+            {
+              title: "Scope",
+              description:
+                "Shop setup including up to 50 products, payment and shipping configuration.",
+            },
+            {
+              title: "What we need from you",
+              description:
+                "Product data, images and prices, plus your payment and shipping conditions.",
+            },
+            {
+              title: "Payment",
+              description:
+                "50% on signing the agreement, the remaining 50% after your final approval — before go-live.",
+            },
+            {
+              title: "After go-live",
+              description:
+                "You manage products and orders yourself. We hand over a short walkthrough of the system.",
+            },
+          ],
+          addons: [
+            { label: "Another 50 products", price: "+€399" },
+            { label: "Additional payment method", price: "+€199" },
+            { label: "Shipping provider integration", price: "+€299" },
+            { label: "Multilingual shop", price: "from €699" },
+            { label: "Maintenance", price: "from €99/month" },
+          ],
+        },
+      },
     },
     faq: {
       eyebrow: "FAQ",
@@ -428,6 +704,7 @@ export const dictionaries = {
       description:
         "Vom Relaunch Ihrer bestehenden Seite bis zum Online-Shop – wir entwickeln die Lösung, die zu Ihren Zielen passt.",
       discuss: "Leistung besprechen",
+      details: "Details ansehen",
       gainLabel: "Damit gewinnen Sie:",
       items: [
         {
@@ -589,7 +866,282 @@ export const dictionaries = {
           "Wir beraten Sie kostenlos und finden gemeinsam die passende Website für Ihre Ziele.",
         cta: "Kostenloses Erstgespräch vereinbaren",
       },
+      details: "Details ansehen",
       note: "Alle Preise verstehen sich als Startpreise. Der finale Preis hängt vom Umfang, Design und den gewünschten Funktionen ab.",
+    },
+    serviceDetail: {
+      eyebrow: "Leistung",
+      back: "Alle Leistungen",
+      backHome: "Zurück zur Startseite",
+      startingPrice: "Startpreis",
+      timelineLabel: "Üblicher Zeitrahmen",
+      paymentLabel: "Zahlung",
+      payment: "50% zum Start · 50% nach Abnahme",
+      idealForTitle: "Für wen das passt",
+      includedTitle: "Das ist enthalten",
+      deliverablesTitle: "Im Detail",
+      conditionsTitle: "Konditionen",
+      pricingTitle: "Preise und Optionen",
+      pricingDescription:
+        "Der Startpreis umfasst das komplette Paket unten. Optionen kommen nur dazu, wenn Sie sie brauchen.",
+      addonsTitle: "Optionale Erweiterungen",
+      basePriceLabel: "Paketpreis",
+      noteTitle: "Gut zu wissen",
+      note: "Alle Preise sind Netto-Startpreise. Vor Projektstart erhalten Sie ein Festpreisangebot — damit es keine Überraschungen gibt.",
+      requestCta: "Per E-Mail beauftragen",
+      questionsCta: "Frage per E-Mail stellen",
+      consultationCta: "Kostenloses Erstgespräch anfragen",
+      midCtaTitle: "Bereit für dieses Paket?",
+      midCtaDescription:
+        "Senden Sie uns eine kurze E-Mail und Sie erhalten ein Festpreisangebot für genau diesen Umfang.",
+      finalCtaTitle: "Dieses Paket jetzt beauftragen",
+      finalCtaDescription:
+        "Ein Klick öffnet eine vorbereitete E-Mail. Ergänzen Sie einen Satz zu Ihrem Unternehmen und senden Sie sie ab — wir antworten mit den nächsten Schritten.",
+      contactHint: "Oder schreiben Sie uns direkt:",
+      mailSubject: "Anfrage",
+      mailIntro:
+        "Guten Tag YourSite Team,\n\nich möchte folgendes Paket beauftragen:",
+      mailQuestionIntro:
+        "Guten Tag YourSite Team,\n\nich habe eine Frage zu folgendem Paket:",
+      mailFields:
+        "\n\nMein Unternehmen:\nMeine Website (falls vorhanden):\nMein Ziel:\n\nBeste Grüße,",
+      items: {
+        relaunch: {
+          positioning: "Frischer Auftritt ohne Neustart",
+          summary:
+            "Ihre Website existiert bereits — sie passt nur nicht mehr zur Qualität Ihrer Arbeit. Wir behalten, was funktioniert, modernisieren Design und Technik und machen aus der Seite einen Auftritt, der wieder überzeugt.",
+          timeline: "ca. 1–2 Wochen",
+          idealFor: [
+            "Unternehmen, deren Website mehrere Jahre alt wirkt",
+            "Seiten, die langsam oder am Smartphone unpraktisch sind",
+            "Betriebe, die einen frischen Auftritt ohne kompletten Neubau wollen",
+          ],
+          deliverables: [
+            "Analyse Ihrer bestehenden Seiten, Struktur und Texte",
+            "Neues, modernes Design auf Basis Ihrer Inhalte",
+            "Technisches Refresh: Ladezeit, mobile Ansicht, Kontaktwege",
+            "Klarere Struktur mit sichtbarem Call-to-Action",
+            "Go-Live inklusive Übergabe aller Dateien und Zugänge",
+          ],
+          conditions: [
+            {
+              title: "Umfang",
+              description:
+                "Modernisierung Ihrer bestehenden Website mit bis zu fünf Seiten. Weitere Seiten sind als Option möglich.",
+            },
+            {
+              title: "Das brauchen wir von Ihnen",
+              description:
+                "Zugang zu Ihrer aktuellen Website und zum Hosting sowie Ihr Logo und vorhandene Texte oder Bilder.",
+            },
+            {
+              title: "Zahlung",
+              description:
+                "50% bei Vertragsunterzeichnung, die restlichen 50% nach Ihrer finalen Freigabe — vor dem Go-Live.",
+            },
+            {
+              title: "Nach dem Go-Live",
+              description:
+                "Alle Dateien und Zugänge gehören Ihnen. Laufende Wartung ist auf Wunsch als monatliche Option verfügbar.",
+            },
+          ],
+          addons: [
+            { label: "Zusätzliche Unterseite", price: "+€149" },
+            { label: "Überarbeitung Ihrer Texte", price: "+€199" },
+            { label: "Logo-Refresh", price: "+€249" },
+            { label: "Domain- und Hosting-Umzug", price: "+€99" },
+            { label: "Wartung", price: "ab €39/Monat" },
+          ],
+        },
+        onepage: {
+          positioning: "Digitale Visitenkarte und Status",
+          summary:
+            "Eine moderne Seite, die alles trägt, was ein möglicher Kunde braucht: wer Sie sind, was Sie anbieten und wie man Sie erreicht. Schnell, klar und so gebaut, dass man Sie ernst nimmt.",
+          timeline: "ca. 1–2 Wochen",
+          idealFor: [
+            "Selbstständige Fachkräfte und kleine Teams",
+            "Unternehmen, die einen Auftritt brauchen, keine große Website",
+            "Alle, die schnell und sauber online gehen möchten",
+          ],
+          deliverables: [
+            "Individuelles Design in Ihren Farben und Ihrem Stil",
+            "Alle wichtigen Informationen auf einer Seite, klar sortiert",
+            "Präsentation Ihrer Leistungen mit Fokus auf Vertrauen",
+            "Kontaktbereich mit Formular und direktem Call-to-Action",
+            "Optimierung für Smartphone, Tablet und Desktop",
+          ],
+          conditions: [
+            {
+              title: "Umfang",
+              description:
+                "Eine Seite mit bis zu sechs Abschnitten, inklusive Kontaktformular und Rechtstexten.",
+            },
+            {
+              title: "Das brauchen wir von Ihnen",
+              description:
+                "Ihr Logo, Bilder und eine grobe Vorstellung Ihrer Inhalte — die Struktur erarbeiten wir mit Ihnen.",
+            },
+            {
+              title: "Zahlung",
+              description:
+                "50% bei Vertragsunterzeichnung, die restlichen 50% nach Ihrer finalen Freigabe — vor dem Go-Live.",
+            },
+            {
+              title: "Nach dem Go-Live",
+              description:
+                "Sie erhalten alle Dateien und Zugänge. Spätere Erweiterungen sind jederzeit möglich.",
+            },
+          ],
+          addons: [
+            { label: "Zusätzlicher Abschnitt", price: "+€149" },
+            { label: "Texterstellung für Ihre Inhalte", price: "+€249" },
+            { label: "Zweite Sprache", price: "+€299" },
+            { label: "Blog- oder News-Bereich", price: "+€399" },
+            { label: "Wartung", price: "ab €39/Monat" },
+          ],
+        },
+        "landing-page": {
+          positioning: "Leadgenerierung für Ihre Werbung",
+          summary:
+            "Eine Seite mit genau einer Aufgabe: Besucher aus Ihrer Werbung in Anfragen zu verwandeln. Jedes Element — Headline, Nachweis, Formular — ist auf diese eine Aktion ausgerichtet.",
+          timeline: "ca. 1–2 Wochen",
+          idealFor: [
+            "Unternehmen mit Google- oder Social-Media-Werbung",
+            "Eine konkrete Leistung, ein Produkt oder ein Angebot",
+            "Teams, die messbare Anfragen wollen, nicht nur Besucher",
+          ],
+          deliverables: [
+            "Seitenstruktur, ausgerichtet auf eine Kundenaktion",
+            "Verkaufsstarkes Design mit klaren Call-to-Actions",
+            "Klare Präsentation eines Angebots, ohne Ablenkung",
+            "Anfrageformular, optimiert für mobile Geräte",
+            "Ab dem ersten Tag bereit für Ihre Werbekampagnen",
+          ],
+          conditions: [
+            {
+              title: "Umfang",
+              description:
+                "Eine Kampagnenseite inklusive Formular, Danke-Ansicht und Rechtstexten.",
+            },
+            {
+              title: "Das brauchen wir von Ihnen",
+              description:
+                "Ihr Angebot, Ihre Zielgruppe und vorhandenes Werbematerial oder Bilder.",
+            },
+            {
+              title: "Zahlung",
+              description:
+                "50% bei Vertragsunterzeichnung, die restlichen 50% nach Ihrer finalen Freigabe — vor dem Go-Live.",
+            },
+            {
+              title: "Nach dem Go-Live",
+              description:
+                "Sie können die Seite für neue Kampagnen weiterverwenden. Weitere Varianten sind als Option möglich.",
+            },
+          ],
+          addons: [
+            { label: "Zweite Variante für A/B-Tests", price: "+€349" },
+            { label: "Tracking- und Conversion-Setup", price: "+€199" },
+            { label: "Texterstellung für Ihre Inhalte", price: "+€249" },
+            { label: "Zweite Sprache", price: "+€299" },
+            { label: "Wartung", price: "ab €39/Monat" },
+          ],
+        },
+        "business-website": {
+          positioning: "Der vollständige Auftritt für Ihr Unternehmen",
+          summary:
+            "Mehrere Seiten, die Ihr Unternehmen so präsentieren, wie es es verdient: Leistungen, Team, Referenzen und klare Kontaktwege — eine Website, die Ihren Vertrieb jeden Tag unterstützt.",
+          timeline: "ca. 3–5 Wochen",
+          idealFor: [
+            "Etablierte Unternehmen mit mehreren Leistungen",
+            "Betriebe, die Referenzen und Team zeigen möchten",
+            "Alle, deren Website mehr sein soll als eine Visitenkarte",
+          ],
+          deliverables: [
+            "Individuelles Webdesign über mehrere Seiten",
+            "Eigene Seiten für Ihre Leistungen",
+            "Referenzen oder Projektübersicht",
+            "Kontakt- und Anfrageformulare",
+            "Struktur für Suchmaschinen und klare Navigation",
+          ],
+          conditions: [
+            {
+              title: "Umfang",
+              description:
+                "Bis zu acht Seiten inklusive Kontaktformularen und Rechtstexten. Weitere Seiten als Option.",
+            },
+            {
+              title: "Das brauchen wir von Ihnen",
+              description:
+                "Ihr Logo, Bilder und Inhalte für die einzelnen Seiten — bei Struktur und Formulierung beraten wir Sie.",
+            },
+            {
+              title: "Zahlung",
+              description:
+                "50% bei Vertragsunterzeichnung, die restlichen 50% nach Ihrer finalen Freigabe — vor dem Go-Live.",
+            },
+            {
+              title: "Nach dem Go-Live",
+              description:
+                "Auf Wunsch erhalten Sie ein einfaches System, um Ihre Inhalte selbst zu verwalten.",
+            },
+          ],
+          addons: [
+            { label: "Zusätzliche Unterseite", price: "+€199" },
+            { label: "Mehrsprachigkeit", price: "ab €499" },
+            { label: "Blog- oder News-Bereich", price: "+€399" },
+            { label: "Online-Terminbuchung", price: "+€349" },
+            { label: "Wartung", price: "ab €59/Monat" },
+          ],
+        },
+        "online-shop": {
+          positioning: "Verkaufen rund um die Uhr",
+          summary:
+            "Ihr eigener Shop mit einem Kaufprozess, den Kunden wirklich abschließen: klare Produkte, einfacher Checkout, zuverlässige Zahlungen. Gebaut, um zu verkaufen, während Sie schlafen.",
+          timeline: "ca. 5–8 Wochen",
+          idealFor: [
+            "Unternehmen, die Produkte online verkaufen möchten",
+            "Lokale Betriebe, die über ihre Region hinaus wachsen",
+            "Alle, die einen professionellen Kaufprozess brauchen",
+          ],
+          deliverables: [
+            "Individuelles Shop-Design in Ihrem Markenstil",
+            "Produktkatalog mit Kategorien und Suche",
+            "Warenkorb und Checkout mit möglichst wenigen Schritten",
+            "Online-Zahlungen und Versandeinstellungen",
+            "Mobil optimierter Kaufprozess",
+          ],
+          conditions: [
+            {
+              title: "Umfang",
+              description:
+                "Shop-Einrichtung inklusive bis zu 50 Produkten, Zahlungs- und Versandkonfiguration.",
+            },
+            {
+              title: "Das brauchen wir von Ihnen",
+              description:
+                "Produktdaten, Bilder und Preise sowie Ihre Zahlungs- und Versandbedingungen.",
+            },
+            {
+              title: "Zahlung",
+              description:
+                "50% bei Vertragsunterzeichnung, die restlichen 50% nach Ihrer finalen Freigabe — vor dem Go-Live.",
+            },
+            {
+              title: "Nach dem Go-Live",
+              description:
+                "Produkte und Bestellungen verwalten Sie selbst. Wir übergeben eine kurze Einführung in das System.",
+            },
+          ],
+          addons: [
+            { label: "Weitere 50 Produkte", price: "+€399" },
+            { label: "Zusätzliche Zahlungsart", price: "+€199" },
+            { label: "Anbindung Versanddienstleister", price: "+€299" },
+            { label: "Mehrsprachiger Shop", price: "ab €699" },
+            { label: "Wartung", price: "ab €99/Monat" },
+          ],
+        },
+      },
     },
     faq: {
       eyebrow: "FAQ",
