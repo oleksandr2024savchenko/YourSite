@@ -166,7 +166,7 @@ export const dictionaries = {
       tiers: [
         {
           name: "Relaunch",
-          price: "from €800",
+          price: "from €699",
           description:
             "For companies with an existing website that should look current and convincing.",
           features: [
@@ -264,7 +264,7 @@ export const dictionaries = {
         {
           question: "What does a website cost?",
           answer:
-            "Our projects start from €800. The final price depends on scope, design and the features you need.",
+            "Our projects start from €699. The final price depends on scope, design and the features you need.",
         },
         {
           question: "Is the website optimised for smartphones?",
@@ -507,7 +507,7 @@ export const dictionaries = {
       tiers: [
         {
           name: "Relaunch",
-          price: "ab €800",
+          price: "ab €699",
           description:
             "Für Unternehmen mit einer bestehenden Website, die zeitgemäß und überzeugend wirken soll.",
           features: [
@@ -605,7 +605,7 @@ export const dictionaries = {
         {
           question: "Was kostet eine Website?",
           answer:
-            "Unsere Projekte starten ab €800. Der finale Preis hängt vom Umfang, Design und den gewünschten Funktionen ab.",
+            "Unsere Projekte starten ab €699. Der finale Preis hängt vom Umfang, Design und den gewünschten Funktionen ab.",
         },
         {
           question: "Ist die Website für Smartphones optimiert?",
