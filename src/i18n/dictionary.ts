@@ -187,7 +187,7 @@ export const dictionaries = {
             "Optimised for smartphone, tablet and desktop",
           ],
           gain: ["More trust", "more enquiries", "more customers"],
-          cta: "Request a Quote",
+          cta: "Start a Onepage Website",
         },
         {
           name: "Landing Page",
@@ -523,7 +523,7 @@ export const dictionaries = {
             "Optimierung für Smartphone, Tablet und Desktop",
           ],
           gain: ["Mehr Vertrauen", "mehr Anfragen", "mehr Kunden"],
-          cta: "Angebot anfordern",
+          cta: "Onepage Website starten",
         },
         {
           name: "Landing Page",
