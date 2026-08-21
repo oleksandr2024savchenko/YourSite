@@ -4,7 +4,7 @@ import { Check, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import Reveal from "./Reveal";
 
-const FEATURED_INDEX = 2;
+const FEATURED_INDEX = 3;
 
 export default function Pricing() {
   const { t } = useLanguage();
@@ -24,7 +24,7 @@ export default function Pricing() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {t.pricing.tiers.map((tier, index) => {
             const featured = index === FEATURED_INDEX;
             return (

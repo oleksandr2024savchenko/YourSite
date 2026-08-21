@@ -11,6 +11,7 @@ const accents = [
   "from-slate-soft to-surface",
   "from-beige/80 to-surface",
   "from-accent-soft/70 to-surface",
+  "from-slate-soft/80 to-surface",
 ];
 
 export default function Services() {
@@ -34,12 +35,12 @@ export default function Services() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {t.services.items.map((service, index) => (
             <Reveal key={service.title} delay={0.08 * index} className="h-full">
               <a
                 href="#contact"
-                className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/80 bg-gradient-to-b ${accents[index]} shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md`}
+                className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/80 bg-gradient-to-b ${accents[index % accents.length]} shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md`}
               >
                 <div className="relative h-44 overflow-hidden">
                   <Image

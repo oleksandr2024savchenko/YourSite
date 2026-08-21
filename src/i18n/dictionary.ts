@@ -85,10 +85,15 @@ export const dictionaries = {
       eyebrow: "Services",
       title: "The right website for your business",
       description:
-        "From a compact onepager to a full online shop — we build the solution that fits your goals.",
+        "From a relaunch of your current site to a full online shop — we build the solution that fits your goals.",
       discuss: "Discuss this service",
       gainLabel: "What you gain:",
       items: [
+        {
+          title: "Relaunch",
+          description: "Modernize your existing website.",
+          gain: ["A fresh presence", "more trust", "more enquiries"],
+        },
         {
           title: "Onepage Website",
           description:
@@ -154,6 +159,21 @@ export const dictionaries = {
       included: "You receive:",
       gainLabel: "Your benefit:",
       tiers: [
+        {
+          name: "Relaunch",
+          price: "from €800",
+          description:
+            "For companies with an existing website that should look current and convincing.",
+          features: [
+            "Review of your existing website",
+            "Modern design update",
+            "Technical refresh and performance",
+            "Clearer structure and call-to-action",
+            "Optimised for smartphone, tablet and desktop",
+          ],
+          gain: ["A fresh presence", "more trust", "more enquiries"],
+          cta: "Start a Relaunch",
+        },
         {
           name: "Onepage Website",
           price: "from €1,499",
@@ -239,7 +259,7 @@ export const dictionaries = {
         {
           question: "What does a website cost?",
           answer:
-            "Our projects start from €1,499. The final price depends on scope, design and the features you need.",
+            "Our projects start from €800. The final price depends on scope, design and the features you need.",
         },
         {
           question: "Is the website optimised for smartphones?",
@@ -281,6 +301,7 @@ export const dictionaries = {
         projectType: "Which website do you need?",
         projectTypePlaceholder: "Please select",
         projectTypeOptions: [
+          "Relaunch",
           "Onepage",
           "Landing Page",
           "Business Website",
@@ -400,10 +421,15 @@ export const dictionaries = {
       eyebrow: "Leistungen",
       title: "Die passende Website für Ihr Unternehmen",
       description:
-        "Von der kompakten Onepage bis zum Online-Shop – wir entwickeln die Lösung, die zu Ihren Zielen passt.",
+        "Vom Relaunch Ihrer bestehenden Seite bis zum Online-Shop – wir entwickeln die Lösung, die zu Ihren Zielen passt.",
       discuss: "Leistung besprechen",
       gainLabel: "Damit gewinnen Sie:",
       items: [
+        {
+          title: "Relaunch",
+          description: "Bestehende Seite modernisieren.",
+          gain: ["Frischer Auftritt", "mehr Vertrauen", "mehr Anfragen"],
+        },
         {
           title: "Onepage Website",
           description:
@@ -469,6 +495,21 @@ export const dictionaries = {
       included: "Sie erhalten:",
       gainLabel: "Ihr Vorteil:",
       tiers: [
+        {
+          name: "Relaunch",
+          price: "ab €800",
+          description:
+            "Für Unternehmen mit einer bestehenden Website, die zeitgemäß und überzeugend wirken soll.",
+          features: [
+            "Analyse Ihrer bestehenden Website",
+            "Modernes Design-Update",
+            "Technisches Refresh und Performance",
+            "Klarere Struktur und Call-to-Action",
+            "Optimierung für Smartphone, Tablet und Desktop",
+          ],
+          gain: ["Frischer Auftritt", "mehr Vertrauen", "mehr Anfragen"],
+          cta: "Relaunch starten",
+        },
         {
           name: "Onepage Website",
           price: "ab €1.499",
@@ -554,7 +595,7 @@ export const dictionaries = {
         {
           question: "Was kostet eine Website?",
           answer:
-            "Unsere Projekte starten ab €1.499. Der finale Preis hängt vom Umfang, Design und den gewünschten Funktionen ab.",
+            "Unsere Projekte starten ab €800. Der finale Preis hängt vom Umfang, Design und den gewünschten Funktionen ab.",
         },
         {
           question: "Ist die Website für Smartphones optimiert?",
@@ -597,6 +638,7 @@ export const dictionaries = {
         projectType: "Welche Website benötigen Sie?",
         projectTypePlaceholder: "Bitte auswählen",
         projectTypeOptions: [
+          "Relaunch",
           "Onepage",
           "Landing Page",
           "Business Website",
