@@ -61,6 +61,11 @@ export default function Services() {
                   <h3 className="mt-2 text-xl font-semibold tracking-tight text-charcoal">
                     {service.title}
                   </h3>
+                  {service.positioning ? (
+                    <p className="mt-2 text-sm font-medium text-accent-dark">
+                      {service.positioning}
+                    </p>
+                  ) : null}
                   <p className="mt-3 text-sm leading-relaxed text-muted">
                     {service.description}
                   </p>

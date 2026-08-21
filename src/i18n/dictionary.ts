@@ -91,29 +91,34 @@ export const dictionaries = {
       items: [
         {
           title: "Relaunch",
+          positioning: "",
           description: "Modernize your existing website.",
           gain: ["A fresh presence", "more trust", "more enquiries"],
         },
         {
           title: "Onepage Website",
+          positioning: "Digital business card and status",
           description:
-            "Your most important information on one modern page.",
+            "For companies and independent professionals who need a stylish, fast online presence without extra pages.",
           gain: ["More trust", "more enquiries", "more customers"],
         },
         {
           title: "Landing Page",
+          positioning: "Lead-generation tool for advertising",
           description:
-            "A website focused entirely on one specific action.",
+            "A focused page for one specific service, product or offer — built to generate as many enquiries as possible.",
           gain: ["More enquiries", "more leads", "more sales"],
         },
         {
           title: "Business Website",
+          positioning: "",
           description:
             "A professional website for your entire company.",
           gain: ["More trust", "more customers", "more revenue"],
         },
         {
           title: "Online Shop",
+          positioning: "",
           description:
             "Sell your products directly online — around the clock.",
           gain: ["More buyers", "more orders", "more revenue"],
@@ -178,7 +183,7 @@ export const dictionaries = {
           name: "Onepage Website",
           price: "from €1,499",
           description:
-            "For freelancers and small businesses that want a professional online presence.",
+            "For companies and independent professionals who need a stylish, fast online presence without extra pages.",
           features: [
             "Modern, custom design",
             "All key information on one page",
@@ -193,7 +198,7 @@ export const dictionaries = {
           name: "Landing Page",
           price: "from €1,799",
           description:
-            "For companies that want to win new customers through targeted advertising.",
+            "A focused page for one specific service, product or offer — built to generate as many enquiries as possible.",
           features: [
             "High-converting page design",
             "Clear presentation of a single offer",
@@ -427,29 +432,34 @@ export const dictionaries = {
       items: [
         {
           title: "Relaunch",
+          positioning: "",
           description: "Bestehende Seite modernisieren.",
           gain: ["Frischer Auftritt", "mehr Vertrauen", "mehr Anfragen"],
         },
         {
           title: "Onepage Website",
+          positioning: "Digitale Visitenkarte und Status",
           description:
-            "Ihre wichtigsten Informationen auf einer modernen Seite.",
+            "Für Unternehmen und selbstständige Fachkräfte, die eine stilvolle, schnelle Online-Präsenz ohne überflüssige Seiten brauchen.",
           gain: ["Mehr Vertrauen", "mehr Anfragen", "mehr Kunden"],
         },
         {
           title: "Landing Page",
+          positioning: "Leadgenerierung für Ihre Werbung",
           description:
-            "Eine Website, die gezielt auf eine Aktion ausgerichtet ist.",
+            "Eine fokussierte Seite für eine konkrete Leistung, ein Produkt oder Angebot — ausgelegt auf möglichst viele Anfragen.",
           gain: ["Mehr Anfragen", "mehr Leads", "mehr Verkäufe"],
         },
         {
           title: "Business Website",
+          positioning: "",
           description:
             "Eine professionelle Website für Ihr gesamtes Unternehmen.",
           gain: ["Mehr Vertrauen", "mehr Kunden", "mehr Umsatz"],
         },
         {
           title: "Online-Shop",
+          positioning: "",
           description:
             "Verkaufen Sie Ihre Produkte direkt online – rund um die Uhr.",
           gain: ["Mehr Käufer", "mehr Bestellungen", "mehr Umsatz"],
@@ -514,7 +524,7 @@ export const dictionaries = {
           name: "Onepage Website",
           price: "ab €1.499",
           description:
-            "Für Selbstständige und kleine Unternehmen, die professionell online auftreten möchten.",
+            "Für Unternehmen und selbstständige Fachkräfte, die eine stilvolle, schnelle Online-Präsenz ohne überflüssige Seiten brauchen.",
           features: [
             "Modernes, individuelles Design",
             "Alle wichtigen Informationen auf einer Seite",
@@ -529,7 +539,7 @@ export const dictionaries = {
           name: "Landing Page",
           price: "ab €1.799",
           description:
-            "Für Unternehmen, die mit Werbung gezielt neue Kunden gewinnen möchten.",
+            "Eine fokussierte Seite für eine konkrete Leistung, ein Produkt oder Angebot — ausgelegt auf möglichst viele Anfragen.",
           features: [
             "Verkaufsstarkes Seitendesign",
             "Klare Präsentation eines Angebots",
