@@ -3,7 +3,7 @@ export type Locale = "en" | "de";
 export const dictionaries = {
   en: {
     meta: {
-      title: "YourSite — Modern Websites That Grow Your Business",
+      title: "ClearPoint — Modern Websites That Grow Your Business",
       description:
         "We build professional websites for companies, freelancers and local businesses – from the first idea to a successful launch.",
     },
@@ -19,7 +19,7 @@ export const dictionaries = {
       closeMenu: "Close menu",
     },
     hero: {
-      brand: "YourSite",
+      brand: "ClearPoint",
       headline: "Modern websites that win more customers for your business.",
       subheadline:
         "We build professional websites for companies, freelancers and local businesses – from the first idea to a successful launch.",
@@ -51,7 +51,7 @@ export const dictionaries = {
         "Your website is not just a business card. It can be an important part of your sales.",
     },
     about: {
-      eyebrow: "Why YourSite",
+      eyebrow: "Why ClearPoint",
       title: "Why companies work with us",
       description:
         "We combine modern design, clear communication and websites that present your company professionally and reach new customers.",
@@ -283,9 +283,9 @@ export const dictionaries = {
       contactHint: "Or write to us directly:",
       mailSubject: "Enquiry",
       mailIntro:
-        "Hello YourSite team,\n\nI would like to order the following package:",
+        "Hello ClearPoint team,\n\nI would like to order the following package:",
       mailQuestionIntro:
-        "Hello YourSite team,\n\nI have a question about the following package:",
+        "Hello ClearPoint team,\n\nI have a question about the following package:",
       mailFields:
         "\n\nMy company:\nMy website (if any):\nMy goal:\n\nBest regards,",
       items: {
@@ -620,7 +620,7 @@ export const dictionaries = {
   },
   de: {
     meta: {
-      title: "YourSite — Moderne Websites, die Ihr Unternehmen voranbringen",
+      title: "ClearPoint — Moderne Websites, die Ihr Unternehmen voranbringen",
       description:
         "Wir entwickeln professionelle Websites für Unternehmen, Selbstständige und lokale Betriebe – von der ersten Idee bis zum erfolgreichen Launch.",
     },
@@ -636,7 +636,7 @@ export const dictionaries = {
       closeMenu: "Menü schließen",
     },
     hero: {
-      brand: "YourSite",
+      brand: "ClearPoint",
       headline: "Moderne Websites, die mehr Kunden für Ihr Unternehmen gewinnen.",
       subheadline:
         "Wir entwickeln professionelle Websites für Unternehmen, Selbstständige und lokale Betriebe – von der ersten Idee bis zum erfolgreichen Launch.",
@@ -668,7 +668,7 @@ export const dictionaries = {
         "Ihre Website ist nicht nur eine Visitenkarte. Sie kann ein wichtiger Teil Ihres Vertriebs sein.",
     },
     about: {
-      eyebrow: "Warum YourSite",
+      eyebrow: "Warum ClearPoint",
       title: "Warum Unternehmen mit uns zusammenarbeiten",
       description:
         "Wir verbinden modernes Design, klare Kommunikation und Websites, die Ihr Unternehmen professionell präsentieren und neue Kunden erreichen.",
@@ -900,9 +900,9 @@ export const dictionaries = {
       contactHint: "Oder schreiben Sie uns direkt:",
       mailSubject: "Anfrage",
       mailIntro:
-        "Guten Tag YourSite Team,\n\nich möchte folgendes Paket beauftragen:",
+        "Guten Tag ClearPoint Team,\n\nich möchte folgendes Paket beauftragen:",
       mailQuestionIntro:
-        "Guten Tag YourSite Team,\n\nich habe eine Frage zu folgendem Paket:",
+        "Guten Tag ClearPoint Team,\n\nich habe eine Frage zu folgendem Paket:",
       mailFields:
         "\n\nMein Unternehmen:\nMeine Website (falls vorhanden):\nMein Ziel:\n\nBeste Grüße,",
       items: {

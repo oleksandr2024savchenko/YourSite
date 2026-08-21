@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
-import { homeHref, sectionHref } from "@/lib/links";
+import { CONTACT_EMAIL, homeHref, sectionHref } from "@/lib/links";
 import { serviceHref, serviceSlugs } from "@/lib/services";
 
 type FooterLink = { label: string; href: string; route?: boolean };
@@ -46,7 +46,7 @@ export default function Footer() {
                 <span className="h-2.5 w-2.5 rounded-full bg-accent-deep" />
               </span>
               <span className="text-lg font-semibold tracking-tight text-charcoal">
-                YourSite
+                ClearPoint
               </span>
             </a>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
@@ -69,10 +69,10 @@ export default function Footer() {
               <p className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 shrink-0 text-accent-deep" />
                 <a
-                  href="mailto:hello@yoursite.at"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="transition-all duration-300 hover:text-charcoal"
                 >
-                  hello@yoursite.at
+                  {CONTACT_EMAIL}
                 </a>
               </p>
             </div>
@@ -108,7 +108,7 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-border pt-8 sm:flex-row sm:items-center">
           <p className="text-sm text-muted">
-            © {new Date().getFullYear()} YourSite GmbH. {t.footer.copyright}
+            © {new Date().getFullYear()} ClearPoint GmbH. {t.footer.copyright}
           </p>
           <p className="text-sm text-muted">{t.footer.location}</p>
         </div>

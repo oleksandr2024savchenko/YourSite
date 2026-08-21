@@ -27,7 +27,7 @@ export async function generateMetadata({
   const detail = dictionaries.en.serviceDetail.items[slug];
 
   return {
-    title: `${tier.name} — ${tier.price} | YourSite`,
+    title: `${tier.name} — ${tier.price} | ClearPoint`,
     description: detail.summary,
   };
 }

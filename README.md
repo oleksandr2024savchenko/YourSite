@@ -1,4 +1,4 @@
-# YourSite — GitHub Pages
+# ClearPoint — GitHub Pages
 
 Static export of the Next.js landing page.
 

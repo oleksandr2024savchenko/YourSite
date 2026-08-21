@@ -3,9 +3,8 @@
 import { useState, type FormEvent } from "react";
 import { ArrowRight, Calendar, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { CONTACT_EMAIL } from "@/lib/links";
 import Reveal from "./Reveal";
-
-const CONTACT_EMAIL = "hello@yoursite.at";
 
 const fieldClass =
   "w-full rounded-2xl border border-border bg-surface px-4 py-3 text-sm text-charcoal transition-all duration-300 placeholder:text-muted/70 focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none";

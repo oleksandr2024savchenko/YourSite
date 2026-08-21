@@ -1,6 +1,6 @@
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
-export const CONTACT_EMAIL = "hello@yoursite.at";
+export const CONTACT_EMAIL = "hello@clearpoint.at";
 
 /**
  * Landing sections live on the home page, so links from a sub-page need the

@@ -69,7 +69,7 @@ export default function Header() {
             <span className="h-2.5 w-2.5 rounded-full bg-accent-deep" />
           </span>
           <span className="text-lg font-semibold tracking-tight text-charcoal">
-            YourSite
+            ClearPoint
           </span>
         </a>
 
