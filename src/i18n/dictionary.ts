@@ -183,7 +183,7 @@ export const dictionaries = {
           name: "Onepage Website",
           price: "from €1,499",
           description:
-            "For companies and independent professionals who need a stylish, fast online presence without extra pages.",
+            "For freelancers and small businesses that want a professional online presence.",
           features: [
             "Modern, custom design",
             "All key information on one page",
@@ -198,7 +198,7 @@ export const dictionaries = {
           name: "Landing Page",
           price: "from €1,799",
           description:
-            "A focused page for one specific service, product or offer — built to generate as many enquiries as possible.",
+            "For companies that want to win new customers through targeted advertising.",
           features: [
             "High-converting page design",
             "Clear presentation of a single offer",
@@ -524,7 +524,7 @@ export const dictionaries = {
           name: "Onepage Website",
           price: "ab €1.499",
           description:
-            "Für Unternehmen und selbstständige Fachkräfte, die eine stilvolle, schnelle Online-Präsenz ohne überflüssige Seiten brauchen.",
+            "Für Selbstständige und kleine Unternehmen, die professionell online auftreten möchten.",
           features: [
             "Modernes, individuelles Design",
             "Alle wichtigen Informationen auf einer Seite",
@@ -539,7 +539,7 @@ export const dictionaries = {
           name: "Landing Page",
           price: "ab €1.799",
           description:
-            "Eine fokussierte Seite für eine konkrete Leistung, ein Produkt oder Angebot — ausgelegt auf möglichst viele Anfragen.",
+            "Für Unternehmen, die mit Werbung gezielt neue Kunden gewinnen möchten.",
           features: [
             "Verkaufsstarkes Seitendesign",
             "Klare Präsentation eines Angebots",
