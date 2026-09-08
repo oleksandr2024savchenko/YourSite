@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Palette, LayoutGrid, Target, BadgeEuro } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { images } from "@/lib/images";
+import { withLocale } from "@/lib/routes";
 import Reveal from "./Reveal";
 
 const featureIcons = [Palette, LayoutGrid, Target, BadgeEuro];
@@ -15,7 +17,7 @@ const featureTones = [
 ];
 
 export default function ValueProposition() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <section id="about" className="scroll-mt-20 py-24 lg:py-32">
@@ -43,6 +45,12 @@ export default function ValueProposition() {
             <p className="mt-5 text-lg leading-relaxed text-muted">
               {t.about.description}
             </p>
+            <Link
+              href={withLocale("/ueber-uns/", locale)}
+              className="mt-6 inline-flex text-sm font-medium text-accent-dark hover:text-charcoal"
+            >
+              {locale === "de" ? "Mehr über ClearPoint" : "More about ClearPoint"}
+            </Link>
           </Reveal>
         </div>
 

@@ -3,9 +3,9 @@ export type Locale = "en" | "de";
 export const dictionaries = {
   en: {
     meta: {
-      title: "ClearPoint — Modern Websites That Grow Your Business",
+      title: "Have a website built in Vienna | ClearPoint",
       description:
-        "We build professional websites for companies, freelancers and local businesses – from the first idea to a successful launch.",
+        "ClearPoint builds professional websites in Vienna – one-pagers, business sites, relaunches and shops. Fixed prices, SEO basics, mobile first, GDPR.",
     },
     nav: {
       services: "Services",
@@ -14,15 +14,17 @@ export const dictionaries = {
       benefits: "Benefits",
       pricing: "Pricing",
       faq: "FAQ",
+      blog: "Blog",
+      contact: "Contact",
       cta: "Get a Quote",
       openMenu: "Open menu",
       closeMenu: "Close menu",
     },
     hero: {
       brand: "ClearPoint",
-      headline: "Modern websites that win more customers for your business.",
+      headline: "Have a website built in Vienna – sites that win customers.",
       subheadline:
-        "We build professional websites for companies, freelancers and local businesses – from the first idea to a successful launch.",
+        "ClearPoint plans, designs and builds websites for companies, independents and local businesses in Vienna – from the first idea to launch.",
       primaryCta: "Free Initial Consultation",
       secondaryCta: "View Services",
       imageCaption: "Vienna, Austria",
@@ -91,10 +93,18 @@ export const dictionaries = {
       gainLabel: "What you gain:",
       items: [
         {
-          title: "Relaunch",
-          positioning: "",
-          description: "Modernize your existing website.",
-          gain: ["A fresh presence", "more trust", "more enquiries"],
+          title: "Have a website built",
+          positioning: "The main starting point for Vienna businesses",
+          description:
+            "A professional website with structure, forms and SEO basics – not a template with a new logo.",
+          gain: ["More clarity", "more trust", "more enquiries"],
+        },
+        {
+          title: "Business Website",
+          positioning: "The full presence for your company",
+          description:
+            "Several pages for services, trust, references and contact – built to be found and to convert.",
+          gain: ["More trust", "more customers", "more revenue"],
         },
         {
           title: "Onepage Website",
@@ -111,18 +121,24 @@ export const dictionaries = {
           gain: ["More enquiries", "more leads", "more sales"],
         },
         {
-          title: "Business Website",
-          positioning: "",
-          description:
-            "A professional website for your entire company.",
-          gain: ["More trust", "more customers", "more revenue"],
+          title: "Website Relaunch",
+          positioning: "A fresh presence without throwing rankings away",
+          description: "Modernize your existing website, including SEO migration.",
+          gain: ["A fresh presence", "more trust", "more enquiries"],
         },
         {
           title: "Online Shop",
-          positioning: "",
+          positioning: "Sell around the clock",
           description:
             "Sell your products directly online — around the clock.",
           gain: ["More buyers", "more orders", "more revenue"],
+        },
+        {
+          title: "Support and maintenance",
+          positioning: "After launch comes everyday use",
+          description:
+            "Updates, backups and small changes so the site stays fast and reachable.",
+          gain: ["Fewer outages", "predictable cost", "a named contact"],
         },
       ],
     },
@@ -596,9 +612,9 @@ export const dictionaries = {
     footer: {
       tagline:
         "Professional websites for companies, freelancers and local businesses — designed and built in Vienna.",
-      address: "Musterstraße 12/3\n1010 Vienna, Austria",
+      address: "Active in Vienna and surrounding area\nVienna, Austria",
       copyright: "All rights reserved.",
-      location: "Vienna, Austria · FN 000000a",
+      location: "Vienna, Austria",
       groups: {
         company: "Company",
         services: "Services",
@@ -620,9 +636,9 @@ export const dictionaries = {
   },
   de: {
     meta: {
-      title: "ClearPoint — Moderne Websites, die Ihr Unternehmen voranbringen",
+      title: "Website erstellen lassen Wien | ClearPoint",
       description:
-        "Wir entwickeln professionelle Websites für Unternehmen, Selbstständige und lokale Betriebe – von der ersten Idee bis zum erfolgreichen Launch.",
+        "ClearPoint erstellt Websites in Wien – Onepage, Business Website, Relaunch und Shop. Fixpreis, SEO-Basis, Mobile First, DSGVO. Start ab 699 €.",
     },
     nav: {
       services: "Leistungen",
@@ -631,15 +647,17 @@ export const dictionaries = {
       benefits: "Vorteile",
       pricing: "Preise",
       faq: "FAQ",
+      blog: "Blog",
+      contact: "Kontakt",
       cta: "Angebot anfordern",
       openMenu: "Menü öffnen",
       closeMenu: "Menü schließen",
     },
     hero: {
       brand: "ClearPoint",
-      headline: "Moderne Websites, die mehr Kunden für Ihr Unternehmen gewinnen.",
+      headline: "Website erstellen lassen in Wien – Seiten, die Kunden gewinnen.",
       subheadline:
-        "Wir entwickeln professionelle Websites für Unternehmen, Selbstständige und lokale Betriebe – von der ersten Idee bis zum erfolgreichen Launch.",
+        "ClearPoint plant, gestaltet und entwickelt Websites für Unternehmen, Selbstständige und lokale Betriebe in Wien – von der ersten Idee bis zum Launch.",
       primaryCta: "Kostenlose Erstberatung",
       secondaryCta: "Leistungen ansehen",
       imageCaption: "Wien, Österreich",
@@ -708,10 +726,18 @@ export const dictionaries = {
       gainLabel: "Damit gewinnen Sie:",
       items: [
         {
-          title: "Relaunch",
-          positioning: "",
-          description: "Bestehende Seite modernisieren.",
-          gain: ["Frischer Auftritt", "mehr Vertrauen", "mehr Anfragen"],
+          title: "Website erstellen lassen",
+          positioning: "Die zentrale Anlaufstelle für Wiener Unternehmen",
+          description:
+            "Eine professionelle Website mit Struktur, Formular und SEO-Basis – kein Template mit neuem Logo.",
+          gain: ["Mehr Klarheit", "mehr Vertrauen", "mehr Anfragen"],
+        },
+        {
+          title: "Business Website",
+          positioning: "Der vollständige Auftritt für Ihr Unternehmen",
+          description:
+            "Mehrere Seiten für Leistungen, Vertrauen, Referenzen und Kontakt – findbar und anfragebereit.",
+          gain: ["Mehr Vertrauen", "mehr Kunden", "mehr Umsatz"],
         },
         {
           title: "Onepage Website",
@@ -728,18 +754,24 @@ export const dictionaries = {
           gain: ["Mehr Anfragen", "mehr Leads", "mehr Verkäufe"],
         },
         {
-          title: "Business Website",
-          positioning: "",
-          description:
-            "Eine professionelle Website für Ihr gesamtes Unternehmen.",
-          gain: ["Mehr Vertrauen", "mehr Kunden", "mehr Umsatz"],
+          title: "Website Relaunch",
+          positioning: "Frischer Auftritt ohne verschenkte Rankings",
+          description: "Bestehende Seite modernisieren, inklusive SEO-Migration.",
+          gain: ["Frischer Auftritt", "mehr Vertrauen", "mehr Anfragen"],
         },
         {
           title: "Online-Shop",
-          positioning: "",
+          positioning: "Verkaufen rund um die Uhr",
           description:
             "Verkaufen Sie Ihre Produkte direkt online – rund um die Uhr.",
           gain: ["Mehr Käufer", "mehr Bestellungen", "mehr Umsatz"],
+        },
+        {
+          title: "Support und Wartung",
+          positioning: "Nach dem Launch beginnt der Alltag",
+          description:
+            "Updates, Backups und kleine Änderungen, damit die Seite schnell und erreichbar bleibt.",
+          gain: ["Weniger Ausfälle", "planbare Kosten", "eine Ansprechperson"],
         },
       ],
     },
@@ -1214,9 +1246,9 @@ export const dictionaries = {
     footer: {
       tagline:
         "Professionelle Websites für Unternehmen, Selbstständige und lokale Betriebe — entwickelt in Wien.",
-      address: "Musterstraße 12/3\n1010 Wien, Österreich",
+      address: "Tätig in Wien und Umgebung\nWien, Österreich",
       copyright: "Alle Rechte vorbehalten.",
-      location: "Wien, Österreich · FN 000000a",
+      location: "Wien, Österreich",
       groups: {
         company: "Unternehmen",
         services: "Leistungen",

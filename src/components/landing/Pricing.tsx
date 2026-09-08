@@ -4,12 +4,15 @@ import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { serviceHref, serviceSlugs } from "@/lib/services";
+import { withLocale } from "@/lib/routes";
+import { getService } from "@/content/service-pages";
+import { tx } from "@/content/copy";
 import Reveal from "./Reveal";
 
-const FEATURED_INDEX = 3;
+const FEATURED_SLUG = "business-website";
 
 export default function Pricing() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <section id="pricing" className="scroll-mt-20 py-24 lg:py-32">
@@ -27,10 +30,11 @@ export default function Pricing() {
         </Reveal>
 
         <div className="mt-14 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {t.pricing.tiers.map((tier, index) => {
-            const featured = index === FEATURED_INDEX;
+          {serviceSlugs.map((slug, index) => {
+            const page = getService(slug);
+            const featured = slug === FEATURED_SLUG;
             return (
-              <Reveal key={tier.name} delay={0.08 * index} className="h-full">
+              <Reveal key={slug} delay={0.08 * index} className="h-full">
                 <div
                   className={`relative flex h-full flex-col rounded-2xl border p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${
                     featured
@@ -46,13 +50,13 @@ export default function Pricing() {
 
                   <div>
                     <h3 className="text-xs font-semibold tracking-[0.14em] text-slate uppercase">
-                      {tier.name}
+                      {tx(page.menuName, locale)}
                     </h3>
                     <p className="mt-3 text-2xl font-semibold tracking-tight text-charcoal">
-                      {tier.price}
+                      {tx(page.priceFrom, locale)}
                     </p>
                     <p className="mt-4 text-sm leading-relaxed text-muted">
-                      {tier.description}
+                      {tx(page.positioning, locale)}
                     </p>
                   </div>
 
@@ -60,56 +64,34 @@ export default function Pricing() {
                     {t.pricing.included}
                   </p>
                   <ul className="mt-3 flex-1 space-y-2.5">
-                    {tier.features.map((feature) => (
+                    {page.pricing.included.map((feature) => (
                       <li
-                        key={feature}
+                        key={feature.de}
                         className="flex items-start gap-2 text-sm text-muted"
                       >
                         <Check
                           className="mt-0.5 h-4 w-4 shrink-0 text-accent-deep"
                           strokeWidth={2}
                         />
-                        <span>{feature}</span>
+                        <span>{tx(feature, locale)}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <div className="mt-6 border-t border-border/70 pt-5">
-                    <p className="text-xs font-medium tracking-wide text-charcoal">
-                      {t.pricing.gainLabel}
-                    </p>
-                    <div className="mt-2.5 flex flex-wrap items-center gap-x-1.5 gap-y-1">
-                      {tier.gain.map((step, stepIndex) => (
-                        <span
-                          key={step}
-                          className="inline-flex items-center gap-1.5 text-sm text-muted"
-                        >
-                          {stepIndex > 0 && (
-                            <ArrowRight
-                              className="h-3.5 w-3.5 text-accent-deep"
-                              strokeWidth={2}
-                            />
-                          )}
-                          {step}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <a
-                    href="#contact"
+                  <Link
+                    href={withLocale("/kontakt/", locale)}
                     className={`mt-6 inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-center text-sm font-medium transition-all duration-300 ${
                       featured
                         ? "bg-accent text-charcoal shadow-sm hover:bg-accent-deep hover:text-white"
                         : "border border-border bg-surface text-charcoal hover:border-accent/40 hover:bg-accent-soft/50"
                     }`}
                   >
-                    {tier.cta}
+                    {tx(page.menuName, locale)}
                     <ArrowRight className="h-4 w-4 shrink-0" />
-                  </a>
+                  </Link>
 
                   <Link
-                    href={serviceHref(serviceSlugs[index])}
+                    href={withLocale(serviceHref(slug), locale)}
                     className="mt-2.5 inline-flex items-center justify-center gap-1.5 rounded-2xl px-5 py-2.5 text-center text-sm font-medium text-accent-dark transition-all duration-300 hover:bg-accent-soft/60"
                   >
                     {t.pricing.details}
@@ -131,13 +113,13 @@ export default function Pricing() {
                 {t.pricing.helper.description}
               </p>
             </div>
-            <a
-              href="#contact"
+            <Link
+              href={withLocale("/preise/", locale)}
               className="inline-flex items-center gap-2 rounded-2xl bg-accent px-6 py-3.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
             >
               {t.pricing.helper.cta}
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
           </div>
 
           <p className="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-muted">

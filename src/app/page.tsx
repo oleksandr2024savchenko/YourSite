@@ -1,29 +1,17 @@
-import Header from "@/components/landing/Header";
-import Hero from "@/components/landing/Hero";
-import Benefits from "@/components/landing/Benefits";
-import ValueProposition from "@/components/landing/ValueProposition";
-import Services from "@/components/landing/Services";
-import Process from "@/components/landing/Process";
-import Pricing from "@/components/landing/Pricing";
-import FAQ from "@/components/landing/FAQ";
-import CTA from "@/components/landing/CTA";
-import Footer from "@/components/landing/Footer";
+import type { Metadata } from "next";
+import HomeView from "@/views/HomeView";
+import { pageMetadata } from "@/lib/seo";
+import { dictionaries } from "@/i18n/dictionary";
+
+export function generateMetadata(): Metadata {
+  return pageMetadata({
+    locale: "de",
+    path: "/",
+    title: dictionaries.de.meta.title,
+    description: dictionaries.de.meta.description,
+  });
+}
 
 export default function Home() {
-  return (
-    <>
-      <Header />
-      <main className="flex-1">
-        <Hero />
-        <Benefits />
-        <Services />
-        <ValueProposition />
-        <Process />
-        <Pricing />
-        <FAQ />
-        <CTA />
-      </main>
-      <Footer />
-    </>
-  );
+  return <HomeView locale="de" />;
 }

@@ -1,14 +1,16 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { images } from "@/lib/images";
+import { withLocale } from "@/lib/routes";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <section className="hero-atmosphere relative overflow-hidden">
@@ -55,19 +57,19 @@ export default function Hero() {
             transition={{ duration: 0.55, delay: 0.24, ease }}
             className="mt-10 flex flex-wrap items-center gap-3"
           >
-            <a
-              href="#contact"
+            <Link
+              href={withLocale("/kontakt/", locale)}
               className="inline-flex items-center gap-2 rounded-2xl bg-accent px-6 py-3.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
             >
               {t.hero.primaryCta}
               <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="#services"
+            </Link>
+            <Link
+              href={withLocale("/services/", locale)}
               className="inline-flex items-center rounded-2xl border border-border bg-surface/80 px-6 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:border-accent/50 hover:bg-surface"
             >
               {t.hero.secondaryCta}
-            </a>
+            </Link>
           </motion.div>
         </div>
 

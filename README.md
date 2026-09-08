@@ -1,10 +1,8 @@
 # ClearPoint — GitHub Pages
 
-Static export of the Next.js landing page.
+Static export of the Next.js website for Vienna web projects.
 
 ## Live site
-
-After Pages is pointed at the `gh-pages` branch:
 
 https://oleksandr2024savchenko.github.io/YourSite/
 
@@ -26,3 +24,7 @@ git push origin main
 ```
 
 GitHub Actions builds the site and updates the `gh-pages` branch automatically.
+
+## Contact form
+
+Enquiry forms post to FormSubmit (`hello@clearpoint.at`). The first submission sends a confirmation mail that must be approved once.

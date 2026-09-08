@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { dictionaries } from "@/i18n/dictionary";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,8 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: dictionaries.en.meta.title,
-  description: dictionaries.en.meta.description,
+  metadataBase: new URL(SITE_URL || "https://oleksandr2024savchenko.github.io/YourSite"),
+  title: dictionaries.de.meta.title,
+  description: dictionaries.de.meta.description,
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -26,12 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="de"
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans">
-        <LanguageProvider>{children}</LanguageProvider>
-      </body>
+      <body className="flex min-h-full flex-col font-sans">{children}</body>
     </html>
   );
 }

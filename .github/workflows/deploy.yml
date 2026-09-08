@@ -33,6 +33,7 @@ jobs:
       - name: Build static export
         env:
           GITHUB_PAGES: "true"
+          NEXT_PUBLIC_SITE_ORIGIN: "https://oleksandr2024savchenko.github.io"
         run: npm run build
 
       - name: Add .nojekyll
