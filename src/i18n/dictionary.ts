@@ -143,7 +143,7 @@ export const dictionaries = {
       ],
     },
     process: {
-      eyebrow: "How It Works",
+      eyebrow: "Creation process",
       title: "A clear path from idea to production",
       description:
         "Four clear stages with transparent payment terms — 50% to start, 50% on approval.",
@@ -776,7 +776,7 @@ export const dictionaries = {
       ],
     },
     process: {
-      eyebrow: "So arbeiten wir",
+      eyebrow: "Erstellungsprozess",
       title: "Ein klarer Weg von der Idee bis zur Produktion",
       description:
         "Vier klare Phasen mit transparenten Zahlungsbedingungen — 50% zum Start, 50% nach Abnahme.",

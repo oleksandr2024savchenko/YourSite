@@ -1,7 +1,7 @@
 import type { Locale } from "@/i18n/dictionary";
 import Link from "next/link";
 import SiteShell from "@/components/site/SiteShell";
-import Reveal from "@/components/landing/Reveal";
+import Process from "@/components/landing/Process";
 import { aboutPage } from "@/content/pages";
 import { tx } from "@/content/copy";
 import { ui } from "@/content/ui";
@@ -56,24 +56,7 @@ export default function AboutView({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section className="bg-surface-soft/50 py-20">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <h2 className="text-2xl font-semibold text-charcoal">{tx(page.work.title, locale)}</h2>
-            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {page.work.steps.map((step, index) => (
-                <Reveal key={step.title.de} delay={0.04 * index}>
-                  <div className="rounded-2xl border border-border/80 bg-surface p-7">
-                    <p className="text-sm font-semibold text-accent-deep">
-                      {String(index + 1).padStart(2, "0")}
-                    </p>
-                    <h3 className="mt-3 font-semibold text-charcoal">{tx(step.title, locale)}</h3>
-                    <p className="mt-2 text-sm text-muted">{tx(step.text, locale)}</p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Process />
 
         <section className="py-20">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">

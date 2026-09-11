@@ -29,17 +29,6 @@ export const aboutPage = {
       ),
     ],
   },
-  work: {
-    title: c("Wie wir arbeiten", "How we work"),
-    steps: [
-      { title: c("Forschung", "Research"), text: c("Ziele, bestehende Seite, Wettbewerb in der Suche, Inhalte.", "Goals, current site, search competition, content.") },
-      { title: c("Struktur", "Structure"), text: c("Seiten, H1/H2, Formular, interne Links – bevor Farben diskutiert werden.", "Pages, H1/H2, form, internal links – before colours are debated.") },
-      { title: c("Design", "Design"), text: c("Ruhige Flächen, klare Typografie, Marke statt Trendfolie.", "Calm surfaces, clear type, brand instead of trend foil.") },
-      { title: c("Umsetzung", "Build"), text: c("Performance, Mobile, CMS je nach Paket, echte Formularzustellung.", "Performance, mobile, CMS by package, real form delivery.") },
-      { title: c("Test", "Test"), text: c("Geräte, Formular, Rechtstexte, Redirects, Lesbarkeit.", "Devices, form, legal pages, redirects, readability.") },
-      { title: c("Launch", "Launch"), text: c("Go-Live nach Freigabe, Übergabe, optionale Wartung.", "Go-live after approval, handover, optional maintenance.") },
-    ],
-  },
   trust: {
     title: c("Warum uns Unternehmen beauftragen", "Why companies hire us"),
     items: [
