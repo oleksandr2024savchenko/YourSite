@@ -172,6 +172,20 @@ export const dictionaries = {
         },
       ],
     },
+    work: {
+      eyebrow: "Work",
+      title: "Selected projects",
+      description:
+        "Real websites from Vienna will appear here – labelled, once we may show them. No stock demos as client work.",
+      projectSlot: "Project coming soon",
+      projectHint: "Industry, task and effect – when the project can be published.",
+      voicesTitle: "Client voices",
+      voicesDescription:
+        "Real quotes, once they exist. We do not invent reviews or stock faces as supposed clients.",
+      voiceSlot: "Quote coming soon",
+      voiceHint: "Name, role and a real statement from a client.",
+      cta: "Discuss a project",
+    },
     pricing: {
       eyebrow: "Pricing",
       title: "Transparent packages for every business",
@@ -804,6 +818,20 @@ export const dictionaries = {
             "Sie testen das fertige Produkt. Nach Ihrer finalen Freigabe wird der Restbetrag von 50% fällig, und wir übertragen das Projekt live inklusive aller Rechte.",
         },
       ],
+    },
+    work: {
+      eyebrow: "Referenzen",
+      title: "Ausgewählte Projekte",
+      description:
+        "Hier erscheinen echte Websites aus Wien – gekennzeichnet, sobald wir sie zeigen dürfen. Keine Stock-Demos als Kundenprojekte.",
+      projectSlot: "Projekt folgt",
+      projectHint: "Branche, Aufgabe und Wirkung – sobald die Veröffentlichung möglich ist.",
+      voicesTitle: "Kundenstimmen",
+      voicesDescription:
+        "Echte Aussagen, sobald sie vorliegen. Keine erfundenen Reviews und keine Stock-Gesichter als angebliche Kunden.",
+      voiceSlot: "Stimme folgt",
+      voiceHint: "Name, Rolle und eine echte Aussage einer Auftraggeberin oder eines Auftraggebers.",
+      cta: "Projekt besprechen",
     },
     pricing: {
       eyebrow: "Preise",

@@ -3,6 +3,7 @@ import Benefits from "@/components/landing/Benefits";
 import ValueProposition from "@/components/landing/ValueProposition";
 import Services from "@/components/landing/Services";
 import Process from "@/components/landing/Process";
+import References from "@/components/landing/References";
 import Pricing from "@/components/landing/Pricing";
 import FAQ from "@/components/landing/FAQ";
 import CTA from "@/components/landing/CTA";
@@ -52,6 +53,7 @@ export default function HomeView({ locale }: { locale: Locale }) {
         </section>
         <ValueProposition />
         <Process />
+        <References />
         <Pricing />
         <FAQ />
         <CTA />
