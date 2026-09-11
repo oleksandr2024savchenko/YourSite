@@ -17,6 +17,7 @@ export default function Footer() {
 
   const company = [
     { label: tx(ui.nav.about, locale), href: withLocale(paths.about, locale) },
+    { label: tx(ui.nav.references, locale), href: withLocale(paths.references, locale) },
     { label: tx(ui.nav.pricing, locale), href: withLocale(paths.preise, locale) },
     { label: tx(ui.nav.blog, locale), href: withLocale(paths.blog, locale) },
     { label: tx(ui.nav.contact, locale), href: withLocale(paths.contact, locale) },

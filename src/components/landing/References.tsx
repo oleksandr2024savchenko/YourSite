@@ -1,9 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { LayoutGrid, Quote } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
-import { withLocale } from "@/lib/routes";
+import { tx } from "@/content/copy";
+import { portfolioProjects, portfolioVoices } from "@/content/portfolio";
+import { paths, withLocale } from "@/lib/routes";
 import Reveal from "./Reveal";
 
 const projectTones = [
@@ -12,10 +15,14 @@ const projectTones = [
   "from-beige/80 to-surface",
 ];
 
-const SLOTS = 3;
+const PLACEHOLDERS = 3;
 
-export default function References() {
+export default function References({ pageLink = false }: { pageLink?: boolean }) {
   const { t, locale } = useLanguage();
+  const projects = portfolioProjects;
+  const voices = portfolioVoices;
+  const projectSlots = projects.length > 0 ? projects : Array.from({ length: PLACEHOLDERS }, () => null);
+  const voiceSlots = voices.length > 0 ? voices : Array.from({ length: PLACEHOLDERS }, () => null);
 
   return (
     <section
@@ -36,26 +43,51 @@ export default function References() {
         </Reveal>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: SLOTS }, (_, index) => (
-            <Reveal key={`project-${index}`} delay={0.08 * index} className="h-full">
+          {projectSlots.map((project, index) => (
+            <Reveal key={project ? tx(project.title, locale) : `project-${index}`} delay={0.08 * index} className="h-full">
               <article
-                className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-border/80 bg-gradient-to-b ${projectTones[index]} shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md`}
+                className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-border/80 bg-gradient-to-b ${projectTones[index % projectTones.length]} shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md`}
               >
-                <div className="relative flex h-44 items-center justify-center bg-accent-soft/40">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-surface text-accent-deep shadow-sm">
-                    <LayoutGrid className="h-5 w-5" strokeWidth={1.75} />
-                  </span>
+                <div className="relative h-44 overflow-hidden bg-accent-soft/40">
+                  {project?.image ? (
+                    <Image
+                      src={project.image}
+                      alt={tx(project.title, locale)}
+                      fill
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  ) : (
+                    <div className="flex h-full items-center justify-center">
+                      <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-surface text-accent-deep shadow-sm">
+                        <LayoutGrid className="h-5 w-5" strokeWidth={1.75} />
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <div className="flex flex-1 flex-col p-8 pt-5">
                   <p className="text-xs font-semibold tracking-[0.2em] text-slate uppercase">
                     {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="mt-2 text-xl font-semibold tracking-tight text-charcoal">
-                    {t.work.projectSlot}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted">
-                    {t.work.projectHint}
-                  </p>
+                  {project ? (
+                    <>
+                      <h3 className="mt-2 text-xl font-semibold tracking-tight text-charcoal">
+                        {tx(project.title, locale)}
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-muted">
+                        {tx(project.summary, locale)}
+                      </p>
+                      {project.href ? (
+                        <Link
+                          href={project.href}
+                          className="mt-6 inline-flex text-sm font-medium text-accent-dark hover:text-charcoal"
+                        >
+                          {t.work.viewProject}
+                        </Link>
+                      ) : null}
+                    </>
+                  ) : null}
                 </div>
               </article>
             </Reveal>
@@ -72,8 +104,8 @@ export default function References() {
         </Reveal>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: SLOTS }, (_, index) => (
-            <Reveal key={`voice-${index}`} delay={0.08 * index} className="h-full">
+          {voiceSlots.map((voice, index) => (
+            <Reveal key={voice ? tx(voice.name, locale) : `voice-${index}`} delay={0.08 * index} className="h-full">
               <article className="group flex h-full flex-col rounded-2xl border border-border/80 bg-surface p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md">
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-soft text-accent-deep">
                   <Quote className="h-5 w-5" strokeWidth={1.75} />
@@ -81,12 +113,17 @@ export default function References() {
                 <p className="mt-5 text-xs font-semibold tracking-[0.2em] text-slate uppercase">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-2 text-lg font-semibold tracking-tight text-charcoal">
-                  {t.work.voiceSlot}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-                  {t.work.voiceHint}
-                </p>
+                {voice ? (
+                  <>
+                    <p className="mt-3 text-sm leading-relaxed text-muted">
+                      {tx(voice.quote, locale)}
+                    </p>
+                    <h3 className="mt-6 text-lg font-semibold tracking-tight text-charcoal">
+                      {tx(voice.name, locale)}
+                    </h3>
+                    <p className="mt-1 text-sm text-muted">{tx(voice.role, locale)}</p>
+                  </>
+                ) : null}
               </article>
             </Reveal>
           ))}
@@ -94,10 +131,10 @@ export default function References() {
 
         <Reveal delay={0.12} className="mt-14">
           <Link
-            href={withLocale("/kontakt/", locale)}
+            href={withLocale(pageLink ? paths.references : paths.contact, locale)}
             className="inline-flex text-sm font-medium text-accent-dark hover:text-charcoal"
           >
-            {t.work.cta}
+            {pageLink ? t.work.viewAll : t.work.cta}
           </Link>
         </Reveal>
       </div>

@@ -57,8 +57,21 @@ export const aboutPage = {
     ],
   },
   note: c(
-    "Kundenstimmen veröffentlichen wir, sobald sie real vorliegen. Bis dahin zeigen wir Beispielprojekte als Demo-Fälle – gekennzeichnet, nicht als erfundene Rezensionen.",
-    "We publish client quotes once they are real. Until then we show sample projects as demo cases – labelled, not as invented reviews.",
+    "Referenzen zeigen, wie ein Auftritt wirkt: klares Angebot, ruhiges Design, Weg zur Anfrage.",
+    "References show how a presence works: a clear offer, calm design, a path to an enquiry.",
+  ),
+};
+
+export const referencesPage = {
+  seoTitle: c("Referenzen | ClearPoint Wien", "Work | ClearPoint Vienna"),
+  seoDescription: c(
+    "Referenzen von ClearPoint in Wien: ausgewählte Websites und Stimmen von Auftraggebern. Business Website, Onepage, Relaunch und Shop.",
+    "Work from ClearPoint in Vienna: selected websites and client voices. Business sites, one-pagers, relaunches and shops.",
+  ),
+  h1: c("Referenzen – Websites mit klarem Punkt.", "Work – websites with a clear point."),
+  intro: c(
+    "Ausgewählte Projekte für Unternehmen in Wien und Umgebung. Jede Seite macht ein Angebot verständlich und führt zur Anfrage.",
+    "Selected projects for companies in Vienna and around. Each site makes an offer understandable and leads to an enquiry.",
   ),
 };
 

@@ -76,6 +76,7 @@ export default function Header() {
 
   const links = [
     { href: withLocale(paths.preise, locale), label: tx(nav.pricing, locale) },
+    { href: withLocale(paths.references, locale), label: tx(nav.references, locale) },
     { href: withLocale(paths.about, locale), label: tx(nav.about, locale) },
     { href: withLocale(paths.blog, locale), label: tx(nav.blog, locale) },
     { href: withLocale(paths.contact, locale), label: tx(nav.contact, locale) },

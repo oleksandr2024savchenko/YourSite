@@ -5,6 +5,7 @@ export const ui = {
     home: c("Home", "Home"),
     services: c("Leistungen", "Services"),
     pricing: c("Preise", "Pricing"),
+    references: c("Referenzen", "Work"),
     about: c("Über uns", "About"),
     blog: c("Blog", "Blog"),
     contact: c("Kontakt", "Contact"),
@@ -60,6 +61,7 @@ export const ui = {
   breadcrumbs: {
     home: c("Home", "Home"),
     services: c("Leistungen", "Services"),
+    references: c("Referenzen", "Work"),
     blog: c("Blog", "Blog"),
   },
   common: {

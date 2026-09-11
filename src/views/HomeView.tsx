@@ -53,7 +53,7 @@ export default function HomeView({ locale }: { locale: Locale }) {
         </section>
         <ValueProposition />
         <Process />
-        <References />
+        <References pageLink />
         <Pricing />
         <FAQ />
         <CTA />

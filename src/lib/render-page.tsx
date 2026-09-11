@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import HomeView from "@/views/HomeView";
 import ServicesIndexView from "@/views/ServicesIndexView";
 import AboutView from "@/views/AboutView";
+import ReferencesView from "@/views/ReferencesView";
 import ContactView from "@/views/ContactView";
 import PreiseView from "@/views/PreiseView";
 import WebsiteCheckView from "@/views/WebsiteCheckView";
@@ -19,7 +20,7 @@ import { getService } from "@/content/service-pages";
 import { blogPosts, getPost } from "@/content/blog";
 import { pageMetadata } from "@/lib/seo";
 import { tx } from "@/content/copy";
-import { aboutPage, contactPage, legalPages, pricingPage, websiteCheckPage } from "@/content/pages";
+import { aboutPage, contactPage, legalPages, pricingPage, referencesPage, websiteCheckPage } from "@/content/pages";
 import { dictionaries } from "@/i18n/dictionary";
 import { serviceSlugs } from "@/lib/services";
 
@@ -30,6 +31,7 @@ export function pageFromSegments(segments: string[] | undefined) {
   if (parts[0] === "services" && parts[1]) return { type: "service" as const, slug: parts[1] };
   if (parts[0] === "preise") return { type: "preise" as const };
   if (parts[0] === "ueber-uns") return { type: "about" as const };
+  if (parts[0] === "referenzen") return { type: "references" as const };
   if (parts[0] === "blog" && parts.length === 1) return { type: "blog" as const };
   if (parts[0] === "blog" && parts[1]) return { type: "post" as const, slug: parts[1] };
   if (parts[0] === "kontakt") return { type: "contact" as const };
@@ -85,6 +87,13 @@ export function metadataForPage(locale: Locale, segments?: string[]): Metadata {
         path: "/ueber-uns/",
         title: tx(aboutPage.seoTitle, locale),
         description: tx(aboutPage.seoDescription, locale),
+      });
+    case "references":
+      return pageMetadata({
+        locale,
+        path: "/referenzen/",
+        title: tx(referencesPage.seoTitle, locale),
+        description: tx(referencesPage.seoDescription, locale),
       });
     case "blog":
       return pageMetadata({
@@ -162,6 +171,8 @@ export function RenderPage({
       return <PreiseView locale={locale} />;
     case "about":
       return <AboutView locale={locale} />;
+    case "references":
+      return <ReferencesView locale={locale} />;
     case "blog":
       return <BlogIndexView locale={locale} />;
     case "post": {
@@ -190,6 +201,7 @@ export function allEnglishParams() {
     ...Object.keys(oldServiceRedirects).map((slug) => ({ slug: ["services", slug] })),
     { slug: ["preise"] },
     { slug: ["ueber-uns"] },
+    { slug: ["referenzen"] },
     { slug: ["blog"] },
     ...blogPosts.map((post) => ({ slug: ["blog", post.slug] })),
     { slug: ["kontakt"] },
