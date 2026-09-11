@@ -35,7 +35,7 @@ export default function Services() {
     return (
       <Reveal key={slug} delay={0.08 * index} className="h-full">
         <div
-          className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/80 bg-gradient-to-b ${accents[index % accents.length]} shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md`}
+          className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/80 bg-gradient-to-b ${accents[index % accents.length]} shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-lg`}
         >
           <div className="relative h-44 overflow-hidden">
             <Image
@@ -44,9 +44,10 @@ export default function Services() {
               fill
               loading="lazy"
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent transition-opacity duration-300 group-hover:opacity-80" />
+            <div className="absolute inset-0 bg-accent-deep/0 transition-colors duration-300 group-hover:bg-accent-deep/10" />
           </div>
 
           <div className="flex flex-1 flex-col p-8 pt-5">
@@ -93,7 +94,7 @@ export default function Services() {
                 className="inline-flex items-center justify-center gap-2 rounded-2xl bg-accent px-5 py-2.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
               >
                 {t.services.details}
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
               </Link>
               <Link
                 href={withLocale("/kontakt/", locale)}

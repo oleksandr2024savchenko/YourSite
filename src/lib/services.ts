@@ -44,11 +44,18 @@ export const serviceStartingPrice: Record<ServiceSlug, number> = {
   "online-shop": 4999,
 };
 
-export const pricingSlugs: ServiceSlug[] = [...serviceSlugs].sort((a, b) => {
-  const diff = serviceStartingPrice[a] - serviceStartingPrice[b];
-  if (diff !== 0) return diff;
-  return serviceSlugs.indexOf(a) - serviceSlugs.indexOf(b);
-});
+export function sortByStartingPrice(
+  slugs: readonly ServiceSlug[],
+): ServiceSlug[] {
+  return [...slugs].sort((a, b) => {
+    const diff = serviceStartingPrice[a] - serviceStartingPrice[b];
+    if (diff !== 0) return diff;
+    return serviceSlugs.indexOf(a) - serviceSlugs.indexOf(b);
+  });
+}
+
+export const pricingPrimarySlugs = sortByStartingPrice(primaryServiceSlugs);
+export const pricingOtherSlugs = sortByStartingPrice(otherServiceSlugs);
 
 export const serviceMenu = [
   {

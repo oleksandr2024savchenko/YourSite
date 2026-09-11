@@ -25,12 +25,15 @@ function ServiceIndexCard({
   const page = getService(slug);
   return (
     <Reveal delay={0.05 * index}>
-      <article className="overflow-hidden rounded-2xl border border-border/80 bg-surface shadow-sm">
-        <img
-          src={images.services[slug]}
-          alt={tx(page.imageAlt, locale)}
-          className="h-48 w-full object-cover"
-        />
+      <article className="group overflow-hidden rounded-2xl border border-border/80 bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-lg">
+        <div className="relative h-48 overflow-hidden">
+          <img
+            src={images.services[slug]}
+            alt={tx(page.imageAlt, locale)}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-accent-deep/0 transition-colors duration-300 group-hover:bg-accent-deep/10" />
+        </div>
         <div className="p-7">
           <h2 className="text-xl font-semibold text-charcoal">{tx(page.h1, locale)}</h2>
           <p className="mt-2 text-sm font-medium text-accent-dark">
@@ -41,7 +44,7 @@ function ServiceIndexCard({
           </p>
           <Link
             href={withLocale(servicePath(slug), locale)}
-            className="mt-6 inline-flex text-sm font-medium text-accent-dark hover:text-charcoal"
+            className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-accent-dark transition-all duration-300 group-hover:gap-1.5 hover:text-charcoal"
           >
             {locale === "de" ? "Zur Leistungsseite" : "Open service page"}
           </Link>
