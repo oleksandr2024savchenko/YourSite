@@ -18,6 +18,38 @@ export function serviceHref(slug: ServiceSlug) {
   return `/services/${slug}/` as const;
 }
 
+/** One-off website packages shown first in the services grid. */
+export const primaryServiceSlugs = [
+  "website-erstellen-lassen",
+  "onepage-website",
+  "landing-page",
+  "business-website",
+  "online-shop",
+] as const satisfies readonly ServiceSlug[];
+
+/** Relaunch, support and other non-build packages. */
+export const otherServiceSlugs = [
+  "website-relaunch",
+  "support-wartung",
+] as const satisfies readonly ServiceSlug[];
+
+/** Numeric starting price used to sort the pricing grid (monthly packs count as the monthly amount). */
+export const serviceStartingPrice: Record<ServiceSlug, number> = {
+  "support-wartung": 39,
+  "website-erstellen-lassen": 699,
+  "website-relaunch": 699,
+  "onepage-website": 1499,
+  "landing-page": 1799,
+  "business-website": 2999,
+  "online-shop": 4999,
+};
+
+export const pricingSlugs: ServiceSlug[] = [...serviceSlugs].sort((a, b) => {
+  const diff = serviceStartingPrice[a] - serviceStartingPrice[b];
+  if (diff !== 0) return diff;
+  return serviceSlugs.indexOf(a) - serviceSlugs.indexOf(b);
+});
+
 export const serviceMenu = [
   {
     slug: "website-erstellen-lassen" as const,

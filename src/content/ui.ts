@@ -12,6 +12,10 @@ export const ui = {
     openMenu: c("Menü öffnen", "Open menu"),
     closeMenu: c("Menü schließen", "Close menu"),
     allServices: c("Alle Leistungen", "All services"),
+    backHome: c("Zur Startseite", "Back to home"),
+  },
+  services: {
+    otherTitle: c("Unsere weiteren Leistungen", "Our other services"),
   },
   form: {
     name: c("Ihr Name", "Your name"),

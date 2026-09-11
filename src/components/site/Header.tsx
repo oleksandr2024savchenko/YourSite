@@ -4,14 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, ArrowLeft } from "lucide-react";
 import type { Locale } from "@/i18n/dictionary";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { ui } from "@/content/ui";
 import { tx } from "@/content/copy";
 import { servicePages } from "@/content/service-pages";
 import { isServiceSlug, serviceMenu } from "@/lib/services";
-import { paths, switchLocalePath, withLocale } from "@/lib/routes";
+import { paths, stripLocale, switchLocalePath, withLocale } from "@/lib/routes";
 
 function LanguageToggle({
   compact = false,
@@ -82,18 +82,30 @@ export default function Header() {
   ];
 
   const isActive = (href: string) => pathname === href || pathname === href.slice(0, -1);
+  const onHome = stripLocale(pathname) === "/";
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-8">
-        <Link href={withLocale("/", locale)} className="group flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent-soft transition-all duration-300 group-hover:bg-accent/25">
-            <span className="h-2.5 w-2.5 rounded-full bg-accent-deep" />
-          </span>
-          <span className="text-lg font-semibold tracking-tight text-charcoal">
-            ClearPoint
-          </span>
-        </Link>
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          {!onHome && (
+            <Link
+              href={withLocale("/", locale)}
+              aria-label={tx(nav.backHome, locale)}
+              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-charcoal transition-all duration-300 hover:bg-surface-soft"
+            >
+              <ArrowLeft className="h-5 w-5" strokeWidth={2} />
+            </Link>
+          )}
+          <Link href={withLocale("/", locale)} className="group flex items-center gap-2.5">
+            <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent-soft transition-all duration-300 group-hover:bg-accent/25">
+              <span className="h-2.5 w-2.5 rounded-full bg-accent-deep" />
+            </span>
+            <span className="text-lg font-semibold tracking-tight text-charcoal">
+              ClearPoint
+            </span>
+          </Link>
+        </div>
 
         <nav className="hidden items-center gap-6 lg:flex">
           <div

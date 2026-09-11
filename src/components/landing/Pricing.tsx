@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
-import { serviceHref, serviceSlugs } from "@/lib/services";
+import { pricingSlugs, serviceHref } from "@/lib/services";
 import { withLocale } from "@/lib/routes";
 import { getService } from "@/content/service-pages";
 import { tx } from "@/content/copy";
@@ -30,7 +30,7 @@ export default function Pricing() {
         </Reveal>
 
         <div className="mt-14 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {serviceSlugs.map((slug, index) => {
+          {pricingSlugs.map((slug, index) => {
             const page = getService(slug);
             const featured = slug === FEATURED_SLUG;
             return (
