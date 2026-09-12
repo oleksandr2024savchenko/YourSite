@@ -22,7 +22,7 @@ export default function FaqList({
 
   return (
     <section className="scroll-mt-20 bg-surface-soft/50 py-20 lg:py-28">
-      <div className="mx-auto max-w-3xl px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         {(title || eyebrow) && (
           <Reveal className="text-center">
             {eyebrow ? (
@@ -57,7 +57,7 @@ export default function FaqList({
                     onClick={() => setOpenIndex(open ? null : index)}
                     aria-expanded={open}
                     aria-controls={panelId}
-                    className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-all duration-300 hover:bg-accent-soft/25"
+                    className="flex w-full items-start justify-between gap-3 px-4 py-4 text-left transition-all duration-300 hover:bg-accent-soft/25 sm:items-center sm:gap-4 sm:px-6 sm:py-5"
                   >
                     <span className="text-base font-medium tracking-tight text-charcoal">
                       {item.question}

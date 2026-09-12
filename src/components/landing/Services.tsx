@@ -91,7 +91,7 @@ export default function Services() {
             <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
               <Link
                 href={withLocale(serviceHref(slug), locale)}
-                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-accent px-5 py-2.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
+                className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-2xl bg-accent px-5 py-2.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md sm:w-auto"
               >
                 {t.services.details}
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -113,9 +113,9 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="scroll-mt-20 bg-surface-soft/50 py-24 lg:py-32"
+      className="scroll-mt-20 bg-surface-soft/50 py-16 sm:py-24 lg:py-32"
     >
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal className="max-w-2xl">
           <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
             {t.services.eyebrow}

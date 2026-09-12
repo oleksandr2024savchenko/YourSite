@@ -20,8 +20,8 @@ export default function ValueProposition() {
   const { t, locale } = useLanguage();
 
   return (
-    <section id="about" className="scroll-mt-20 py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+    <section id="about" className="scroll-mt-20 py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-sm">
             <Image

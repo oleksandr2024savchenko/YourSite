@@ -29,16 +29,16 @@ export default function ContactView({ locale }: { locale: Locale }) {
         )}
       />
       <main className="flex-1">
-        <section className="hero-atmosphere py-20">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-charcoal">
+        <section className="hero-atmosphere py-12 sm:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <h1 className="max-w-3xl text-3xl font-semibold tracking-tight break-words text-charcoal sm:text-4xl">
               {tx(page.h1, locale)}
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-muted">{tx(page.intro, locale)}</p>
           </div>
         </section>
         <section className="py-20">
-          <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
             <div>
               <h2 className="text-2xl font-semibold text-charcoal">{tx(page.napTitle, locale)}</h2>
               <ul className="mt-8 space-y-4 text-sm text-muted">

@@ -6,8 +6,8 @@ import { withLocale } from "@/lib/routes";
 export default function DankeView({ locale }: { locale: Locale }) {
   return (
     <SiteShell locale={locale}>
-      <main className="mx-auto max-w-2xl flex-1 px-6 py-24 text-center">
-        <h1 className="text-4xl font-semibold text-charcoal">
+      <main className="mx-auto max-w-2xl flex-1 px-4 py-16 text-center sm:px-6 sm:py-24">
+        <h1 className="text-3xl font-semibold break-words text-charcoal sm:text-4xl">
           {locale === "de" ? "Danke für Ihre Anfrage." : "Thank you for your enquiry."}
         </h1>
         <p className="mt-5 text-muted">

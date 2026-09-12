@@ -40,7 +40,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-border bg-surface-soft/40">
-      <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Link href={withLocale("/", locale)} className="inline-flex items-center gap-2.5">

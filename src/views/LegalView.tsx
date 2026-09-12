@@ -13,8 +13,8 @@ export default function LegalView({
   const page = legalPages[kind];
   return (
     <SiteShell locale={locale}>
-      <main className="mx-auto max-w-3xl flex-1 px-6 py-20 lg:px-8">
-        <h1 className="text-4xl font-semibold tracking-tight text-charcoal">
+      <main className="mx-auto max-w-3xl flex-1 px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <h1 className="text-3xl font-semibold tracking-tight break-words text-charcoal sm:text-4xl">
           {tx(page.h1, locale)}
         </h1>
         {page.blocks.map((block) => (

@@ -10,7 +10,7 @@ import { CONTACT_EMAIL, FORM_ENDPOINT } from "@/lib/site";
 import { withLocale } from "@/lib/routes";
 
 const fieldClass =
-  "w-full rounded-2xl border border-border bg-surface px-4 py-3 text-sm text-charcoal transition-all duration-300 placeholder:text-muted/70 focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none";
+  "w-full rounded-2xl border border-border bg-surface px-4 py-3 text-base text-charcoal transition-all duration-300 placeholder:text-muted/70 focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none md:text-sm";
 const labelClass = "block text-xs font-medium tracking-wide text-charcoal";
 
 export default function ContactForm({
@@ -199,7 +199,7 @@ export default function ContactForm({
             required
             checked={form.dsgvo}
             onChange={(e) => update("dsgvo")(e.target.checked)}
-            className="mt-1 h-4 w-4 rounded border-border text-accent-deep"
+            className="mt-0.5 h-5 w-5 shrink-0 rounded border-border text-accent-deep md:mt-1 md:h-4 md:w-4"
           />
           <span>
             {tx(copy.dsgvo, locale)}{" "}

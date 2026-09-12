@@ -9,9 +9,9 @@ export default function CTA() {
   const { t, locale } = useLanguage();
 
   return (
-    <section id="contact" className="scroll-mt-20 px-6 py-24 lg:px-8 lg:py-32">
+    <section id="contact" className="scroll-mt-20 px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
       <Reveal>
-        <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl bg-gradient-to-br from-charcoal via-[#353a3f] to-[#3a4a49] px-8 py-14 sm:px-12 lg:px-16 lg:py-16">
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl bg-gradient-to-br from-charcoal via-[#353a3f] to-[#3a4a49] px-5 py-10 sm:px-12 sm:py-14 lg:px-16 lg:py-16">
           <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
               <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-accent">

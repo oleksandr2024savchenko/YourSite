@@ -11,8 +11,8 @@ export default function Process() {
   const { t } = useLanguage();
 
   return (
-    <section id="process" className="scroll-mt-20 py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+    <section id="process" className="scroll-mt-20 py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
             {t.process.eyebrow}

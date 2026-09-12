@@ -93,8 +93,8 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="scroll-mt-20 py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+    <section id="pricing" className="scroll-mt-20 py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
             {t.pricing.eyebrow}
@@ -107,7 +107,7 @@ export default function Pricing() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid items-stretch gap-6 pt-2 sm:grid-cols-2 lg:grid-cols-3">
           {pricingPrimarySlugs.map((slug, index) => renderCard(slug, index))}
         </div>
 
@@ -121,7 +121,7 @@ export default function Pricing() {
         </div>
 
         <Reveal delay={0.1} className="mt-14">
-          <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 rounded-2xl border border-border/80 bg-surface p-8 text-center shadow-sm">
+          <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 rounded-2xl border border-border/80 bg-surface p-6 text-center shadow-sm sm:p-8">
             <div>
               <p className="text-xl font-semibold tracking-tight text-charcoal">
                 {t.pricing.helper.title}
@@ -132,7 +132,7 @@ export default function Pricing() {
             </div>
             <Link
               href={withLocale("/preise/", locale)}
-              className="inline-flex items-center gap-2 rounded-2xl bg-accent px-6 py-3.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-3.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md sm:w-auto"
             >
               {t.pricing.helper.cta}
               <ArrowRight className="h-4 w-4" />

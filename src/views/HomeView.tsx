@@ -31,8 +31,8 @@ export default function HomeView({ locale }: { locale: Locale }) {
         <TrustStrip items={trust.map((item) => tx(item, locale))} />
         <Benefits />
         <Services />
-        <section className="px-6 py-16 lg:px-8">
-          <div className="mx-auto max-w-6xl rounded-3xl border border-border bg-accent-soft/40 px-8 py-10 sm:px-12">
+        <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+          <div className="mx-auto max-w-6xl rounded-3xl border border-border bg-accent-soft/40 px-5 py-8 sm:px-12 sm:py-10">
             <h2 className="text-2xl font-semibold text-charcoal">
               {locale === "de"
                 ? "Kostenloser Website Check"

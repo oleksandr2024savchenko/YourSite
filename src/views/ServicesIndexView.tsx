@@ -58,12 +58,12 @@ export default function ServicesIndexView({ locale }: { locale: Locale }) {
   return (
     <SiteShell locale={locale}>
       <main className="flex-1">
-        <section className="hero-atmosphere py-20">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <section className="hero-atmosphere py-12 sm:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
               ClearPoint
             </p>
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-charcoal">
+            <h1 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight break-words text-charcoal sm:text-4xl">
               {locale === "de"
                 ? "Leistungen: Website erstellen lassen in Wien"
                 : "Services: have a website built in Vienna"}
@@ -76,12 +76,12 @@ export default function ServicesIndexView({ locale }: { locale: Locale }) {
           </div>
         </section>
         <section className="py-20">
-          <div className="mx-auto grid max-w-6xl gap-6 px-6 md:grid-cols-2 lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
             {primaryServiceSlugs.map((slug, index) => (
               <ServiceIndexCard key={slug} slug={slug} locale={locale} index={index} />
             ))}
           </div>
-          <div className="mx-auto mt-16 max-w-6xl px-6 lg:px-8">
+          <div className="mx-auto mt-16 max-w-6xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-semibold tracking-tight text-charcoal">
               {tx(ui.services.otherTitle, locale)}
             </h2>

@@ -34,7 +34,7 @@ function iconFor(label: string): LucideIcon {
 export default function TrustStrip({ items }: { items: string[] }) {
   return (
     <section className="border-y border-border/70 bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {items.map((item) => {
             const Icon = iconFor(item);

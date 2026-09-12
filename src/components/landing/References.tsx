@@ -27,9 +27,9 @@ export default function References({ pageLink = false }: { pageLink?: boolean })
   return (
     <section
       id="references"
-      className="scroll-mt-20 bg-surface-soft/40 py-24 lg:py-32"
+      className="scroll-mt-20 bg-surface-soft/40 py-16 sm:py-24 lg:py-32"
     >
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal className="max-w-2xl">
           <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
             {t.work.eyebrow}

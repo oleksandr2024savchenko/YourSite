@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -38,8 +38,8 @@ function LanguageToggle({
             key={code}
             type="button"
             onClick={() => router.push(switchLocalePath(pathname, code))}
-            className={`relative z-10 rounded-xl px-2.5 py-1.5 text-xs font-medium uppercase tracking-wide transition-all duration-300 ${
-              compact ? "flex-1" : ""
+            className={`relative z-10 rounded-xl px-2.5 text-xs font-medium uppercase tracking-wide transition-all duration-300 ${
+              compact ? "min-h-11 flex-1 py-2" : "py-1.5"
             } ${active ? "text-accent-dark" : "text-muted hover:text-charcoal"}`}
             aria-pressed={active}
           >
@@ -84,9 +84,21 @@ export default function Header() {
 
   const isActive = (href: string) => pathname === href || pathname === href.slice(0, -1);
 
+  useEffect(() => {
+    setOpen(false);
+    setServicesOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-sm">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 pt-[env(safe-area-inset-top,0px)] backdrop-blur-sm">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href={withLocale("/", locale)} className="group flex items-center gap-2.5">
           <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent-soft transition-all duration-300 group-hover:bg-accent/25">
             <span className="h-2.5 w-2.5 rounded-full bg-accent-deep" />
@@ -162,7 +174,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-xl p-2 text-charcoal transition-all duration-300 hover:bg-surface-soft lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-xl p-2 text-charcoal transition-all duration-300 hover:bg-surface-soft lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? tx(nav.closeMenu, locale) : tx(nav.openMenu, locale)}
           aria-expanded={open}
@@ -172,16 +184,23 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border/60 bg-background px-6 py-4 lg:hidden">
-          <nav className="flex flex-col gap-2">
+        <div className="max-h-[min(70dvh,calc(100dvh-4rem-env(safe-area-inset-top,0px)-5.5rem))] overflow-y-auto overscroll-contain border-t border-border/60 bg-background px-4 py-4 sm:px-6 lg:hidden">
+          <nav className="flex flex-col gap-1">
             <p className="px-3 pt-1 text-xs font-semibold tracking-wide text-slate uppercase">
               {tx(nav.services, locale)}
             </p>
+            <Link
+              href={withLocale(paths.services, locale)}
+              className="rounded-xl px-3 py-3 text-sm font-medium text-accent-dark hover:bg-accent-soft/60"
+              onClick={() => setOpen(false)}
+            >
+              {tx(nav.allServices, locale)}
+            </Link>
             {serviceLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-xl px-3 py-2 text-sm font-medium text-muted hover:bg-surface-soft hover:text-charcoal"
+                className="rounded-xl px-3 py-3 text-sm font-medium text-muted hover:bg-surface-soft hover:text-charcoal"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
@@ -191,7 +210,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-xl px-3 py-2.5 text-sm font-medium text-muted hover:bg-surface-soft hover:text-charcoal"
+                className="rounded-xl px-3 py-3 text-sm font-medium text-muted hover:bg-surface-soft hover:text-charcoal"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
@@ -200,7 +219,7 @@ export default function Header() {
             <LanguageToggle compact locale={locale} />
             <Link
               href={withLocale(paths.contact, locale)}
-              className="mt-1 inline-flex items-center justify-center rounded-2xl bg-accent px-5 py-2.5 text-sm font-medium text-charcoal"
+              className="mt-2 inline-flex min-h-12 items-center justify-center rounded-2xl bg-accent px-5 py-3 text-sm font-medium text-charcoal"
               onClick={() => setOpen(false)}
             >
               {tx(nav.cta, locale)}

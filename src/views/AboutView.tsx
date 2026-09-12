@@ -24,13 +24,13 @@ export default function AboutView({ locale }: { locale: Locale }) {
         )}
       />
       <main className="flex-1">
-        <section className="hero-atmosphere py-20">
-          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-8">
+        <section className="hero-atmosphere py-12 sm:py-20">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
             <div>
               <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
                 ClearPoint · Wien
               </p>
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-charcoal">
+              <h1 className="mt-4 text-3xl font-semibold tracking-tight break-words text-charcoal sm:text-4xl">
                 {tx(page.h1, locale)}
               </h1>
               <p className="mt-5 text-lg leading-relaxed text-muted">{tx(page.intro, locale)}</p>
@@ -46,7 +46,7 @@ export default function AboutView({ locale }: { locale: Locale }) {
         </section>
 
         <section className="py-20">
-          <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-semibold text-charcoal">{tx(page.who.title, locale)}</h2>
             {page.who.paragraphs.map((p) => (
               <p key={p.de} className="mt-4 leading-relaxed text-muted">
@@ -59,7 +59,7 @@ export default function AboutView({ locale }: { locale: Locale }) {
         <Process />
 
         <section className="py-20">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-semibold text-charcoal">{tx(page.trust.title, locale)}</h2>
             <div className="mt-10 grid gap-6 md:grid-cols-2">
               {page.trust.items.map((item) => (
@@ -73,7 +73,7 @@ export default function AboutView({ locale }: { locale: Locale }) {
         </section>
 
         <section className="bg-surface-soft/40 py-20">
-          <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-semibold text-charcoal">{tx(page.founder.title, locale)}</h2>
             <p className="mt-4 font-medium text-charcoal">
               {page.founder.name} · {tx(page.founder.role, locale)}

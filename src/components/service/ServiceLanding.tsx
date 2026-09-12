@@ -26,9 +26,9 @@ import JsonLd from "@/components/site/JsonLd";
 import SiteShell from "@/components/site/SiteShell";
 
 const primaryButton =
-  "inline-flex items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-3.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md";
+  "inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-3.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md sm:w-auto";
 const secondaryButton =
-  "inline-flex items-center justify-center gap-2 rounded-2xl border border-border bg-surface/80 px-6 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:border-accent/50 hover:bg-surface";
+  "inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl border border-border bg-surface/80 px-6 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:border-accent/50 hover:bg-surface sm:w-auto";
 
 function relatedHref(id: ServiceSlug | "website-check") {
   return id === "website-check" ? paths.websiteCheck : servicePath(id);
@@ -76,7 +76,7 @@ export default function ServiceLanding({
       />
       <main className="flex-1">
         <section className="hero-atmosphere relative overflow-hidden">
-          <div className="relative mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-20">
+          <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
             <Breadcrumbs
               locale={locale}
               items={[
@@ -90,7 +90,7 @@ export default function ServiceLanding({
                 <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
                   ClearPoint · Wien
                 </p>
-                <h1 className="mt-4 text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
+                <h1 className="mt-4 text-[1.75rem] leading-[1.2] font-semibold tracking-tight break-words text-charcoal sm:text-4xl sm:leading-tight lg:text-[2.75rem] lg:leading-[1.15]">
                   {tx(page.h1, locale)}
                 </h1>
                 <p className="mt-3 text-lg font-medium text-accent-dark">
@@ -137,7 +137,7 @@ export default function ServiceLanding({
         <TrustStrip items={page.trust.map((item) => tx(item, locale))} />
 
         <section className="py-20 lg:py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal className="max-w-3xl">
               <h2 className="text-2xl font-semibold tracking-tight text-charcoal sm:text-3xl">
                 {tx(page.problem.title, locale)}
@@ -164,7 +164,7 @@ export default function ServiceLanding({
         </section>
 
         <section className="bg-surface-soft/50 py-20 lg:py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2">
               <Reveal>
                 <h2 className="text-2xl font-semibold tracking-tight text-charcoal sm:text-3xl">
@@ -210,7 +210,7 @@ export default function ServiceLanding({
         </section>
 
         <section className="py-20 lg:py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-2xl font-semibold tracking-tight text-charcoal sm:text-3xl">
                 {tx(page.technical.title, locale)}
@@ -254,7 +254,7 @@ export default function ServiceLanding({
 
         {page.extras.map((block) => (
           <section key={block.title.de} className="pb-16">
-            <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
               <Reveal>
                 <h2 className="text-2xl font-semibold tracking-tight text-charcoal sm:text-3xl">
                   {tx(block.title, locale)}
@@ -280,7 +280,7 @@ export default function ServiceLanding({
         ))}
 
         <section className="bg-surface-soft/50 py-20 lg:py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-2xl font-semibold tracking-tight text-charcoal sm:text-3xl">
                 {tx(page.process.title, locale)}
@@ -307,7 +307,7 @@ export default function ServiceLanding({
         </section>
 
         <section className="py-20 lg:py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal className="max-w-3xl">
               <h2 className="text-2xl font-semibold tracking-tight text-charcoal sm:text-3xl">
                 {tx(page.pricing.title, locale)}
@@ -374,7 +374,7 @@ export default function ServiceLanding({
         </section>
 
         <section className="bg-surface-soft/50 py-20 lg:py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-2xl font-semibold tracking-tight text-charcoal sm:text-3xl">
                 {tx(page.cases.title, locale)}
@@ -408,7 +408,7 @@ export default function ServiceLanding({
         </section>
 
         <section className="py-20 lg:py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal className="max-w-3xl">
               <h2 className="text-2xl font-semibold tracking-tight text-charcoal sm:text-3xl">
                 {tx(page.local.title, locale)}
@@ -420,8 +420,8 @@ export default function ServiceLanding({
           </div>
         </section>
 
-        <section className="bg-surface-soft/40 py-20 lg:py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <section className="bg-surface-soft/40 py-16 sm:py-20 lg:py-24">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-2xl font-semibold tracking-tight text-charcoal sm:text-3xl">
                 {tx(page.comparison.title, locale)}
@@ -430,7 +430,7 @@ export default function ServiceLanding({
                 {tx(page.comparison.intro, locale)}
               </p>
             </Reveal>
-            <div className="mt-10 overflow-x-auto rounded-2xl border border-border/80 bg-surface">
+            <div className="-mx-4 mt-10 overflow-x-auto overscroll-x-contain rounded-none border-y border-border/80 bg-surface sm:mx-0 sm:rounded-2xl sm:border">
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead className="bg-accent-soft/60">
                   <tr>
@@ -465,7 +465,7 @@ export default function ServiceLanding({
           items={faq}
         />
 
-        <section className="px-6 py-16 lg:px-8">
+        <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <h2 className="text-2xl font-semibold text-charcoal">
               {tx(ui.common.related, locale)}
@@ -484,8 +484,8 @@ export default function ServiceLanding({
           </div>
         </section>
 
-        <section className="px-6 pb-24 lg:px-8">
-          <div className="mx-auto grid max-w-6xl items-start gap-10 overflow-hidden rounded-3xl bg-gradient-to-br from-charcoal via-[#353a3f] to-[#3a4a49] px-8 py-12 sm:px-12 lg:grid-cols-2">
+        <section className="px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8">
+          <div className="mx-auto grid max-w-6xl items-start gap-10 overflow-hidden rounded-3xl bg-gradient-to-br from-charcoal via-[#353a3f] to-[#3a4a49] px-5 py-10 sm:px-12 sm:py-12 lg:grid-cols-2">
             <div>
               <ShieldCheck className="h-8 w-8 text-accent" />
               <h2 className="mt-4 text-3xl font-semibold text-white">

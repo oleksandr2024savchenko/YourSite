@@ -28,8 +28,10 @@ export default function SiteShell({
       <HtmlLang locale={locale} />
       <JsonLd data={localBusinessJsonLd()} />
       <Header />
-      <div className="flex flex-1 flex-col pb-16 lg:pb-0">{children}</div>
-      <Footer />
+      <div className="flex min-h-0 flex-1 flex-col pb-[calc(5.5rem+env(safe-area-inset-bottom,0px))] lg:pb-0">
+        {children}
+        <Footer />
+      </div>
       <StickyCta />
     </LanguageProvider>
   );

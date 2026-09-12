@@ -21,9 +21,9 @@ export default function BlogIndexView({ locale }: { locale: Locale }) {
         )}
       />
       <main className="flex-1">
-        <section className="hero-atmosphere py-20">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <h1 className="text-4xl font-semibold tracking-tight text-charcoal">
+        <section className="hero-atmosphere py-12 sm:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <h1 className="text-3xl font-semibold tracking-tight break-words text-charcoal sm:text-4xl">
               {locale === "de"
                 ? "Blog: Webdesign, SEO und Website-Kosten in Wien"
                 : "Blog: web design, SEO and website costs in Vienna"}
@@ -36,7 +36,7 @@ export default function BlogIndexView({ locale }: { locale: Locale }) {
           </div>
         </section>
         <section className="py-20">
-          <div className="mx-auto grid max-w-6xl gap-6 px-6 md:grid-cols-2 lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
             {blogPosts.map((post) => (
               <article key={post.slug} className="rounded-2xl border border-border/80 bg-surface p-7">
                 <p className="text-xs font-semibold tracking-wide text-accent-deep uppercase">
