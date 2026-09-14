@@ -18,9 +18,11 @@ export function serviceHref(slug: ServiceSlug) {
   return `/services/${slug}/` as const;
 }
 
-/** One-off website packages shown first in the services grid. */
+/** Umbrella "start here" service, shown as a wide hub card above the package grids. */
+export const hubServiceSlug = "website-erstellen-lassen" satisfies ServiceSlug;
+
+/** One-off website packages shown in the services grid (the hub service sits above them). */
 export const primaryServiceSlugs = [
-  "website-erstellen-lassen",
   "onepage-website",
   "landing-page",
   "business-website",

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import {
+  hubServiceSlug,
   pricingOtherSlugs,
   pricingPrimarySlugs,
   serviceHref,
@@ -19,6 +20,7 @@ const FEATURED_SLUG = "business-website";
 
 export default function Pricing() {
   const { t, locale } = useLanguage();
+  const hubPage = getService(hubServiceSlug);
 
   const renderCard = (slug: ServiceSlug, index: number) => {
     const page = getService(slug);
@@ -111,7 +113,30 @@ export default function Pricing() {
           </p>
         </Reveal>
 
-        <div className="no-scrollbar -mx-4 mt-8 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto px-4 pt-4 pb-2 sm:mx-0 sm:mt-14 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pt-2 sm:pb-0 lg:grid-cols-3">
+        <Reveal delay={0.05} className="mt-8 sm:mt-14">
+          <div className="flex flex-col gap-6 rounded-3xl border border-accent/40 bg-accent-soft/50 p-6 shadow-sm sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold tracking-[0.2em] text-accent-deep uppercase">
+                {tx(ui.services.hubEyebrow, locale)}
+              </p>
+              <p className="mt-3 text-xl font-semibold tracking-tight text-charcoal sm:text-2xl">
+                {tx(hubPage.menuName, locale)} · {tx(hubPage.priceFrom, locale)}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-muted">
+                {tx(ui.services.hubHint, locale)}
+              </p>
+            </div>
+            <Link
+              href={withLocale(serviceHref(hubServiceSlug), locale)}
+              className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-3 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
+            >
+              {t.pricing.details}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </Reveal>
+
+        <div className="no-scrollbar -mx-4 mt-6 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto px-4 pt-4 pb-2 sm:mx-0 sm:mt-8 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pt-2 sm:pb-0 lg:grid-cols-4">
           {pricingPrimarySlugs.map((slug, index) => renderCard(slug, index))}
         </div>
 

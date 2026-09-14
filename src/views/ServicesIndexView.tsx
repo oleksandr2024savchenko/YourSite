@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteShell from "@/components/site/SiteShell";
 import Reveal from "@/components/landing/Reveal";
 import {
+  hubServiceSlug,
   otherServiceSlugs,
   primaryServiceSlugs,
   type ServiceSlug,
@@ -78,8 +79,48 @@ export default function ServicesIndexView({ locale }: { locale: Locale }) {
             </p>
           </div>
         </section>
-        <section className="py-20">
-          <div className="no-scrollbar mx-auto flex max-w-6xl snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:px-6 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:pb-0 lg:px-8">
+        <section className="py-12 sm:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <article className="group grid overflow-hidden rounded-3xl border border-accent/40 bg-surface shadow-sm transition-all duration-300 hover:border-accent/60 hover:shadow-lg lg:grid-cols-5">
+                <div className="relative h-48 overflow-hidden sm:h-56 lg:col-span-2 lg:h-full">
+                  <img
+                    src={images.services[hubServiceSlug]}
+                    alt={tx(getService(hubServiceSlug).imageAlt, locale)}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 sm:p-9 lg:col-span-3">
+                  <p className="text-xs font-semibold tracking-[0.2em] text-accent-deep uppercase">
+                    {tx(ui.services.hubEyebrow, locale)}
+                  </p>
+                  <h2 className="mt-3 text-2xl font-semibold tracking-tight text-charcoal">
+                    {tx(getService(hubServiceSlug).h1, locale)}
+                  </h2>
+                  <p className="mt-2 text-sm font-medium text-accent-dark">
+                    {tx(getService(hubServiceSlug).priceFrom, locale)} ·{" "}
+                    {tx(getService(hubServiceSlug).timeline, locale)}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">
+                    {tx(ui.services.hubHint, locale)}
+                  </p>
+                  <Link
+                    href={withLocale(servicePath(hubServiceSlug), locale)}
+                    className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-3 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
+                  >
+                    {locale === "de" ? "Zur Leistungsseite" : "Open service page"}
+                  </Link>
+                </div>
+              </article>
+            </Reveal>
+          </div>
+
+          <div className="mx-auto mt-12 max-w-6xl px-4 sm:mt-16 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-semibold tracking-tight text-charcoal">
+              {tx(ui.services.packagesTitle, locale)}
+            </h2>
+          </div>
+          <div className="no-scrollbar mx-auto mt-8 flex max-w-6xl snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:px-6 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:pb-0 lg:px-8">
             {primaryServiceSlugs.map((slug, index) => (
               <ServiceIndexCard key={slug} slug={slug} locale={locale} index={index} />
             ))}

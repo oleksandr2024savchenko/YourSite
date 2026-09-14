@@ -16,6 +16,12 @@ export const ui = {
   },
   services: {
     otherTitle: c("Unsere weiteren Leistungen", "Our other services"),
+    packagesTitle: c("Unsere Website-Pakete", "Our website packages"),
+    hubEyebrow: c("Der passende Einstieg", "The right starting point"),
+    hubHint: c(
+      "Sie wissen noch nicht, welches Paket passt? Starten Sie hier: Im kostenlosen Erstgespräch klären wir Ziel und Umfang und empfehlen das passende Paket – mit Fixpreis vor dem Start.",
+      "Not sure which package fits? Start here: in a free first call we clarify goals and scope and recommend the right package – with a fixed price before we start.",
+    ),
   },
   form: {
     name: c("Ihr Name", "Your name"),
