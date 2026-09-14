@@ -25,7 +25,7 @@ export default function Process() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:mt-16 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {t.process.steps.map((step, index) => {
             const Icon = stepIcons[index];
             const number = String(index + 1).padStart(2, "0");
@@ -34,7 +34,7 @@ export default function Process() {
             return (
               <Reveal key={step.title} delay={0.08 * index} className="h-full">
                 <div
-                  className={`relative flex h-full flex-col rounded-2xl border p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${
+                  className={`relative flex h-full flex-col rounded-2xl border p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md sm:p-8 ${
                     milestone
                       ? "border-accent bg-accent-soft/50"
                       : "border-border/80 bg-surface"
@@ -61,7 +61,7 @@ export default function Process() {
                     </span>
                   </div>
 
-                  <h3 className="mt-6 text-lg font-semibold tracking-tight text-charcoal">
+                  <h3 className="mt-4 text-lg font-semibold tracking-tight text-charcoal sm:mt-6">
                     {step.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted">

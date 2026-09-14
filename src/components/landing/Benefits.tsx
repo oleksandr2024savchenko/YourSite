@@ -29,12 +29,12 @@ export default function Benefits() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6 md:grid-cols-3">
           {t.benefits.items.map((item, index) => {
             const Icon = itemIcons[index];
             return (
               <Reveal key={item.title} delay={0.08 * index} className="h-full">
-                <div className="group flex h-full flex-col rounded-2xl border border-border/80 bg-surface p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md">
+                <div className="group flex h-full flex-col rounded-2xl border border-border/80 bg-surface p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md sm:p-8">
                   <div
                     className={`mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl ${itemTones[index]} transition-all duration-300 group-hover:-translate-y-0.5`}
                   >

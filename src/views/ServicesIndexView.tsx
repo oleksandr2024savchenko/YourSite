@@ -24,8 +24,11 @@ function ServiceIndexCard({
 }) {
   const page = getService(slug);
   return (
-    <Reveal delay={0.05 * index}>
-      <article className="group overflow-hidden rounded-2xl border border-border/80 bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-lg">
+    <Reveal
+      delay={0.05 * index}
+      className="h-full w-[85%] max-w-[21rem] shrink-0 snap-center md:w-auto md:max-w-none md:shrink"
+    >
+      <article className="group h-full overflow-hidden rounded-2xl border border-border/80 bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-lg">
         <div className="relative h-48 overflow-hidden">
           <img
             src={images.services[slug]}
@@ -76,7 +79,7 @@ export default function ServicesIndexView({ locale }: { locale: Locale }) {
           </div>
         </section>
         <section className="py-20">
-          <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
+          <div className="no-scrollbar mx-auto flex max-w-6xl snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:px-6 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:pb-0 lg:px-8">
             {primaryServiceSlugs.map((slug, index) => (
               <ServiceIndexCard key={slug} slug={slug} locale={locale} index={index} />
             ))}
@@ -85,7 +88,7 @@ export default function ServicesIndexView({ locale }: { locale: Locale }) {
             <h2 className="text-3xl font-semibold tracking-tight text-charcoal">
               {tx(ui.services.otherTitle, locale)}
             </h2>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="no-scrollbar -mx-4 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:-mx-6 sm:mt-10 sm:px-6 md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 md:pb-0">
               {otherServiceSlugs.map((slug, index) => (
                 <ServiceIndexCard key={slug} slug={slug} locale={locale} index={index} />
               ))}

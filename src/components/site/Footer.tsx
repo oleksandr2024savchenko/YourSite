@@ -41,8 +41,8 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-surface-soft/40">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
-          <div className="lg:col-span-2">
+        <div className="grid grid-cols-2 gap-8 sm:gap-12 md:grid-cols-2 lg:grid-cols-5">
+          <div className="col-span-2 md:col-span-1 lg:col-span-2">
             <Link href={withLocale("/", locale)} className="inline-flex items-center gap-2.5">
               <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent-soft">
                 <span className="h-2.5 w-2.5 rounded-full bg-accent-deep" />

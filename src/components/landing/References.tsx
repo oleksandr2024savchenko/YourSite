@@ -42,9 +42,13 @@ export default function References({ pageLink = false }: { pageLink?: boolean })
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="no-scrollbar -mx-4 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:-mx-6 sm:mt-14 sm:px-6 md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-3">
           {projectSlots.map((project, index) => (
-            <Reveal key={project ? tx(project.title, locale) : `project-${index}`} delay={0.08 * index} className="h-full">
+            <Reveal
+              key={project ? tx(project.title, locale) : `project-${index}`}
+              delay={0.08 * index}
+              className="h-full w-[85%] max-w-[21rem] shrink-0 snap-center md:w-auto md:max-w-none md:shrink"
+            >
               <article
                 className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-border/80 bg-gradient-to-b ${projectTones[index % projectTones.length]} shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md`}
               >
@@ -94,7 +98,7 @@ export default function References({ pageLink = false }: { pageLink?: boolean })
           ))}
         </div>
 
-        <Reveal className="mt-20 max-w-2xl">
+        <Reveal className="mt-12 max-w-2xl sm:mt-20">
           <h2 className="text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">
             {t.work.voicesTitle}
           </h2>
@@ -103,9 +107,13 @@ export default function References({ pageLink = false }: { pageLink?: boolean })
           </p>
         </Reveal>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="no-scrollbar -mx-4 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:-mx-6 sm:mt-10 sm:px-6 md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-3">
           {voiceSlots.map((voice, index) => (
-            <Reveal key={voice ? tx(voice.name, locale) : `voice-${index}`} delay={0.08 * index} className="h-full">
+            <Reveal
+              key={voice ? tx(voice.name, locale) : `voice-${index}`}
+              delay={0.08 * index}
+              className="h-full w-[85%] max-w-[21rem] shrink-0 snap-center md:w-auto md:max-w-none md:shrink"
+            >
               <article className="group flex h-full flex-col rounded-2xl border border-border/80 bg-surface p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md">
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-soft text-accent-deep">
                   <Quote className="h-5 w-5" strokeWidth={1.75} />

@@ -24,7 +24,11 @@ export default function Pricing() {
     const page = getService(slug);
     const featured = slug === FEATURED_SLUG;
     return (
-      <Reveal key={slug} delay={0.08 * index} className="h-full">
+      <Reveal
+        key={slug}
+        delay={0.08 * index}
+        className="h-full w-[85%] max-w-[20rem] shrink-0 snap-center sm:w-auto sm:max-w-none sm:shrink"
+      >
         <div
           className={`group relative flex h-full flex-col rounded-2xl border p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${
             featured
@@ -107,16 +111,16 @@ export default function Pricing() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid items-stretch gap-6 pt-2 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="no-scrollbar -mx-4 mt-8 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto px-4 pt-4 pb-2 sm:mx-0 sm:mt-14 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pt-2 sm:pb-0 lg:grid-cols-3">
           {pricingPrimarySlugs.map((slug, index) => renderCard(slug, index))}
         </div>
 
-        <Reveal className="mt-20 max-w-2xl">
+        <Reveal className="mt-12 max-w-2xl sm:mt-20">
           <h2 className="text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">
             {tx(ui.services.otherTitle, locale)}
           </h2>
         </Reveal>
-        <div className="mt-10 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="no-scrollbar -mx-4 mt-8 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:mt-10 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3">
           {pricingOtherSlugs.map((slug, index) => renderCard(slug, index))}
         </div>
 
