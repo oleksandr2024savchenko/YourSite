@@ -7,7 +7,7 @@ import { ui } from "@/content/ui";
 import { tx } from "@/content/copy";
 import { servicePages } from "@/content/service-pages";
 import { dictionaries } from "@/i18n/dictionary";
-import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_TEL, NAP } from "@/lib/site";
+import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_TEL } from "@/lib/site";
 import { paths, withLocale } from "@/lib/routes";
 import { isServiceSlug, serviceMenu } from "@/lib/services";
 
@@ -58,9 +58,9 @@ export default function Footer() {
               <p className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent-deep" />
                 <span>
-                  {tx(ui.common.area, locale)} {NAP.areaServed}
+                  {tx(ui.common.area, locale)} {tx(ui.common.areaServed, locale)}
                   <br />
-                  {NAP.city}, {NAP.country}
+                  {tx(ui.common.cityCountry, locale)}
                 </span>
               </p>
               <p className="flex items-center gap-2.5">
@@ -103,7 +103,7 @@ export default function Footer() {
             © {year} ClearPoint. {t.footer.copyright}
           </p>
           <p className="text-sm text-muted">
-            {NAP.city}, {NAP.country}
+            {tx(ui.common.cityCountry, locale)}
           </p>
         </div>
       </div>

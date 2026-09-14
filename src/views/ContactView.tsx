@@ -9,7 +9,6 @@ import {
   CONTACT_PHONE,
   CONTACT_PHONE_TEL,
   CONTACT_WHATSAPP,
-  NAP,
 } from "@/lib/site";
 import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import JsonLd from "@/components/site/JsonLd";
@@ -85,7 +84,9 @@ export default function ContactView({ locale }: { locale: Locale }) {
                   loading="lazy"
                 />
               </div>
-              <p className="mt-3 text-xs text-muted">{NAP.responseTime}</p>
+              <p className="mt-3 text-xs text-muted">
+                {tx(ui.common.responseTime, locale)}
+              </p>
             </div>
             <div className="rounded-3xl border border-border bg-surface p-8 shadow-sm">
               <ContactForm locale={locale} />

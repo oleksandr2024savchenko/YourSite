@@ -643,7 +643,7 @@ export const dictionaries = {
         faq: "FAQ",
         contact: "Contact",
         privacy: "Privacy Policy",
-        impressum: "Impressum",
+        impressum: "Imprint",
         terms: "Terms of Service",
       },
     },

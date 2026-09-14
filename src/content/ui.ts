@@ -95,6 +95,12 @@ export const ui = {
     whatsapp: c("WhatsApp", "WhatsApp"),
     hours: c("Erreichbarkeit", "Availability"),
     area: c("Tätig in", "Active in"),
+    areaServed: c("Wien und Umgebung", "Vienna and surrounding area"),
+    cityCountry: c("Wien, Österreich", "Vienna, Austria"),
+    responseTime: c(
+      "Antwort innerhalb von 24 Stunden",
+      "Reply within 24 hours",
+    ),
     map: c("Karte: Wien", "Map: Vienna"),
   },
 };

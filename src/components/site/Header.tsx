@@ -61,6 +61,7 @@ function LanguageToggle({
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const { locale } = useLanguage();
   const pathname = usePathname();
   const nav = ui.nav;
@@ -87,10 +88,12 @@ export default function Header() {
   useEffect(() => {
     setOpen(false);
     setServicesOpen(false);
+    setMobileServicesOpen(false);
   }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    if (!open) setMobileServicesOpen(false);
     return () => {
       document.body.style.overflow = "";
     };
@@ -186,26 +189,40 @@ export default function Header() {
       {open && (
         <div className="max-h-[min(70dvh,calc(100dvh-4rem-env(safe-area-inset-top,0px)-5.5rem))] overflow-y-auto overscroll-contain border-t border-border/60 bg-background px-4 py-4 sm:px-6 lg:hidden">
           <nav className="flex flex-col gap-1">
-            <p className="px-3 pt-1 text-xs font-semibold tracking-wide text-slate uppercase">
-              {tx(nav.services, locale)}
-            </p>
-            <Link
-              href={withLocale(paths.services, locale)}
-              className="rounded-xl px-3 py-3 text-sm font-medium text-accent-dark hover:bg-accent-soft/60"
-              onClick={() => setOpen(false)}
+            <button
+              type="button"
+              className="flex min-h-11 w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-medium text-charcoal transition-all duration-300 hover:bg-surface-soft"
+              aria-expanded={mobileServicesOpen}
+              onClick={() => setMobileServicesOpen((v) => !v)}
             >
-              {tx(nav.allServices, locale)}
-            </Link>
-            {serviceLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="rounded-xl px-3 py-3 text-sm font-medium text-muted hover:bg-surface-soft hover:text-charcoal"
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+              {tx(nav.services, locale)}
+              <ChevronDown
+                className={`h-4 w-4 text-muted transition-transform duration-300 ${
+                  mobileServicesOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {mobileServicesOpen && (
+              <div className="mb-1 flex flex-col gap-1 border-l border-border/80 pl-3">
+                <Link
+                  href={withLocale(paths.services, locale)}
+                  className="rounded-xl px-3 py-3 text-sm font-medium text-accent-dark hover:bg-accent-soft/60"
+                  onClick={() => setOpen(false)}
+                >
+                  {tx(nav.allServices, locale)}
+                </Link>
+                {serviceLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="rounded-xl px-3 py-3 text-sm font-medium text-muted hover:bg-surface-soft hover:text-charcoal"
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
             {links.map((link) => (
               <Link
                 key={link.href}
