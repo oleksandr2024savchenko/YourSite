@@ -14,7 +14,9 @@ const nextConfig: NextConfig = {
     : {}),
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
-    NEXT_PUBLIC_SITE_ORIGIN: "https://oleksandr2024savchenko.github.io",
+    NEXT_PUBLIC_SITE_ORIGIN:
+      process.env.NEXT_PUBLIC_SITE_ORIGIN ??
+      "https://oleksandr2024savchenko.github.io",
   },
   images: {
     // Required for static export (next/image optimizer is unavailable on GitHub Pages)

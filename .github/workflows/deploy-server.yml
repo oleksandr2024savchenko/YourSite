@@ -1,0 +1,53 @@
+name: Deploy to clearpoint.at
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: server-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Skips gracefully until the DEPLOY_SSH_KEY secret is configured
+      - name: Check deploy key
+        id: check
+        run: echo "has_key=${{ secrets.DEPLOY_SSH_KEY != '' }}" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout
+        if: steps.check.outputs.has_key == 'true'
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        if: steps.check.outputs.has_key == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.check.outputs.has_key == 'true'
+        run: npm ci
+
+      - name: Build static export
+        if: steps.check.outputs.has_key == 'true'
+        env:
+          NEXT_PUBLIC_SITE_ORIGIN: "https://clearpoint.at"
+        run: npm run build
+
+      - name: Setup SSH
+        if: steps.check.outputs.has_key == 'true'
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H 76.13.3.71 >> ~/.ssh/known_hosts
+
+      - name: Rsync to server
+        if: steps.check.outputs.has_key == 'true'
+        run: |
+          rsync -az --delete out/ root@76.13.3.71:/var/www/clearpoint/
