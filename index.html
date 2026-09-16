@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClearPoint ist umgezogen</title>
+    <link rel="canonical" href="https://clearpoint.at/" />
+    <meta http-equiv="refresh" content="0;url=https://clearpoint.at/" />
+    <script>
+      (function () {
+        var prefix = "/YourSite";
+        var path = location.pathname;
+        if (path === prefix || path.indexOf(prefix + "/") === 0) {
+          path = path.slice(prefix.length) || "/";
+        }
+        if (path.charAt(0) !== "/") path = "/" + path;
+        var target =
+          "https://clearpoint.at" + path + location.search + location.hash;
+        var canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.href = "https://clearpoint.at" + path;
+        var refresh = document.querySelector('meta[http-equiv="refresh"]');
+        if (refresh) refresh.setAttribute("content", "0;url=" + target);
+        location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>
+      ClearPoint ist umgezogen:
+      <a href="https://clearpoint.at/">https://clearpoint.at/</a>
+    </p>
+  </body>
+</html>
