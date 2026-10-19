@@ -1,4 +1,4 @@
-User-agent: *
+User-Agent: *
 Allow: /
 
-Sitemap: https://clearpoint.at/sitemap.xml
+Sitemap: https://oleksandr2024savchenko.github.io/YourSite/sitemap.xml
