@@ -39,7 +39,7 @@ export default function References({ variant = "home" }: { variant?: "home" | "p
               <Reveal
                 key={item.slug}
                 delay={0.08 * index}
-                className="h-full w-[88%] max-w-[22rem] shrink-0 snap-center md:w-auto md:max-w-none md:shrink"
+                className="relative h-full w-[88%] max-w-[22rem] shrink-0 snap-center md:w-auto md:max-w-none md:shrink"
               >
                 <CaseStudyCard item={item} locale={locale} variant="compact" />
               </Reveal>

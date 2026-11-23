@@ -17,7 +17,7 @@ function Metrics({ item, locale, dense = false }: { item: CaseStudy; locale: Loc
   return (
     <dl className={`grid grid-cols-3 gap-2 ${dense ? "" : "sm:gap-3"}`}>
       {item.metrics.map((metric) => (
-        <div key={metric.value} className="rounded-xl border border-border/80 bg-surface px-3 py-3">
+        <div key={metric.value} className="relative rounded-xl border border-border/80 bg-surface px-3 py-3">
           <dt className="sr-only">{tx(metric.label, locale)}</dt>
           <dd>
             <span className={`block font-semibold tracking-tight text-charcoal ${dense ? "text-sm sm:text-base" : "text-lg sm:text-xl"}`}>
