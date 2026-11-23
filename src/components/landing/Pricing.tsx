@@ -139,7 +139,7 @@ export default function Pricing() {
             </div>
             <Link
               href={withLocale(serviceHref(hubServiceSlug), locale)}
-              className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark"
+              className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-accent-dark px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-charcoal"
             >
               {t.pricing.details}
               <ArrowRight className="h-4 w-4" />
@@ -172,7 +172,7 @@ export default function Pricing() {
             </div>
             <Link
               href={withLocale("/preise/", locale)}
-              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark sm:w-auto"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-accent-dark px-6 py-3.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-charcoal sm:w-auto"
             >
               {t.pricing.helper.cta}
               <ArrowRight className="h-4 w-4" />

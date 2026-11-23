@@ -224,7 +224,7 @@ export default function Header() {
           <LanguageToggle locale={locale} />
           <Link
             href={withLocale(paths.contact, locale)}
-            className="inline-flex items-center rounded-full bg-charcoal px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark"
+            className="inline-flex items-center rounded-full bg-accent-dark px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-charcoal"
           >
             {tx(nav.cta, locale)}
           </Link>
@@ -317,7 +317,7 @@ export default function Header() {
                   <motion.div variants={itemVariants}>
                     <Link
                       href={withLocale(paths.contact, locale)}
-                      className="mt-2 flex min-h-12 items-center justify-center rounded-full bg-charcoal px-5 py-3 text-sm font-medium text-white transition-colors duration-300 hover:bg-accent-dark"
+                      className="mt-2 flex min-h-12 items-center justify-center rounded-full bg-accent-dark px-5 py-3 text-sm font-medium text-white transition-colors duration-300 hover:bg-charcoal"
                       onClick={closeMenu}
                     >
                       {tx(nav.cta, locale)}

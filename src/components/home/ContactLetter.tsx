@@ -16,7 +16,7 @@ export default function ContactLetter({ locale }: { locale: Locale }) {
           <blockquote className="mt-5 font-display text-[1.75rem] leading-[1.3] text-charcoal sm:text-[2.1rem]">
             „{tx(copy.text, locale)}“
           </blockquote>
-          <p className="mt-6 font-hand text-4xl text-accent-dark">{FOUNDER.name || SITE_NAME}</p>
+          <p className="mt-6 font-hand text-4xl text-brass">{FOUNDER.name || SITE_NAME}</p>
           <div className="mt-8 border-t border-border pt-8">
             <FounderCard locale={locale} />
           </div>

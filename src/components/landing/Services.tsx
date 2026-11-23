@@ -100,7 +100,7 @@ export default function Services() {
             <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
               <Link
                 href={withLocale(serviceHref(slug), locale)}
-                className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-charcoal px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark sm:w-auto"
+                className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-accent-dark px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-charcoal sm:w-auto"
               >
                 {t.services.details}
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -158,7 +158,7 @@ export default function Services() {
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5">
                 <Link
                   href={withLocale(serviceHref(hubServiceSlug), locale)}
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark sm:w-auto"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent-dark px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-charcoal sm:w-auto"
                 >
                   {t.services.details}
                   <ArrowRight className="h-4 w-4" />

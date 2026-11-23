@@ -17,7 +17,7 @@ export default function DankeView({ locale }: { locale: Locale }) {
         </p>
         <Link
           href={withLocale("/", locale)}
-          className="mt-8 inline-flex rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white"
+          className="mt-8 inline-flex rounded-full bg-accent-dark px-6 py-3 text-sm font-medium text-white"
         >
           {locale === "de" ? "Zur Startseite" : "Back to home"}
         </Link>

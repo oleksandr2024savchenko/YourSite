@@ -41,7 +41,7 @@ export default function ReferencesView({ locale }: { locale: Locale }) {
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Link
               href={withLocale("/kontakt/", locale)}
-              className="inline-flex rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white"
+              className="inline-flex rounded-full bg-accent-dark px-6 py-3 text-sm font-medium text-white"
             >
               {tx(ui.common.consultCta, locale)}
             </Link>

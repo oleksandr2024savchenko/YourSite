@@ -113,7 +113,7 @@ export default function ServicesIndexView({ locale }: { locale: Locale }) {
                   </p>
                   <Link
                     href={withLocale(servicePath(hubServiceSlug), locale)}
-                    className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark"
+                    className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent-dark px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-charcoal"
                   >
                     {locale === "de" ? "Zur Leistungsseite" : "Open service page"}
                   </Link>

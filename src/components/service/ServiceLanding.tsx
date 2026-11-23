@@ -26,7 +26,7 @@ import JsonLd from "@/components/site/JsonLd";
 import SiteShell from "@/components/site/SiteShell";
 
 const primaryButton =
-  "inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark sm:w-auto";
+  "inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-accent-dark px-6 py-3.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-charcoal sm:w-auto";
 const secondaryButton =
   "inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-border bg-surface/80 px-6 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:border-accent/50 hover:bg-surface sm:w-auto";
 
@@ -485,7 +485,7 @@ export default function ServiceLanding({
         </section>
 
         <section className="px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8">
-          <div className="mx-auto grid max-w-6xl items-start gap-10 overflow-hidden rounded-3xl bg-gradient-to-br from-charcoal via-[#353a3f] to-[#3a4a49] px-5 py-10 sm:px-12 sm:py-12 lg:grid-cols-2">
+          <div className="mx-auto grid max-w-6xl items-start gap-10 overflow-hidden rounded-3xl bg-gradient-to-br from-charcoal via-[#1f3a36] to-[#24534e] px-5 py-10 sm:px-12 sm:py-12 lg:grid-cols-2">
             <div>
               <ShieldCheck className="h-8 w-8 text-accent" />
               <h2 className="mt-4 text-3xl font-semibold text-white">

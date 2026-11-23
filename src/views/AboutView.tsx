@@ -125,7 +125,7 @@ export default function AboutView({ locale }: { locale: Locale }) {
               <p className="mt-10 text-sm text-muted">{tx(page.note, locale)}</p>
               <Link
                 href={withLocale("/kontakt/", locale)}
-                className="group mt-8 inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark"
+                className="group mt-8 inline-flex items-center gap-2 rounded-full bg-accent-dark px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-charcoal"
               >
                 {tx(ui.common.consultCta, locale)}
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />

@@ -243,7 +243,7 @@ export default function PriceCalculator({ locale }: { locale: Locale }) {
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start">
-            <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-charcoal via-[#353a3f] to-[#3a4a49] p-6 text-white shadow-lg sm:p-8">
+            <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-charcoal via-[#1f3a36] to-[#24534e] p-6 text-white shadow-lg sm:p-8">
               <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">{tx(t.estimate, locale)}</p>
               <p className="mt-3 text-3xl font-semibold tracking-tight tabular-nums" aria-live="polite">
                 {range}

@@ -26,7 +26,7 @@ export default function CheckTeaser({ locale }: { locale: Locale }) {
           </ol>
           <Link
             href={withLocale(paths.websiteCheck, locale)}
-            className="group mt-10 inline-flex min-h-12 items-center gap-2 rounded-full bg-charcoal px-7 py-3.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-accent-dark"
+            className="group mt-10 inline-flex min-h-12 items-center gap-2 rounded-full bg-accent-dark px-7 py-3.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-charcoal"
           >
             {tx(copy.cta, locale)}
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -34,7 +34,7 @@ export default function CheckTeaser({ locale }: { locale: Locale }) {
         </div>
 
         <div className="relative">
-          <p className="absolute -top-9 right-2 rotate-[-4deg] font-hand text-2xl text-accent-dark sm:right-8" aria-hidden>
+          <p className="absolute -top-9 right-2 rotate-[-4deg] font-hand text-2xl text-brass sm:right-8" aria-hidden>
             {tx(copy.handNote, locale)} ↓
           </p>
           <div className="rotate-[1deg] rounded-2xl border border-border bg-surface p-6 shadow-[0_24px_60px_-30px_rgba(44,47,51,0.35)] sm:p-8">

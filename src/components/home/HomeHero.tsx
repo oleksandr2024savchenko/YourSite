@@ -30,7 +30,7 @@ export default function HomeHero({ locale }: { locale: Locale }) {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
               href={withLocale(paths.contact, locale)}
-              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-7 py-3.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent-dark px-7 py-3.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-charcoal"
             >
               {tx(copy.primary, locale)}
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -59,7 +59,7 @@ export default function HomeHero({ locale }: { locale: Locale }) {
           </figure>
           <div className="mt-5 flex items-center gap-4">
             <BeforeAfterToggle mode={mode} onChange={setMode} locale={locale} label={showcase.client} />
-            <p className="hidden font-hand text-2xl leading-none whitespace-nowrap text-accent-dark sm:block" aria-hidden>
+            <p className="hidden font-hand text-2xl leading-none whitespace-nowrap text-brass sm:block" aria-hidden>
               ← {tx(copy.note, locale)}
             </p>
           </div>

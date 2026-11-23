@@ -1,20 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f6f3;
-  --foreground: #2c2f33;
-  --muted: #6b716c;
+  --background: #f6f2ea;
+  --foreground: #1b2d2a;
+  --muted: #626b67;
   --surface: #ffffff;
-  --surface-soft: #f0efe9;
-  --border: #e4e2db;
-  --accent: #94bfbe;
-  --accent-deep: #6fa3a2;
-  --accent-dark: #3d6b6a;
-  --accent-soft: #e6f2f2;
-  --slate: #94a0ab;
-  --slate-soft: #eef1f3;
-  --beige: #e8e2d6;
-  --charcoal: #2c2f33;
+  --surface-soft: #eee8dc;
+  --border: #e3dccd;
+  --accent: #9fbab0;
+  --accent-deep: #4f8077;
+  --accent-dark: #24534e;
+  --accent-soft: #e6eee9;
+  --slate: #7f8a85;
+  --slate-soft: #ebefea;
+  --beige: #ebe0cb;
+  --charcoal: #1b2d2a;
+  /* Brass: only for the hand-written notes */
+  --brass: #9a6f2c;
+  --brass-light: #d4ab66;
 }
 
 @theme inline {
@@ -32,6 +35,8 @@
   --color-slate-soft: var(--slate-soft);
   --color-beige: var(--beige);
   --color-charcoal: var(--charcoal);
+  --color-brass: var(--brass);
+  --color-brass-light: var(--brass-light);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-display-serif), ui-serif, Georgia, serif;
@@ -72,10 +77,10 @@ h2 em {
 
 .hero-atmosphere {
   background:
-    radial-gradient(ellipse 70% 55% at 72% 18%, rgba(148, 191, 190, 0.22), transparent 55%),
-    radial-gradient(ellipse 45% 35% at 12% 78%, rgba(148, 160, 171, 0.14), transparent 50%),
-    radial-gradient(ellipse 35% 28% at 88% 72%, rgba(232, 226, 214, 0.55), transparent 45%),
-    linear-gradient(165deg, #faf9f6 0%, #f3f1eb 45%, #eef2f1 100%);
+    radial-gradient(ellipse 70% 55% at 72% 18%, rgba(159, 186, 176, 0.22), transparent 55%),
+    radial-gradient(ellipse 45% 35% at 12% 78%, rgba(127, 138, 133, 0.12), transparent 50%),
+    radial-gradient(ellipse 35% 28% at 88% 72%, rgba(235, 224, 203, 0.55), transparent 45%),
+    linear-gradient(165deg, #faf7f1 0%, #f3eee4 45%, #edf0ea 100%);
 }
 
 /* Hide scrollbars on mobile swipe carousels while keeping them scrollable */

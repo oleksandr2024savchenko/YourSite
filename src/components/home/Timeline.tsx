@@ -21,7 +21,7 @@ export default function Timeline({ locale }: { locale: Locale }) {
                 }`}
                 aria-hidden
               />
-              <p className="font-hand text-2xl leading-none text-accent">{tx(step.day, locale)}</p>
+              <p className="font-hand text-2xl leading-none text-brass-light">{tx(step.day, locale)}</p>
               <h3 className="mt-3 text-lg font-semibold">{tx(step.title, locale)}</h3>
               <p className="mt-2 text-sm leading-relaxed text-white/65">{tx(step.text, locale)}</p>
               {"pay" in step && step.pay ? (
