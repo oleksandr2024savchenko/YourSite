@@ -32,3 +32,14 @@ export function absoluteUrl(path = "/") {
   const normalized = path.startsWith("/") ? path : `/${path}`;
   return `${SITE_URL}${normalized}`.replace(/([^:]\/)\/+/g, "$1");
 }
+
+/**
+ * Founder / personal contact person. Shown on "Über uns" and in the contact CTA.
+ * Set `name` and drop a portrait at e.g. `public/images/founder.jpg`, then set
+ * `photo: "/images/founder.jpg"`. Until then a neutral monogram is rendered.
+ */
+export const FOUNDER = {
+  name: "",
+  role: { de: "Gründer & Ihr Ansprechpartner in Wien", en: "Founder & your contact person in Vienna" },
+  photo: "",
+} as const satisfies { name: string; role: { de: string; en: string }; photo: string };

@@ -7,6 +7,9 @@ import { ui } from "@/content/ui";
 import { images } from "@/lib/images";
 import JsonLd from "@/components/site/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/schema";
+import { ArrowUpRight, Gauge, Search, ServerCog, Smartphone, Target, type LucideIcon } from "lucide-react";
+
+const pillarIcons: LucideIcon[] = [ServerCog, Search, Smartphone, Target];
 
 export default function WebsiteCheckView({ locale }: { locale: Locale }) {
   const page = websiteCheckPage;
@@ -43,12 +46,21 @@ export default function WebsiteCheckView({ locale }: { locale: Locale }) {
         </section>
         <section className="py-20">
           <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
-            {page.pillars.map((item) => (
-              <div key={item.title.de} className="rounded-2xl border border-border/80 p-6">
-                <h2 className="text-lg font-semibold text-charcoal">{tx(item.title, locale)}</h2>
-                <p className="mt-3 text-sm text-muted">{tx(item.text, locale)}</p>
-              </div>
-            ))}
+            {page.pillars.map((item, index) => {
+              const Icon = pillarIcons[index % pillarIcons.length];
+              return (
+                <div
+                  key={item.title.de}
+                  className="group rounded-2xl border border-border/80 bg-surface p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-md"
+                >
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-soft text-accent-deep transition-colors duration-300 group-hover:bg-accent group-hover:text-charcoal">
+                    <Icon className="h-5 w-5" strokeWidth={1.75} />
+                  </span>
+                  <h2 className="mt-4 text-lg font-semibold text-charcoal">{tx(item.title, locale)}</h2>
+                  <p className="mt-2 text-sm text-muted">{tx(item.text, locale)}</p>
+                </div>
+              );
+            })}
           </div>
         </section>
         <section className="bg-surface-soft/50 py-20">
@@ -61,12 +73,18 @@ export default function WebsiteCheckView({ locale }: { locale: Locale }) {
                   href={tool.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-2xl border border-border/80 bg-surface p-7 transition hover:border-accent/50"
+                  className="group rounded-2xl border border-border/80 bg-surface p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-md"
                 >
-                  <h3 className="font-semibold text-charcoal">{tx(tool.title, locale)}</h3>
+                  <h3 className="flex items-center gap-2 font-semibold text-charcoal">
+                    <Gauge className="h-4 w-4 text-accent-deep" strokeWidth={1.75} />
+                    {tx(tool.title, locale)}
+                  </h3>
                   <p className="mt-2 text-sm text-muted">{tx(tool.text, locale)}</p>
                   <p className="mt-4 text-sm font-medium text-accent-dark">
-                    {tx(tool.cta, locale)} →
+                    <span className="inline-flex items-center gap-1">
+                      {tx(tool.cta, locale)}
+                      <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </span>
                   </p>
                 </a>
               ))}

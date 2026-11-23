@@ -3,6 +3,7 @@
 import { Calendar } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import ContactForm from "@/components/site/ContactForm";
+import FounderCard from "@/components/site/FounderCard";
 import Reveal from "./Reveal";
 
 export default function CTA() {
@@ -26,6 +27,9 @@ export default function CTA() {
               <p className="mt-8 text-sm tracking-wide text-white/60">
                 {t.cta.reassurance}
               </p>
+              <div className="mt-10 border-t border-white/10 pt-8">
+                <FounderCard locale={locale} tone="dark" />
+              </div>
             </div>
             <div className="rounded-2xl bg-surface p-6 shadow-sm sm:p-8">
               <ContactForm locale={locale} />

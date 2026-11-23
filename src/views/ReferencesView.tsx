@@ -36,7 +36,7 @@ export default function ReferencesView({ locale }: { locale: Locale }) {
             </p>
           </div>
         </section>
-        <References />
+        <References variant="page" />
         <section className="pb-24">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Link

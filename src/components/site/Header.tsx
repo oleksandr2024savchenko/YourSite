@@ -85,15 +85,22 @@ export default function Header() {
 
   const isActive = (href: string) => pathname === href || pathname === href.slice(0, -1);
 
-  useEffect(() => {
+  const closeMenu = () => {
+    setOpen(false);
+    setMobileServicesOpen(false);
+  };
+
+  // Close menus on navigation (state adjustment during render instead of an effect).
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
     setOpen(false);
     setServicesOpen(false);
     setMobileServicesOpen(false);
-  }, [pathname]);
+  }
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    if (!open) setMobileServicesOpen(false);
     return () => {
       document.body.style.overflow = "";
     };
@@ -178,7 +185,7 @@ export default function Header() {
         <button
           type="button"
           className="inline-flex h-11 w-11 items-center justify-center rounded-xl p-2 text-charcoal transition-all duration-300 hover:bg-surface-soft lg:hidden"
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => (open ? closeMenu() : setOpen(true))}
           aria-label={open ? tx(nav.closeMenu, locale) : tx(nav.openMenu, locale)}
           aria-expanded={open}
         >
@@ -207,7 +214,7 @@ export default function Header() {
                 <Link
                   href={withLocale(paths.services, locale)}
                   className="rounded-xl px-3 py-3 text-sm font-medium text-accent-dark hover:bg-accent-soft/60"
-                  onClick={() => setOpen(false)}
+                  onClick={closeMenu}
                 >
                   {tx(nav.allServices, locale)}
                 </Link>
@@ -216,7 +223,7 @@ export default function Header() {
                     key={link.href}
                     href={link.href}
                     className="rounded-xl px-3 py-3 text-sm font-medium text-muted hover:bg-surface-soft hover:text-charcoal"
-                    onClick={() => setOpen(false)}
+                    onClick={closeMenu}
                   >
                     {link.label}
                   </Link>
@@ -228,7 +235,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className="rounded-xl px-3 py-3 text-sm font-medium text-muted hover:bg-surface-soft hover:text-charcoal"
-                onClick={() => setOpen(false)}
+                onClick={closeMenu}
               >
                 {link.label}
               </Link>
@@ -237,7 +244,7 @@ export default function Header() {
             <Link
               href={withLocale(paths.contact, locale)}
               className="mt-2 inline-flex min-h-12 items-center justify-center rounded-2xl bg-accent px-5 py-3 text-sm font-medium text-charcoal"
-              onClick={() => setOpen(false)}
+              onClick={closeMenu}
             >
               {tx(nav.cta, locale)}
             </Link>

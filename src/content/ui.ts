@@ -60,6 +60,24 @@ export const ui = {
     ),
     another: c("Weitere Anfrage", "Another enquiry"),
   },
+  cases: {
+    before: c("Vorher", "Before"),
+    after: c("Nachher", "After"),
+    toggleHint: c("Umschalten: alte Website vs. neuer Auftritt", "Switch: old website vs. new presence"),
+    conceptBadge: c("Konzeptstudie", "Concept study"),
+    problem: c("Ausgangslage", "Starting point"),
+    solution: c("Lösung", "Solution"),
+    result: c("Ergebnis", "Result"),
+    metricsNote: c(
+      "Zielwerte aus dem Konzept-Build, gemessen mit Google Lighthouse.",
+      "Target values from the concept build, measured with Google Lighthouse.",
+    ),
+    serviceLink: c("Passende Leistung", "Matching service"),
+    conceptNote: c(
+      "Konzeptstudien für typische Wiener Branchen: So lösen wir die häufigsten Ausgangslagen. Echte Kundenprojekte zeigen wir hier, sobald die Freigabe der Auftraggeber vorliegt.",
+      "Concept studies for typical Vienna industries: how we solve the most common briefs. Real client projects appear here once clients have approved them.",
+    ),
+  },
   sticky: {
     label: c("Unverbindliche Beratung", "No-obligation consult"),
     cta: c("Jetzt anfragen", "Enquire now"),

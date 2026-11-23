@@ -14,6 +14,7 @@ import { withLocale } from "@/lib/routes";
 import { getService } from "@/content/service-pages";
 import { tx } from "@/content/copy";
 import { ui } from "@/content/ui";
+import { serviceIcons } from "@/lib/service-icons";
 import Reveal from "./Reveal";
 
 const FEATURED_SLUG = "business-website";
@@ -25,6 +26,7 @@ export default function Pricing() {
   const renderCard = (slug: ServiceSlug, index: number) => {
     const page = getService(slug);
     const featured = slug === FEATURED_SLUG;
+    const Icon = serviceIcons[slug];
     return (
       <Reveal
         key={slug}
@@ -45,9 +47,18 @@ export default function Pricing() {
           )}
 
           <div>
-            <h3 className="text-xs font-semibold tracking-[0.14em] text-slate uppercase">
-              {tx(page.menuName, locale)}
-            </h3>
+            <div className="flex items-center gap-3">
+              <span
+                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-all duration-300 group-hover:-translate-y-0.5 ${
+                  featured ? "bg-accent text-charcoal" : "bg-accent-soft text-accent-deep group-hover:bg-accent group-hover:text-charcoal"
+                }`}
+              >
+                <Icon className="h-5 w-5" strokeWidth={1.75} />
+              </span>
+              <h3 className="text-xs font-semibold tracking-[0.14em] text-slate uppercase">
+                {tx(page.menuName, locale)}
+              </h3>
+            </div>
             <p className="mt-3 text-2xl font-semibold tracking-tight text-charcoal">
               {tx(page.priceFrom, locale)}
             </p>

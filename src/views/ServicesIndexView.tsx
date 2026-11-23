@@ -13,6 +13,8 @@ import { tx } from "@/content/copy";
 import { ui } from "@/content/ui";
 import { images } from "@/lib/images";
 import { servicePath, withLocale } from "@/lib/routes";
+import { serviceIcons } from "@/lib/service-icons";
+import { ArrowRight } from "lucide-react";
 
 function ServiceIndexCard({
   slug,
@@ -24,6 +26,7 @@ function ServiceIndexCard({
   index: number;
 }) {
   const page = getService(slug);
+  const Icon = serviceIcons[slug];
   return (
     <Reveal
       delay={0.05 * index}
@@ -38,7 +41,10 @@ function ServiceIndexCard({
           />
           <div className="absolute inset-0 bg-accent-deep/0 transition-colors duration-300 group-hover:bg-accent-deep/10" />
         </div>
-        <div className="p-7">
+        <div className="relative p-7 pt-10">
+          <span className="absolute -top-6 left-7 flex h-12 w-12 items-center justify-center rounded-2xl border border-border/60 bg-surface text-accent-deep shadow-md transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-accent group-hover:text-charcoal">
+            <Icon className="h-5 w-5" strokeWidth={1.75} />
+          </span>
           <h2 className="text-xl font-semibold text-charcoal">{tx(page.h1, locale)}</h2>
           <p className="mt-2 text-sm font-medium text-accent-dark">
             {tx(page.priceFrom, locale)} · {tx(page.timeline, locale)}
@@ -51,6 +57,7 @@ function ServiceIndexCard({
             className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-accent-dark transition-all duration-300 group-hover:gap-1.5 hover:text-charcoal"
           >
             {locale === "de" ? "Zur Leistungsseite" : "Open service page"}
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
           </Link>
         </div>
       </article>

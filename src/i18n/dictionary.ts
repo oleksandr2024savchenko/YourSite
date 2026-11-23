@@ -322,7 +322,7 @@ export const dictionaries = {
           positioning: "A fresh presence without starting over",
           summary:
             "Your website already exists — it simply no longer matches the quality of your work. We keep what works, modernise design and technology, and turn the page into a presence that convinces again.",
-          timeline: "approx. 1–2 weeks",
+          timeline: "approx. 5–7 days",
           idealFor: [
             "Companies whose website looks several years old",
             "Pages that are slow or awkward on smartphones",
@@ -369,7 +369,7 @@ export const dictionaries = {
           positioning: "Digital business card and status",
           summary:
             "One modern page that carries everything a potential customer needs: who you are, what you offer and how to reach you. Fast, clear and built to be taken seriously.",
-          timeline: "approx. 1–2 weeks",
+          timeline: "approx. 7 days",
           idealFor: [
             "Independent professionals and small teams",
             "Companies that need a presence, not a large site",
@@ -416,7 +416,7 @@ export const dictionaries = {
           positioning: "Lead-generation tool for advertising",
           summary:
             "A page with exactly one job: turning visitors from your ads into enquiries. Every element — headline, proof, form — is built around that single action.",
-          timeline: "approx. 1–2 weeks",
+          timeline: "approx. 7–10 days",
           idealFor: [
             "Companies running Google or social media ads",
             "One specific service, product or offer",
@@ -463,7 +463,7 @@ export const dictionaries = {
           positioning: "The full presence for your company",
           summary:
             "Several pages that present your company in the way it deserves: services, team, references and clear contact paths — a website that supports your sales work every day.",
-          timeline: "approx. 3–5 weeks",
+          timeline: "approx. 10–14 days",
           idealFor: [
             "Established companies with several services",
             "Businesses that want to show references and their team",
@@ -510,7 +510,7 @@ export const dictionaries = {
           positioning: "Sell around the clock",
           summary:
             "Your own shop with a purchase process that customers actually complete: clear products, simple checkout, reliable payments. Built to sell while you sleep.",
-          timeline: "approx. 5–8 weeks",
+          timeline: "approx. 3–4 weeks",
           idealFor: [
             "Companies that want to sell products online",
             "Local businesses expanding beyond their region",
@@ -969,7 +969,7 @@ export const dictionaries = {
           positioning: "Frischer Auftritt ohne Neustart",
           summary:
             "Ihre Website existiert bereits — sie passt nur nicht mehr zur Qualität Ihrer Arbeit. Wir behalten, was funktioniert, modernisieren Design und Technik und machen aus der Seite einen Auftritt, der wieder überzeugt.",
-          timeline: "ca. 1–2 Wochen",
+          timeline: "ca. 5–7 Tage",
           idealFor: [
             "Unternehmen, deren Website mehrere Jahre alt wirkt",
             "Seiten, die langsam oder am Smartphone unpraktisch sind",
@@ -1016,7 +1016,7 @@ export const dictionaries = {
           positioning: "Digitale Visitenkarte und Status",
           summary:
             "Eine moderne Seite, die alles trägt, was ein möglicher Kunde braucht: wer Sie sind, was Sie anbieten und wie man Sie erreicht. Schnell, klar und so gebaut, dass man Sie ernst nimmt.",
-          timeline: "ca. 1–2 Wochen",
+          timeline: "ca. 7 Tage",
           idealFor: [
             "Selbstständige Fachkräfte und kleine Teams",
             "Unternehmen, die einen Auftritt brauchen, keine große Website",
@@ -1063,7 +1063,7 @@ export const dictionaries = {
           positioning: "Leadgenerierung für Ihre Werbung",
           summary:
             "Eine Seite mit genau einer Aufgabe: Besucher aus Ihrer Werbung in Anfragen zu verwandeln. Jedes Element — Headline, Nachweis, Formular — ist auf diese eine Aktion ausgerichtet.",
-          timeline: "ca. 1–2 Wochen",
+          timeline: "ca. 7–10 Tage",
           idealFor: [
             "Unternehmen mit Google- oder Social-Media-Werbung",
             "Eine konkrete Leistung, ein Produkt oder ein Angebot",
@@ -1110,7 +1110,7 @@ export const dictionaries = {
           positioning: "Der vollständige Auftritt für Ihr Unternehmen",
           summary:
             "Mehrere Seiten, die Ihr Unternehmen so präsentieren, wie es es verdient: Leistungen, Team, Referenzen und klare Kontaktwege — eine Website, die Ihren Vertrieb jeden Tag unterstützt.",
-          timeline: "ca. 3–5 Wochen",
+          timeline: "ca. 10–14 Tage",
           idealFor: [
             "Etablierte Unternehmen mit mehreren Leistungen",
             "Betriebe, die Referenzen und Team zeigen möchten",
@@ -1157,7 +1157,7 @@ export const dictionaries = {
           positioning: "Verkaufen rund um die Uhr",
           summary:
             "Ihr eigener Shop mit einem Kaufprozess, den Kunden wirklich abschließen: klare Produkte, einfacher Checkout, zuverlässige Zahlungen. Gebaut, um zu verkaufen, während Sie schlafen.",
-          timeline: "ca. 5–8 Wochen",
+          timeline: "ca. 3–4 Wochen",
           idealFor: [
             "Unternehmen, die Produkte online verkaufen möchten",
             "Lokale Betriebe, die über ihre Region hinaus wachsen",

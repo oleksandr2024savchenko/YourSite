@@ -33,7 +33,7 @@ export const aboutPage = {
     title: c("Warum uns Unternehmen beauftragen", "Why companies hire us"),
     items: [
       { title: c("Transparente Preise", "Transparent prices"), text: c("Startpreis, Leistungsumfang, Add-ons – schriftlich vor dem Kickoff.", "Starting price, scope, add-ons – in writing before kickoff.") },
-      { title: c("Nachvollziehbare Fristen", "Readable timelines"), text: c("1–2 Wochen für schlanke Seiten, länger wenn Shop oder viele URLs.", "1–2 weeks for lean pages, longer for a shop or many URLs.") },
+      { title: c("Nachvollziehbare Fristen", "Readable timelines"), text: c("7–14 Tage für Onepage, Landing Page und Business Website, 3–4 Wochen für einen Shop.", "7–14 days for one-pagers, landing pages and business sites, 3–4 weeks for a shop.") },
       { title: c("Direkte Kommunikation", "Direct communication"), text: c("Eine Person, die das Projekt kennt. Antwort in der Regel innerhalb von 24 Stunden.", "One person who knows the project. A reply usually within 24 hours.") },
       { title: c("Support nach dem Launch", "Support after launch"), text: c("Wartung als echtes Angebot, nicht als nachgeschobene Überraschung.", "Maintenance as a real offer, not a surprise added later.") },
     ],
@@ -111,7 +111,7 @@ export const pricingPage = {
   extras: [
     { title: c("Texte und Fotos", "Copy and photos"), text: c("Wenn Inhalte fehlen, entsteht Aufwand – als Option, nicht als stille Nachbelastung.", "If content is missing, effort appears – as an option, not a silent extra bill.") },
     { title: c("Laufende Gebühren", "Recurring fees"), text: c("Hosting, Domain, Zahlungsanbieter. Diese Beträge fließen an Dritte, nicht in unseren einmaligen Fixpreis.", "Hosting, domain, payment providers. These amounts go to third parties, not into our one-off fixed price.") },
-    { title: c("Wartung", "Maintenance"), text: c("Optional ab 39 € im Monat, damit Updates und Formulare nicht einschlafen.", "Optional from €39 per month so updates and forms do not fall asleep.") },
+    { title: c("Wartung", "Maintenance"), text: c("Optional ab 39 € im Monat, der erste Monat ist bei jeder neuen Website gratis.", "Optional from €39 per month – the first month is free with every new website.") },
   ],
 };
 

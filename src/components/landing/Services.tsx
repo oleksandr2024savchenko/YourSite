@@ -17,6 +17,7 @@ import { withLocale } from "@/lib/routes";
 import { getService } from "@/content/service-pages";
 import { ui } from "@/content/ui";
 import { tx } from "@/content/copy";
+import { serviceIcons } from "@/lib/service-icons";
 import Reveal from "./Reveal";
 
 const accents = [
@@ -35,6 +36,7 @@ export default function Services() {
 
   const renderCard = (slug: ServiceSlug, index: number) => {
     const service = t.services.items[serviceSlugs.indexOf(slug)];
+    const Icon = serviceIcons[slug];
     return (
       <Reveal
         key={slug}
@@ -57,11 +59,11 @@ export default function Services() {
             <div className="absolute inset-0 bg-accent-deep/0 transition-colors duration-300 group-hover:bg-accent-deep/10" />
           </div>
 
-          <div className="flex flex-1 flex-col p-8 pt-5">
-            <p className="text-xs font-semibold tracking-[0.2em] text-slate uppercase">
-              {String(index + 1).padStart(2, "0")}
-            </p>
-            <h3 className="mt-2 text-xl font-semibold tracking-tight text-charcoal">
+          <div className="relative flex flex-1 flex-col p-8 pt-9">
+            <span className="absolute -top-6 left-8 flex h-12 w-12 items-center justify-center rounded-2xl border border-border/60 bg-surface text-accent-deep shadow-md transition-all duration-300 group-hover:-translate-y-1 group-hover:rotate-[-4deg] group-hover:bg-accent group-hover:text-charcoal">
+              <Icon className="h-5 w-5" strokeWidth={1.75} />
+            </span>
+            <h3 className="text-xl font-semibold tracking-tight text-charcoal">
               {service.title}
             </h3>
             {service.positioning ? (

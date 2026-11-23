@@ -210,7 +210,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
       "ClearPoint plans, designs and builds websites for Vienna companies, independents and local businesses. You get a clear structure, transparent prices and a site that can generate enquiries – from the first call to launch.",
     ),
     priceFrom: c("ab 699 €", "from €699"),
-    timeline: c("1–8 Wochen je nach Paket", "1–8 weeks depending on package"),
+    timeline: c("7 Tage bis 4 Wochen je nach Paket", "7 days to 4 weeks depending on package"),
     imageAlt: c(
       "Besprechung einer neuen Website für ein Wiener Unternehmen am Laptop",
       "Planning a new website for a Vienna business on a laptop",
@@ -365,7 +365,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
       },
       {
         question: c("Wie lange dauert die Umsetzung?", "How long does it take?"),
-        answer: c("Onepage und Landing Pages oft 1–2 Wochen, Business Websites 3–5 Wochen, Shops 5–8 Wochen – abhängig von Feedback und Inhalten.", "One-pagers and landing pages often take 1–2 weeks, business sites 3–5 weeks, shops 5–8 weeks – depending on feedback and content."),
+        answer: c("Relaunch oft 5–7 Tage, Onepage rund 7 Tage, Landing Pages 7–10 Tage, Business Websites 10–14 Tage, Shops 3–4 Wochen – sobald Inhalte und Feedback vorliegen.", "Relaunches often take 5–7 days, one-pagers about 7 days, landing pages 7–10 days, business sites 10–14 days, shops 3–4 weeks – once content and feedback are in."),
       },
       {
         question: c("Brauche ich Texte und Fotos vorher?", "Do I need copy and photos first?"),
@@ -445,7 +445,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
       "A business website is more than a calling card: home, about, services, references, contact and legal pages. It explains your offer, builds trust and leads to an enquiry – on desktop and phone.",
     ),
     priceFrom: c("ab 2.999 €", "from €2,999"),
-    timeline: c("ca. 3–5 Wochen", "about 3–5 weeks"),
+    timeline: c("ca. 10–14 Tage", "about 10–14 days"),
     imageAlt: c(
       "Moderne Büro-Website für ein Wiener Unternehmen mit klarer Leistungsübersicht",
       "Modern office website for a Vienna company with a clear services overview",
@@ -582,7 +582,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
     },
     faq: [
       { question: c("Wie viele Seiten sind enthalten?", "How many pages are included?"), answer: c("Bis zu acht Seiten im Startpaket. Weitere Seiten rechnen wir transparent dazu.", "Up to eight pages in the starting package. Extra pages are added transparently.") },
-      { question: c("Wie lange dauert eine Business Website?", "How long does a business website take?"), answer: c("Typisch 3–5 Wochen, wenn Feedback und Inhalte zeitnah kommen.", "Typically 3–5 weeks if feedback and content arrive on time.") },
+      { question: c("Wie lange dauert eine Business Website?", "How long does a business website take?"), answer: c("Typisch 10–14 Tage, wenn Feedback und Inhalte zeitnah kommen.", "Typically 10–14 days if feedback and content arrive on time.") },
       { question: c("Ist SEO enthalten?", "Is SEO included?"), answer: c("Ja, die technische und inhaltliche Basis. Keine laufende Ranking-Kampagne ohne eigenen Auftrag.", "Yes, the technical and content foundation. No ongoing ranking campaign without its own brief.") },
       { question: c("Wer schreibt die Texte?", "Who writes the copy?"), answer: c("Sie liefern Rohmaterial, wir strukturieren. Vollständige Texterstellung ist optional.", "You supply raw material, we structure it. Full copywriting is optional.") },
       { question: c("Brauche ich eigene Fotos?", "Do I need my own photos?"), answer: c("Eigene Fotos wirken glaubwürdiger. Wir können Platzhalter setzen oder Bildauswahl beraten.", "Your own photos look more credible. We can use placeholders or advise on image choice.") },
@@ -626,7 +626,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
       "A one-page website gathers offer, benefits, process, trust and contact on one page. It fits if you have one clear service – not if you want to cover five business lines in Google.",
     ),
     priceFrom: c("ab 1.499 €", "from €1,499"),
-    timeline: c("ca. 1–2 Wochen", "about 1–2 weeks"),
+    timeline: c("ca. 7 Tage", "about 7 days"),
     imageAlt: c(
       "Klare Onepage Website am Smartphone für Selbstständige in Wien",
       "Clear one-page website on a smartphone for independents in Vienna",
@@ -733,7 +733,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
       { question: c("Wie viele Sektionen sind enthalten?", "How many sections are included?"), answer: c("Bis zu sechs im Startpreis. Weitere Sektionen als Option.", "Up to six in the starting price. Extra sections as an option.") },
       { question: c("Wer schreibt die Texte?", "Who writes the copy?"), answer: c("Gemeinsam. Rohfassung von Ihnen, Feinschliff oder volle Texterstellung optional.", "Together. A draft from you, polish or full copywriting optional.") },
       { question: c("Reicht eine Onepage für SEO?", "Is a one-pager enough for SEO?"), answer: c("Für einen klaren Auftritt ja. Für viele Leistungs-Keywords ist eine Business Website besser.", "For a clear presence yes. For many service keywords a business website is better.") },
-      { question: c("Wie lange dauert es?", "How long does it take?"), answer: c("Oft 1–2 Wochen nach Freigabe von Konzept und Inhalten.", "Often 1–2 weeks after concept and content are approved.") },
+      { question: c("Wie lange dauert es?", "How long does it take?"), answer: c("Rund 7 Tage nach Freigabe von Konzept und Inhalten.", "About 7 days after concept and content are approved.") },
       { question: c("Ist ein Formular enthalten?", "Is a form included?"), answer: c("Ja, mit Erfolgsmeldung und Datenschutz-Checkbox – nicht nur mailto.", "Yes, with success state and privacy checkbox – not mailto only.") },
       { question: c("Brauche ich Hosting?", "Do I need hosting?"), answer: c("Ja. Wir helfen bei der Einrichtung. Monatliche Hostingkosten sind separat.", "Yes. We help with setup. Monthly hosting fees are separate.") },
       { question: c("Für wen ist es nicht geeignet?", "Who is it not for?"), answer: c("Für Shops, große Leistungsportfolios und starke SEO-Pläne mit vielen URLs.", "For shops, large service portfolios and SEO plans with many URLs.") },
@@ -773,7 +773,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
       "Landing pages are for campaigns, not the whole company story. We build offer, objections, trust and form so ad budget does not vanish on an unclear page.",
     ),
     priceFrom: c("ab 1.799 €", "from €1,799"),
-    timeline: c("ca. 1–2 Wochen", "about 1–2 weeks"),
+    timeline: c("ca. 7–10 Tage", "about 7–10 days"),
     imageAlt: c(
       "Conversion-starke Landing Page mit Formular für Werbekampagnen",
       "High-conversion landing page with a form for ad campaigns",
@@ -881,7 +881,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
       { question: c("Kann ich nach dem Launch sofort werben?", "Can I advertise right after launch?"), answer: c("Ja, sobald Formular, Rechtstexte und – falls gewünscht – Tracking stehen.", "Yes, once the form, legal pages and – if requested – tracking are in place.") },
       { question: c("Testen wir nach dem Start?", "Do we test after launch?"), answer: c("Empfohlen: Headline, CTA, Formularlänge und Sozialbeweis. Eine zweite Variante ist als Add-on buchbar.", "Recommended: headline, CTA, form length and social proof. A second variant is available as an add-on.") },
       { question: c("Geht das auch ohne laufende Ads?", "Does it work without ongoing ads?"), answer: c("Ja, als Angebotsseite. Der größte Hebel entsteht aber mit Kampagnen.", "Yes, as an offer page. The biggest leverage still comes with campaigns.") },
-      { question: c("Wie schnell ist sie fertig?", "How fast is it ready?"), answer: c("Oft 1–2 Wochen, wenn Angebot und Zielgruppe klar sind.", "Often 1–2 weeks if offer and audience are clear.") },
+      { question: c("Wie schnell ist sie fertig?", "How fast is it ready?"), answer: c("Oft 7–10 Tage, wenn Angebot und Zielgruppe klar sind.", "Often 7–10 days if offer and audience are clear.") },
       { question: c("Ist DSGVO berücksichtigt?", "Is GDPR covered?"), answer: c("Ja: Einwilligung im Formular, Datenschutzseite, kein Tracking vor Consent.", "Yes: consent in the form, privacy page, no tracking before consent.") },
     ],
     related: ["business-website", "website-erstellen-lassen", "online-shop"],
@@ -918,7 +918,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
       "A relaunch is more than a new theme. We modernise design and technology, make the site usable on phones and plan the SEO migration: important URLs, redirects, metadata, indexing and analytics.",
     ),
     priceFrom: c("ab 699 €", "from €699"),
-    timeline: c("ca. 1–2 Wochen", "about 1–2 weeks"),
+    timeline: c("ca. 5–7 Tage", "about 5–7 days"),
     imageAlt: c(
       "Vorher-Nachher-Vergleich eines Website-Relaunchs am Desktop",
       "Before-and-after comparison of a website relaunch on desktop",
@@ -1025,7 +1025,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
       ),
     },
     faq: [
-      { question: c("Wie lange dauert ein Relaunch?", "How long does a relaunch take?"), answer: c("Oft 1–2 Wochen für den Startumfang, länger bei vielen URLs oder neuem CMS.", "Often 1–2 weeks for the starting scope, longer with many URLs or a new CMS.") },
+      { question: c("Wie lange dauert ein Relaunch?", "How long does a relaunch take?"), answer: c("Oft 5–7 Tage für den Startumfang, länger bei vielen URLs oder neuem CMS.", "Often 5–7 days for the starting scope, longer with many URLs or a new CMS.") },
       { question: c("Verliere ich meine Google-Positionen?", "Will I lose my Google rankings?"), answer: c("Nicht, wenn wir URLs, Redirects und Metas planen. Ein Relaunch ohne Migration ist das eigentliche Risiko.", "Not if we plan URLs, redirects and metas. A relaunch without migration is the real risk.") },
       { question: c("Kann ich Inhalte behalten?", "Can I keep my content?"), answer: c("Ja. Wir übernehmen, was trägt, und schärfen Struktur und Ansprache.", "Yes. We keep what works and sharpen structure and wording.") },
       { question: c("Was kostet der Umzug?", "What does the move cost?"), answer: c("Der Relaunch startet bei 699 €. Domain- und Hosting-Umzug ist optional zuzüglich 99 €.", "The relaunch starts at €699. Domain and hosting move is optional plus €99.") },
@@ -1081,7 +1081,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
       "A shop needs more than pretty tiles: catalogue, filters, product page, cart, checkout, payment, shipping, emails and legal pages. We deliberately split small shop and growing shop so the scope stays honest.",
     ),
     priceFrom: c("ab 4.999 €", "from €4,999"),
-    timeline: c("ca. 5–8 Wochen", "about 5–8 weeks"),
+    timeline: c("ca. 3–4 Wochen", "about 3–4 weeks"),
     imageAlt: c(
       "Produktkatalog und Checkout eines Online-Shops für ein Wiener Unternehmen",
       "Product catalogue and checkout of an online shop for a Vienna business",
@@ -1188,7 +1188,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
     faq: [
       { question: c("WooCommerce oder Shopify?", "WooCommerce or Shopify?"), answer: c("Kommt auf Pflege, Budget und Integrationen an. Wir beraten im Erstgespräch und bauen nicht aus Prinzip auf einer Plattform.", "It depends on care, budget and integrations. We advise in the discovery call and do not pick a platform out of habit.") },
       { question: c("Können bestehende Produkte importiert werden?", "Can existing products be imported?"), answer: c("Ja, wenn Daten sauber vorliegen (CSV, vorhandener Shop). Aufräumen ist oft der eigentliche Aufwand.", "Yes if data is clean (CSV, existing shop). Cleaning is often the real work.") },
-      { question: c("Wie lange dauert ein Shop?", "How long does a shop take?"), answer: c("Typisch 5–8 Wochen inklusive Zahlungen, Versand und Tests.", "Typically 5–8 weeks including payments, shipping and tests.") },
+      { question: c("Wie lange dauert ein Shop?", "How long does a shop take?"), answer: c("Typisch 3–4 Wochen inklusive Zahlungen, Versand und Tests.", "Typically 3–4 weeks including payments, shipping and tests.") },
       { question: c("Welche Zahlungen sind möglich?", "Which payments are possible?"), answer: c("Gängige Anbieter in Österreich. Jede zusätzliche Zahlart nach Aufwand.", "Common providers in Austria. Each extra method according to effort.") },
       { question: c("Wer zahlt die Gebühren?", "Who pays the fees?"), answer: c("Transaktionsgebühren zahlt der Shop-Betreiber an den Zahlungsanbieter. Sie sind nicht in unserem Fixpreis.", "Transaction fees are paid by the shop owner to the provider. They are not in our fixed price.") },
       { question: c("Gibt es Support nach dem Start?", "Is there support after launch?"), answer: c("Ja, Wartung ab 99 € im Monat für Updates, Backups und technische Hilfe.", "Yes, maintenance from €99 per month for updates, backups and technical help.") },
