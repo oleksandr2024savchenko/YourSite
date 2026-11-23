@@ -28,8 +28,8 @@ export default function PackageComparison({ locale }: { locale: Locale }) {
   const popular = locale === "de" ? "Beliebteste Wahl" : "Most popular";
   return (
     <div>
-      <div className="no-scrollbar -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-        <table className="w-full min-w-[46rem] border-separate border-spacing-0 text-sm">
+      <div className="no-scrollbar relative -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+        <table className="relative w-full min-w-[46rem] border-separate border-spacing-0 text-sm">
           <caption className="sr-only">{locale === "de" ? "Pakete im Vergleich" : "Packages compared"}</caption>
           <thead>
             <tr>

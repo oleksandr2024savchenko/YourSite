@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -99,10 +100,20 @@ export default function Header() {
     setMobileServicesOpen(false);
   }
 
+  // Lock page scroll while the mobile menu is open. Only <html> is locked: setting
+  // overflow on <body> would turn it into its own scroll container (html uses
+  // overflow-x: clip) and the sticky header would jump to the top of the document.
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (!open) return;
+    const html = document.documentElement;
+    html.style.overflow = "hidden";
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeMenu();
+    };
+    window.addEventListener("keydown", onKey);
     return () => {
-      document.body.style.overflow = "";
+      html.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
     };
   }, [open]);
 
@@ -188,13 +199,18 @@ export default function Header() {
           onClick={() => (open ? closeMenu() : setOpen(true))}
           aria-label={open ? tx(nav.closeMenu, locale) : tx(nav.openMenu, locale)}
           aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
-      {open && (
-        <div className="max-h-[min(70dvh,calc(100dvh-4rem-env(safe-area-inset-top,0px)-5.5rem))] overflow-y-auto overscroll-contain border-t border-border/60 bg-background px-4 py-4 sm:px-6 lg:hidden">
+      {open &&
+        createPortal(
+        <div
+          id="mobile-menu"
+          className="fixed inset-x-0 top-[calc(4rem+env(safe-area-inset-top,0px))] bottom-0 z-[60] overflow-y-auto overscroll-contain border-t border-border/60 bg-background px-4 pt-4 pb-[max(1.5rem,env(safe-area-inset-bottom,0px))] sm:px-6 lg:hidden"
+        >
           <nav className="flex flex-col gap-1">
             <button
               type="button"
@@ -249,8 +265,9 @@ export default function Header() {
               {tx(nav.cta, locale)}
             </Link>
           </nav>
-        </div>
-      )}
+        </div>,
+          document.body,
+        )}
     </header>
   );
 }
