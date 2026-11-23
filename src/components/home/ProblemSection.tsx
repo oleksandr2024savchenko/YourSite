@@ -9,7 +9,7 @@ export default function ProblemSection({ locale }: { locale: Locale }) {
   return (
     <section className="py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2 className="max-w-4xl text-4xl leading-[1.08] text-charcoal sm:text-5xl lg:text-[3.6rem]">{tx(copy.statement, locale)}</h2>
+        <h2 className="max-w-4xl text-[2.1rem] leading-[1.12] text-charcoal sm:text-[2.8rem] lg:text-[3.2rem]">{tx(copy.statement, locale)}</h2>
 
         <div className="mt-14 grid gap-x-12 sm:mt-16 md:grid-cols-2">
           <p className="hidden pb-4 text-sm font-medium text-muted md:block">{tx(copy.oftenTitle, locale)}</p>

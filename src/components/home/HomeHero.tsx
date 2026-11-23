@@ -21,7 +21,7 @@ export default function HomeHero({ locale }: { locale: Locale }) {
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pt-10 pb-14 sm:px-6 sm:pt-16 sm:pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-8 lg:pt-20 lg:pb-24">
         <div>
           <p className="text-sm font-medium text-accent-dark">{tx(copy.eyebrow, locale)}</p>
-          <h1 className="mt-5 text-[2.6rem] leading-[1.02] text-charcoal sm:text-6xl lg:text-[4.3rem]">
+          <h1 className="mt-5 text-[2.3rem] leading-[1.08] text-charcoal sm:text-[3.2rem] lg:text-[3.35rem]">
             {tx(copy.headlineStart, locale)} <em>{tx(copy.headlineAccent, locale)}</em>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">{tx(copy.sub, locale)}</p>

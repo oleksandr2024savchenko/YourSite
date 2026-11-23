@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Caveat, Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Caveat, Geist, Geist_Mono, Newsreader } from "next/font/google";
 import { dictionaries } from "@/i18n/dictionary";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
@@ -9,12 +9,12 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-/** Display serif for h1/h2 – gives the site a hand-set, editorial character. */
-const display = Instrument_Serif({
-  variable: "--font-instrument-serif",
+/** Display serif for h1/h2 – calm, upright, with optical sizes for large headlines. */
+const display = Newsreader({
+  variable: "--font-display-serif",
   subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
+  style: "normal",
+  axes: ["opsz"],
 });
 
 /** Handwritten accent for small human notes (annotations, signature). */
