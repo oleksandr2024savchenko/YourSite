@@ -1,4 +1,4 @@
-import { Lock, Phone as PhoneIcon, Puzzle, TriangleAlert, Zap } from "lucide-react";
+import { Briefcase, Calculator, Check, Landmark, Lock, Phone as PhoneIcon, Puzzle, Scale, TriangleAlert, Zap } from "lucide-react";
 import type { MockTheme } from "@/content/portfolio";
 
 /**
@@ -126,48 +126,103 @@ function ClinicAfterPhone({ theme }: { theme: MockTheme }) {
 
 /* ================= AFTER · editorial ================= */
 
+const facade =
+  "repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0 1.2%, transparent 1.2% 9%), linear-gradient(160deg, #24345a 0%, #16203a 55%, #0e1528 100%)";
+
 function EditorialAfterDesktop({ theme }: { theme: MockTheme }) {
-  const areas = ["Steuerrecht", "Unternehmensrecht", "Arbeitsrecht", "Lohnverrechnung"];
+  const areas = [
+    { icon: Scale, title: "Steuerrecht", text: "Bilanz, Betriebsprüfung" },
+    { icon: Briefcase, title: "Unternehmensrecht", text: "Gründung, Verträge" },
+    { icon: Landmark, title: "Arbeitsrecht", text: "Beratung & Vertretung" },
+    { icon: Calculator, title: "Lohnverrechnung", text: "Monatlich, digital" },
+  ];
   return (
-    <div className="flex h-full flex-col" style={{ background: theme.bg, color: theme.ink }}>
-      <div className="flex items-center justify-between border-b px-[3.5cqw] py-[1.8cqw]" style={{ borderColor: lineColor(theme) }}>
-        <span className="flex gap-[2cqw] text-[1.2cqw] tracking-[0.12em] uppercase opacity-70">
-          {theme.nav.slice(0, 2).map((item) => (
+    <div className="flex h-full flex-col px-[3.5cqw] py-[2.2cqw]" style={{ background: theme.bg, color: theme.ink }}>
+      <div className="flex items-center justify-between">
+        <span className="flex items-center gap-[1cqw]">
+          <span
+            className="flex h-[2.8cqw] w-[2.8cqw] items-center justify-center font-serif text-[1.2cqw]"
+            style={{ background: theme.ink, color: theme.primary }}
+          >
+            M&amp;P
+          </span>
+          <span className="font-serif text-[1.8cqw] tracking-[0.04em]">{theme.brand}</span>
+        </span>
+        <span className="flex items-center gap-[2cqw] text-[1.25cqw] opacity-75">
+          {theme.nav.map((item) => (
             <span key={item}>{item}</span>
           ))}
         </span>
-        <span className="font-serif text-[2cqw] tracking-[0.18em] uppercase">{theme.brand}</span>
-        <span className="flex gap-[2cqw] text-[1.2cqw] tracking-[0.12em] uppercase opacity-70">
-          {theme.nav.slice(2).map((item) => (
-            <span key={item}>{item}</span>
-          ))}
+        <span className="px-[1.6cqw] py-[0.8cqw] text-[1.2cqw] font-semibold" style={{ background: theme.ink, color: theme.bg }}>
+          {theme.cta}
         </span>
       </div>
-      <div className="flex flex-1 flex-col items-center justify-center px-[8cqw] text-center">
-        <p className="text-[1.15cqw] tracking-[0.3em] uppercase" style={{ color: theme.primary }}>
-          Rechtsanwälte · Steuerberater · Wien
-        </p>
-        <p className="mt-[1.6cqw] font-serif text-[4.4cqw] leading-[1.05]">{theme.headline}</p>
-        <span className="mt-[1.8cqw] block h-[0.25cqw] w-[6cqw]" style={{ background: theme.primary }} />
-        <p className="mt-[1.8cqw] max-w-[60%] text-[1.4cqw] leading-snug opacity-70">{theme.sub}</p>
-        <span className="mt-[2.2cqw] border-b-[0.25cqw] pb-[0.4cqw] text-[1.4cqw] font-semibold" style={{ borderColor: theme.primary }}>
-          {theme.cta} →
-        </span>
-      </div>
-      <div className="grid grid-cols-4 border-t" style={{ borderColor: lineColor(theme) }}>
-        {areas.map((area, i) => (
-          <div key={area} className="border-r px-[1.8cqw] py-[1.8cqw] last:border-r-0" style={{ borderColor: lineColor(theme) }}>
-            <p className="font-serif text-[1.3cqw]" style={{ color: theme.primary }}>
-              0{i + 1}
+
+      <div className="mt-[3cqw] grid flex-1 grid-cols-[1.08fr_0.92fr] items-center gap-[3.5cqw]">
+        <div>
+          <p className="flex items-center gap-[1cqw] text-[1.15cqw] font-semibold tracking-[0.22em] uppercase" style={{ color: theme.primary }}>
+            <span className="block h-[0.2cqw] w-[3cqw]" style={{ background: theme.primary }} />
+            Rechtsanwälte & Steuerberater
+          </p>
+          <p className="mt-[1.4cqw] font-serif text-[4.3cqw] leading-[1.04]">
+            Recht und Steuern <span className="italic" style={{ color: theme.primary }}>mit Klarheit.</span>
+          </p>
+          <p className="mt-[1.5cqw] max-w-[90%] text-[1.4cqw] leading-snug opacity-70">{theme.sub}</p>
+          <div className="mt-[2.2cqw] flex gap-[1.2cqw]">
+            <span className="px-[2cqw] py-[1.1cqw] text-[1.35cqw] font-semibold" style={{ background: theme.primary, color: theme.onPrimary }}>
+              {theme.cta}
+            </span>
+            <span className="border px-[2cqw] py-[1.1cqw] text-[1.35cqw] font-medium" style={{ borderColor: theme.ink }}>
+              Fachgebiete
+            </span>
+          </div>
+          <div className="mt-[2.2cqw] flex gap-[2cqw] text-[1.15cqw] opacity-80">
+            {["Seit 1998", "Mitglied der Kammer", "Termine auch per Video"].map((item) => (
+              <span key={item} className="flex items-center gap-[0.5cqw]">
+                <Check className="h-[1.3cqw] w-[1.3cqw]" style={{ color: theme.primary }} strokeWidth={3} />
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative h-full min-h-[22cqw]">
+          <div className="absolute inset-0" style={{ background: facade }} />
+          <div className="absolute inset-[1.2cqw] border" style={{ borderColor: "rgba(184,155,94,0.55)" }} />
+          <div className="absolute top-[3cqw] left-1/2 -translate-x-1/2 text-center">
+            <p className="font-serif text-[5cqw] leading-none" style={{ color: theme.primary }}>
+              §
             </p>
-            <p className="mt-[0.5cqw] text-[1.35cqw] font-semibold">{area}</p>
+            <p className="mt-[0.6cqw] text-[1cqw] tracking-[0.3em] text-white/60 uppercase">Wien · Innere Stadt</p>
+          </div>
+          <div className="absolute top-[2.4cqw] left-[-1.6cqw] bg-white px-[1.4cqw] py-[1cqw] shadow-lg">
+            <p className="text-[1.9cqw] font-semibold leading-none">
+              4,9 <span style={{ color: theme.primary }}>★</span>
+            </p>
+            <p className="mt-[0.4cqw] text-[1cqw] opacity-60">Google-Bewertungen</p>
+          </div>
+          <div className="absolute bottom-[2.4cqw] left-[-2cqw] w-[72%] bg-white p-[1.6cqw] shadow-xl">
+            <p className="text-[1.05cqw] font-semibold tracking-[0.14em] uppercase" style={{ color: theme.primary }}>
+              Nächster freier Termin
+            </p>
+            <p className="mt-[0.6cqw] font-serif text-[1.8cqw]">Di, 10:00 Uhr</p>
+            <p className="mt-[0.3cqw] text-[1.1cqw] opacity-60">Erstberatung · 30 Min. · Kanzlei oder Video</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-[2.6cqw] grid grid-cols-4 gap-[1.2cqw]">
+        {areas.map(({ icon: Icon, title, text }) => (
+          <div key={title} className="flex items-center gap-[1cqw] bg-white p-[1.2cqw] shadow-sm">
+            <span className="flex h-[3cqw] w-[3cqw] shrink-0 items-center justify-center" style={{ background: theme.soft, color: theme.ink }}>
+              <Icon className="h-[1.6cqw] w-[1.6cqw]" strokeWidth={1.75} />
+            </span>
+            <span>
+              <span className="block text-[1.25cqw] font-semibold">{title}</span>
+              <span className="block text-[1cqw] opacity-60">{text}</span>
+            </span>
           </div>
         ))}
-      </div>
-      <div className="flex justify-center gap-[5cqw] px-[3.5cqw] py-[1.3cqw] text-[1.15cqw] tracking-[0.1em] uppercase" style={{ background: theme.ink, color: theme.bg }}>
-        <span>Seit 1998</span>
-        <span>2 Partner · 9 Mitarbeitende</span>
-        <span>Erstgespräch kostenlos</span>
       </div>
     </div>
   );
@@ -176,33 +231,50 @@ function EditorialAfterDesktop({ theme }: { theme: MockTheme }) {
 function EditorialAfterPhone({ theme }: { theme: MockTheme }) {
   return (
     <div className="flex h-full flex-col" style={{ background: theme.bg, color: theme.ink }}>
-      <div className="flex items-center justify-between border-b px-[7cqw] py-[5cqw]" style={{ borderColor: lineColor(theme) }}>
-        <span className="font-serif text-[6cqw] tracking-[0.14em] uppercase">Muster</span>
-        <span className="text-[5cqw] tracking-[0.1em] uppercase opacity-70">Menü</span>
-      </div>
-      <div className="px-[7cqw] pt-[12cqw]">
-        <p className="text-[3.8cqw] tracking-[0.24em] uppercase" style={{ color: theme.primary }}>
-          Recht · Steuern
-        </p>
-        <p className="mt-[4cqw] font-serif text-[11cqw] leading-[1.05]">{theme.headline}</p>
-        <span className="mt-[5cqw] block h-[0.8cqw] w-[16cqw]" style={{ background: theme.primary }} />
-      </div>
-      <div className="mt-[8cqw] border-t" style={{ borderColor: lineColor(theme) }}>
-        {["Steuerrecht", "Unternehmensrecht", "Arbeitsrecht"].map((area, i) => (
-          <div key={area} className="flex items-center justify-between border-b px-[7cqw] py-[4cqw] text-[5cqw]" style={{ borderColor: lineColor(theme) }}>
-            <span>
-              <span className="mr-[3cqw] font-serif" style={{ color: theme.primary }}>
-                0{i + 1}
-              </span>
-              {area}
+      <div className="px-[7cqw] pt-[6cqw] pb-[9cqw] text-white" style={{ background: facade }}>
+        <div className="flex items-center justify-between">
+          <span className="flex items-center gap-[2cqw]">
+            <span className="flex h-[8cqw] w-[8cqw] items-center justify-center border font-serif text-[3.4cqw]" style={{ borderColor: theme.primary, color: theme.primary }}>
+              M&amp;P
             </span>
-            <span style={{ color: theme.primary }}>→</span>
+            <span className="font-serif text-[5.4cqw]">Muster</span>
+          </span>
+          <span className="flex flex-col gap-[1.6cqw]">
+            {[0, 1, 2].map((i) => (
+              <span key={i} className="block h-[1cqw] w-[7cqw] bg-white/80" />
+            ))}
+          </span>
+        </div>
+        <p className="mt-[10cqw] text-[3.6cqw] tracking-[0.22em] uppercase" style={{ color: theme.primary }}>
+          Recht · Steuern · Wien
+        </p>
+        <p className="mt-[3cqw] font-serif text-[10.5cqw] leading-[1.05]">
+          Recht und Steuern <span className="italic" style={{ color: theme.primary }}>mit Klarheit.</span>
+        </p>
+        <span className="mt-[6cqw] block py-[3.6cqw] text-center text-[4.8cqw] font-semibold" style={{ background: theme.primary, color: theme.onPrimary }}>
+          {theme.cta}
+        </span>
+      </div>
+      <div className="-mt-[5cqw] space-y-[2.6cqw] px-[5cqw]">
+        {[
+          { icon: Scale, title: "Steuerrecht" },
+          { icon: Briefcase, title: "Unternehmensrecht" },
+          { icon: Landmark, title: "Arbeitsrecht" },
+        ].map(({ icon: Icon, title }) => (
+          <div key={title} className="flex items-center gap-[3cqw] bg-white p-[3.4cqw] shadow-sm">
+            <span className="flex h-[9cqw] w-[9cqw] items-center justify-center" style={{ background: theme.soft }}>
+              <Icon className="h-[5cqw] w-[5cqw]" strokeWidth={1.75} />
+            </span>
+            <span className="flex-1 text-[4.6cqw] font-semibold">{title}</span>
+            <span className="text-[5cqw]" style={{ color: theme.primary }}>
+              →
+            </span>
           </div>
         ))}
       </div>
-      <span className="mx-[7cqw] mt-auto mb-[7cqw] block py-[4cqw] text-center text-[5cqw] font-semibold" style={{ background: theme.ink, color: theme.bg }}>
-        {theme.cta}
-      </span>
+      <p className="mt-auto pb-[6cqw] text-center text-[3.8cqw] opacity-70">
+        <span style={{ color: theme.primary }}>★ 4,9</span> · Seit 1998 · Erstgespräch gratis
+      </p>
     </div>
   );
 }
