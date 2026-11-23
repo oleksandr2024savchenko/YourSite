@@ -53,7 +53,7 @@ function Metrics({ item, locale, dense = false }: { item: CaseStudy; locale: Loc
         <div key={metric.value} className="rounded-xl border border-border/80 bg-surface px-3 py-3">
           <dt className="sr-only">{tx(metric.label, locale)}</dt>
           <dd>
-            <span className={`block font-semibold tracking-tight text-charcoal ${dense ? "text-base" : "text-lg sm:text-xl"}`}>
+            <span className={`block font-semibold tracking-tight text-charcoal ${dense ? "text-sm sm:text-base" : "text-lg sm:text-xl"}`}>
               {metric.value}
             </span>
             <span className="mt-0.5 block text-[11px] leading-snug text-muted sm:text-xs">{tx(metric.label, locale)}</span>

@@ -23,7 +23,11 @@ git commit -m "Update site"
 git push origin main
 ```
 
-GitHub Actions builds the site and updates the `gh-pages` branch automatically.
+GitHub Actions builds the site and updates the `gh-pages` branch automatically
+(on pushes to `main` and to the working branch `claude/bold-feynman-52ayl5`).
+The Pages build is a **preview**: it is marked `noindex` so it never competes
+with the main domain in search. Production (clearpoint.at) is deployed only from
+`main` via `deploy-server.yml`.
 
 ## Contact form
 

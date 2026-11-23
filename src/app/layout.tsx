@@ -25,7 +25,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL || "https://oleksandr2024savchenko.github.io/YourSite"),
   title: dictionaries.de.meta.title,
   description: dictionaries.de.meta.description,
-  robots: { index: true, follow: true },
+  // Preview builds (GitHub Pages) must not compete with the main domain in search.
+  robots: process.env.NEXT_PUBLIC_NOINDEX === "true" ? { index: false, follow: false } : { index: true, follow: true },
 };
 
 export default function RootLayout({
