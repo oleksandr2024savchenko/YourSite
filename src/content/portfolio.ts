@@ -22,7 +22,14 @@ export type MockTheme = {
   ink: string;
   /** Soft tint for cards and panels. */
   soft: string;
-  widget: "booking" | "services" | "callback";
+  /**
+   * Layout family of the mockup. Each case gets its own "after" structure and
+   * its own outdated "before" era:
+   * - clinic:    split hero + booking widget  /  2000s portal with sidebar + visitor counter
+   * - editorial: serif editorial layout       /  dark Flash-intro site ("Flash Player fehlt" on mobile)
+   * - bold:      dark, phone-first, call bar  /  2016 WordPress slider theme buried under cookie + newsletter popups
+   */
+  style: "clinic" | "editorial" | "bold";
   /** Year shown in the outdated "before" footer. */
   oldYear: string;
 };
@@ -85,7 +92,7 @@ export const caseStudies: CaseStudy[] = [
       bg: "#f4f8f9",
       ink: "#15333a",
       soft: "#dcebee",
-      widget: "booking",
+      style: "clinic",
       oldYear: "2014",
     },
   },
@@ -125,8 +132,8 @@ export const caseStudies: CaseStudy[] = [
       bg: "#f7f5f0",
       ink: "#16203a",
       soft: "#e9e3d5",
-      widget: "services",
-      oldYear: "2012",
+      style: "editorial",
+      oldYear: "2009",
     },
   },
   {
@@ -165,7 +172,7 @@ export const caseStudies: CaseStudy[] = [
       bg: "#1c1f24",
       ink: "#ffffff",
       soft: "#2b2f36",
-      widget: "callback",
+      style: "bold",
       oldYear: "2016",
     },
   },
