@@ -98,7 +98,7 @@ export default function ServicesIndexView({ locale }: { locale: Locale }) {
                   />
                 </div>
                 <div className="p-6 sm:p-9 lg:col-span-3">
-                  <p className="text-xs font-semibold tracking-[0.2em] text-accent-deep uppercase">
+                  <p className="text-xs font-semibold tracking-[0.2em] text-accent-dark uppercase">
                     {tx(ui.services.hubEyebrow, locale)}
                   </p>
                   <h2 className="mt-3 text-2xl font-semibold tracking-tight text-charcoal">

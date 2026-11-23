@@ -41,7 +41,7 @@ export default function Pricing() {
           }`}
         >
           {featured && (
-            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-xl bg-accent-deep px-3 py-1 text-xs font-medium tracking-wide whitespace-nowrap text-white">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-xl bg-accent-dark px-3 py-1 text-xs font-medium tracking-wide whitespace-nowrap text-white">
               {t.pricing.popular}
             </span>
           )}
@@ -55,7 +55,7 @@ export default function Pricing() {
               >
                 <Icon className="h-5 w-5" strokeWidth={1.75} />
               </span>
-              <h3 className="text-xs font-semibold tracking-[0.14em] text-slate uppercase">
+              <h3 className="text-xs font-semibold tracking-[0.14em] text-muted uppercase">
                 {tx(page.menuName, locale)}
               </h3>
             </div>
@@ -89,7 +89,7 @@ export default function Pricing() {
             href={withLocale("/kontakt/", locale)}
             className={`mt-6 inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-center text-sm font-medium transition-all duration-300 ${
               featured
-                ? "bg-accent text-charcoal shadow-sm hover:bg-accent-deep hover:text-white"
+                ? "bg-accent text-charcoal shadow-sm hover:bg-accent-dark hover:text-white"
                 : "border border-border bg-surface text-charcoal hover:border-accent/40 hover:bg-accent-soft/50"
             }`}
           >
@@ -127,7 +127,7 @@ export default function Pricing() {
         <Reveal delay={0.05} className="mt-8 sm:mt-14">
           <div className="flex flex-col gap-6 rounded-3xl border border-accent/40 bg-accent-soft/50 p-6 shadow-sm sm:p-8 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-2xl">
-              <p className="text-xs font-semibold tracking-[0.2em] text-accent-deep uppercase">
+              <p className="text-xs font-semibold tracking-[0.2em] text-accent-dark uppercase">
                 {tx(ui.services.hubEyebrow, locale)}
               </p>
               <p className="mt-3 text-xl font-semibold tracking-tight text-charcoal sm:text-2xl">

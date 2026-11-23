@@ -19,7 +19,7 @@ export default function CheckTeaser({ locale }: { locale: Locale }) {
           <ol className="mt-8 space-y-4">
             {copy.points.map((point, index) => (
               <li key={point.de} className="flex gap-4 text-charcoal/85">
-                <span className="font-display text-2xl leading-none text-accent-deep">{index + 1}</span>
+                <span className="font-display text-2xl leading-none text-accent-dark">{index + 1}</span>
                 {tx(point, locale)}
               </li>
             ))}

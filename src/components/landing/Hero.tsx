@@ -31,7 +31,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease }}
-            className="mb-5 text-sm font-medium tracking-[0.14em] text-accent-deep uppercase sm:tracking-[0.18em]"
+            className="mb-5 text-sm font-medium tracking-[0.14em] text-accent-dark uppercase sm:tracking-[0.18em]"
           >
             {t.hero.brand}
           </motion.p>
@@ -93,7 +93,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-transparent" />
             <div className="absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6">
               <div className="rounded-2xl border border-white/50 bg-white/80 p-4 sm:p-5">
-                <p className="text-xs font-medium tracking-wider text-accent-deep uppercase">
+                <p className="text-xs font-medium tracking-wider text-accent-dark uppercase">
                   {t.hero.imageCaption}
                 </p>
                 <p className="mt-2 text-base font-semibold tracking-tight text-charcoal sm:text-lg">

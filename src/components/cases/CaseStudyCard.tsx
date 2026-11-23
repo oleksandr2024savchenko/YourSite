@@ -72,7 +72,7 @@ export default function CaseStudyCard({
           </div>
         </div>
         <div className="flex flex-1 flex-col p-6">
-          <p className="text-xs font-semibold tracking-[0.16em] text-slate uppercase">{tx(item.industry, locale)}</p>
+          <p className="text-xs font-semibold tracking-[0.16em] text-muted uppercase">{tx(item.industry, locale)}</p>
           <h3 className="mt-2 text-lg font-semibold tracking-tight text-charcoal">{item.client}</h3>
           <p className="mt-1 text-sm font-medium text-accent-dark">{tx(item.scope, locale)}</p>
           <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{tx(item.result, locale)}</p>
@@ -110,7 +110,7 @@ export default function CaseStudyCard({
       </div>
       <div>
         <div className="flex flex-wrap items-center gap-2">
-          <p className="text-xs font-semibold tracking-[0.16em] text-slate uppercase">{tx(item.industry, locale)}</p>
+          <p className="text-xs font-semibold tracking-[0.16em] text-muted uppercase">{tx(item.industry, locale)}</p>
           <span className="rounded-full bg-accent-soft px-2.5 py-0.5 text-[10px] font-semibold tracking-[0.14em] text-accent-dark uppercase">
             {tx(ui.cases.conceptBadge, locale)}
           </span>

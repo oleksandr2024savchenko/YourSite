@@ -183,7 +183,7 @@ export default function ServiceLanding({
                 <h2 className="text-2xl font-semibold tracking-tight text-charcoal sm:text-3xl">
                   {tx(page.audience.title, locale)}
                 </h2>
-                <p className="mt-6 text-xs font-semibold tracking-wide text-slate uppercase">
+                <p className="mt-6 text-xs font-semibold tracking-wide text-muted uppercase">
                   {tx(ui.common.fits, locale)}
                 </p>
                 <ul className="mt-3 space-y-2">
@@ -194,7 +194,7 @@ export default function ServiceLanding({
                     </li>
                   ))}
                 </ul>
-                <p className="mt-6 text-xs font-semibold tracking-wide text-slate uppercase">
+                <p className="mt-6 text-xs font-semibold tracking-wide text-muted uppercase">
                   {tx(ui.common.notFits, locale)}
                 </p>
                 <ul className="mt-3 space-y-2">
@@ -290,7 +290,7 @@ export default function ServiceLanding({
               {page.process.steps.map((step, index) => (
                 <Reveal key={step.title.de} delay={0.04 * index}>
                   <div className="h-full rounded-2xl border border-border/80 bg-surface p-7">
-                    <p className="text-sm font-semibold text-accent-deep">
+                    <p className="text-sm font-semibold text-accent-dark">
                       {String(index + 1).padStart(2, "0")}
                     </p>
                     <h3 className="mt-3 text-lg font-semibold text-charcoal">
@@ -321,7 +321,7 @@ export default function ServiceLanding({
                 <p className="text-3xl font-semibold text-charcoal">
                   {tx(page.priceFrom, locale)}
                 </p>
-                <p className="mt-6 text-xs font-semibold tracking-wide text-slate uppercase">
+                <p className="mt-6 text-xs font-semibold tracking-wide text-muted uppercase">
                   {tx(ui.common.included, locale)}
                 </p>
                 <ul className="mt-3 space-y-2">
@@ -332,7 +332,7 @@ export default function ServiceLanding({
                     </li>
                   ))}
                 </ul>
-                <p className="mt-6 text-xs font-semibold tracking-wide text-slate uppercase">
+                <p className="mt-6 text-xs font-semibold tracking-wide text-muted uppercase">
                   {tx(ui.common.notIncluded, locale)}
                 </p>
                 <ul className="mt-3 space-y-2">
@@ -358,7 +358,7 @@ export default function ServiceLanding({
                     </li>
                   ))}
                 </ul>
-                <p className="mt-6 text-xs font-semibold tracking-wide text-slate uppercase">
+                <p className="mt-6 text-xs font-semibold tracking-wide text-muted uppercase">
                   {locale === "de" ? "Preis hängt ab von" : "Price depends on"}
                 </p>
                 <ul className="mt-3 space-y-2">
@@ -385,7 +385,7 @@ export default function ServiceLanding({
               {page.cases.items.map((item, index) => (
                 <Reveal key={item.industry.de} delay={0.05 * index}>
                   <article className="h-full rounded-2xl border border-border/80 bg-surface p-7">
-                    <p className="text-xs font-semibold tracking-wide text-accent-deep uppercase">
+                    <p className="text-xs font-semibold tracking-wide text-accent-dark uppercase">
                       {tx(item.industry, locale)}
                     </p>
                     <h3 className="mt-4 font-semibold text-charcoal">

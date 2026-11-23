@@ -41,13 +41,13 @@ export default function Process() {
                   }`}
                 >
                   {milestone && (
-                    <span className="absolute -top-3 left-8 rounded-xl bg-accent-deep px-3 py-1 text-xs font-medium tracking-wide text-white">
+                    <span className="absolute -top-3 left-8 rounded-xl bg-accent-dark px-3 py-1 text-xs font-medium tracking-wide text-white">
                       {t.process.milestone}
                     </span>
                   )}
 
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-semibold tracking-tight text-accent-deep">
+                    <span className="text-2xl font-semibold tracking-tight text-accent-dark">
                       {number}
                     </span>
                     <span

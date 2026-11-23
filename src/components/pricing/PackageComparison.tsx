@@ -47,7 +47,7 @@ export default function PackageComparison({ locale }: { locale: Locale }) {
                     }`}
                   >
                     {featured && (
-                      <span className="mb-2 inline-flex items-center gap-1 rounded-full bg-accent-deep px-2.5 py-0.5 text-[10px] font-medium tracking-wide whitespace-nowrap text-white">
+                      <span className="mb-2 inline-flex items-center gap-1 rounded-full bg-accent-dark px-2.5 py-0.5 text-[10px] font-medium tracking-wide whitespace-nowrap text-white">
                         <Star className="h-3 w-3" fill="currentColor" strokeWidth={0} aria-hidden />
                         {popular}
                       </span>

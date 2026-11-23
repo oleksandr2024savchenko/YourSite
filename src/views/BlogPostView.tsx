@@ -46,7 +46,7 @@ export default function BlogPostView({
       />
       <main className="flex-1">
         <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-xs font-semibold tracking-wide text-accent-deep uppercase">
+          <p className="text-xs font-semibold tracking-wide text-accent-dark uppercase">
             {post.category}
           </p>
           <h1 className="mt-4 text-3xl font-semibold tracking-tight break-words text-charcoal sm:text-4xl">

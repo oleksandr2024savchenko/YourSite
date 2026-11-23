@@ -39,7 +39,7 @@ export default function BlogIndexView({ locale }: { locale: Locale }) {
           <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
             {blogPosts.map((post) => (
               <article key={post.slug} className="rounded-2xl border border-border/80 bg-surface p-7">
-                <p className="text-xs font-semibold tracking-wide text-accent-deep uppercase">
+                <p className="text-xs font-semibold tracking-wide text-accent-dark uppercase">
                   {post.category}
                 </p>
                 <h2 className="mt-3 text-xl font-semibold text-charcoal">

@@ -107,7 +107,7 @@ export default function Services() {
               </Link>
               <Link
                 href={withLocale("/kontakt/", locale)}
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-deep transition-all duration-300 hover:text-charcoal"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-dark transition-all duration-300 hover:text-charcoal"
               >
                 {t.services.discuss}
                 <ArrowUpRight className="h-4 w-4" />
@@ -140,7 +140,7 @@ export default function Services() {
         <Reveal delay={0.05} className="mt-8 sm:mt-14">
           <div className="group relative grid overflow-hidden rounded-3xl border border-accent/40 bg-gradient-to-br from-accent-soft/70 via-surface to-surface shadow-sm transition-all duration-300 hover:border-accent/60 hover:shadow-lg lg:grid-cols-5">
             <div className="flex flex-col p-6 sm:p-10 lg:col-span-3">
-              <p className="text-xs font-semibold tracking-[0.2em] text-accent-deep uppercase">
+              <p className="text-xs font-semibold tracking-[0.2em] text-accent-dark uppercase">
                 {tx(ui.services.hubEyebrow, locale)}
               </p>
               <h3 className="mt-3 text-2xl font-semibold tracking-tight text-charcoal sm:text-3xl">
@@ -165,7 +165,7 @@ export default function Services() {
                 </Link>
                 <Link
                   href={withLocale("/kontakt/", locale)}
-                  className="inline-flex items-center justify-center gap-1.5 py-2 text-sm font-medium text-accent-deep transition-all duration-300 hover:text-charcoal"
+                  className="inline-flex items-center justify-center gap-1.5 py-2 text-sm font-medium text-accent-dark transition-all duration-300 hover:text-charcoal"
                 >
                   {t.services.discuss}
                   <ArrowUpRight className="h-4 w-4" />
