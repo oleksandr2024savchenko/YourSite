@@ -26,7 +26,7 @@ export type MockTheme = {
    * Layout family of the mockup. Each case gets its own "after" structure and
    * its own outdated "before" era:
    * - clinic:    split hero + booking widget  /  2000s portal with sidebar + visitor counter
-   * - editorial: serif editorial layout       /  dark Flash-intro site ("Flash Player fehlt" on mobile)
+   * - editorial: modern bento grid, booking card /  dark Flash-intro site ("Flash Player fehlt" on mobile)
    * - bold:      dark, phone-first, call bar  /  2016 WordPress slider theme buried under cookie + newsletter popups
    */
   style: "clinic" | "editorial" | "bold";
@@ -127,11 +127,11 @@ export const caseStudies: CaseStudy[] = [
       headline: "Recht und Steuern mit Klarheit.",
       sub: "Beratung für Unternehmen und Private in Wien – persönlich und verständlich.",
       cta: "Erstberatung vereinbaren",
-      primary: "#b89b5e",
-      onPrimary: "#16203a",
-      bg: "#f7f5f0",
-      ink: "#16203a",
-      soft: "#e9e3d5",
+      primary: "#4f46e5",
+      onPrimary: "#ffffff",
+      bg: "#f4f4f7",
+      ink: "#0f172a",
+      soft: "#e0e7ff",
       style: "editorial",
       oldYear: "2009",
     },
