@@ -32,6 +32,12 @@ export type MockTheme = {
   style: "clinic" | "editorial" | "bold";
   /** Year shown in the outdated "before" footer. */
   oldYear: string;
+  /** Optional copy overrides for the "clinic" layout (defaults: dental practice). */
+  eyebrow?: string;
+  widgetTitle?: string;
+  widgetSub?: string;
+  phoneWidgetTitle?: string;
+  chips?: string[];
 };
 
 export type CaseMetric = { value: string; label: Copy };
@@ -186,3 +192,31 @@ export type PortfolioVoice = {
 };
 
 export const portfolioVoices: PortfolioVoice[] = [];
+
+/**
+ * Concept shown in the homepage hero. Its colours sit close to our own palette
+ * (fir green, cream, brass) so the hero reads as one piece.
+ */
+export const heroShowcase: { client: string; theme: MockTheme } = {
+  client: "Tischlerei Wien",
+  theme: {
+    brand: "Tischlerei Muster",
+    domain: "tischlerei-muster.at",
+    nav: ["Möbel", "Küchen", "Werkstatt", "Kontakt"],
+    headline: "Maßmöbel aus Wien, die bleiben.",
+    sub: "Familienbetrieb in Ottakring – Küchen, Einbauten und Restaurierung aus Massivholz.",
+    cta: "Beratung buchen",
+    primary: "#2f5d50",
+    onPrimary: "#ffffff",
+    bg: "#f7f3ec",
+    ink: "#22302b",
+    soft: "#ebe3d3",
+    style: "clinic",
+    oldYear: "2011",
+    eyebrow: "Wien 1160 · seit 1987",
+    widgetTitle: "Beratung in der Werkstatt",
+    widgetSub: "Do, 17. · ca. 45 Min.",
+    phoneWidgetTitle: "Nächste Termine",
+    chips: ["Küchen", "Einbauschränke", "Restaurierung"],
+  },
+};

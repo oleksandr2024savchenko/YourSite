@@ -43,7 +43,7 @@ function ClinicAfterDesktop({ theme }: { theme: MockTheme }) {
       <div className="mt-[4cqw] grid flex-1 grid-cols-[1.15fr_1fr] items-center gap-[4cqw]">
         <div>
           <p className="text-[1.2cqw] font-semibold tracking-[0.2em] uppercase" style={{ color: theme.primary }}>
-            Wien 1010
+            {theme.eyebrow ?? "Wien 1010"}
           </p>
           <p className="mt-[1cqw] text-[3.6cqw] leading-[1.08] font-semibold tracking-tight">{theme.headline}</p>
           <p className="mt-[1.6cqw] text-[1.45cqw] leading-snug opacity-70">{theme.sub}</p>
@@ -57,8 +57,8 @@ function ClinicAfterDesktop({ theme }: { theme: MockTheme }) {
           </div>
         </div>
         <div className="rounded-[1.6cqw] bg-white p-[2cqw] shadow-sm">
-          <p className="text-[1.7cqw] font-semibold">Nächste freie Termine</p>
-          <p className="mt-[0.4cqw] text-[1.3cqw] opacity-60">Mo, 14. · Prophylaxe</p>
+          <p className="text-[1.7cqw] font-semibold">{theme.widgetTitle ?? "Nächste freie Termine"}</p>
+          <p className="mt-[0.4cqw] text-[1.3cqw] opacity-60">{theme.widgetSub ?? "Mo, 14. · Prophylaxe"}</p>
           <div className="mt-[1.4cqw] grid grid-cols-3 gap-[1cqw]">
             {slots.map((slot, i) => (
               <span
@@ -76,7 +76,7 @@ function ClinicAfterDesktop({ theme }: { theme: MockTheme }) {
         </div>
       </div>
       <div className="mt-[3cqw] grid grid-cols-3 gap-[1.6cqw]">
-        {["Prophylaxe", "Implantate", "Ästhetik"].map((item) => (
+        {(theme.chips ?? ["Prophylaxe", "Implantate", "Ästhetik"]).map((item) => (
           <div key={item} className="flex items-center gap-[1cqw] rounded-[1cqw] p-[1.2cqw]" style={{ background: theme.soft }}>
             <span className="block h-[2.4cqw] w-[2.4cqw] shrink-0 rounded-full" style={{ background: theme.primary, opacity: 0.85 }} />
             <span className="text-[1.3cqw] font-medium">{item}</span>
@@ -93,7 +93,7 @@ function ClinicAfterPhone({ theme }: { theme: MockTheme }) {
       <div className="flex items-center justify-between">
         <span className="flex items-center gap-[2cqw] text-[6cqw] font-semibold">
           <span className="block h-[5cqw] w-[5cqw] rounded-full" style={{ background: theme.primary }} />
-          Zahnmedizin
+          {theme.brand.split(" ")[0]}
         </span>
         <span className="flex flex-col gap-[1.6cqw]">
           {[0, 1, 2].map((i) => (
@@ -104,7 +104,7 @@ function ClinicAfterPhone({ theme }: { theme: MockTheme }) {
       <p className="mt-[12cqw] text-[10cqw] leading-[1.08] font-semibold tracking-tight">{theme.headline}</p>
       <p className="mt-[5cqw] text-[5cqw] leading-snug opacity-70">{theme.sub}</p>
       <div className="mt-[8cqw] rounded-[5cqw] bg-white p-[5cqw] shadow-sm">
-        <p className="text-[5cqw] font-semibold">Heute frei</p>
+        <p className="text-[5cqw] font-semibold">{theme.phoneWidgetTitle ?? "Heute frei"}</p>
         <div className="mt-[3cqw] grid grid-cols-3 gap-[2cqw]">
           {["09:15", "11:30", "15:45"].map((slot, i) => (
             <span

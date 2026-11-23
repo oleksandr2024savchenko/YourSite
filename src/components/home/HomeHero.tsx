@@ -7,14 +7,14 @@ import type { Locale } from "@/i18n/dictionary";
 import { tx } from "@/content/copy";
 import { home } from "@/content/home";
 import { ui } from "@/content/ui";
-import { caseStudies } from "@/content/portfolio";
+import { heroShowcase } from "@/content/portfolio";
 import { paths, withLocale } from "@/lib/routes";
 import SiteMockup from "@/components/cases/SiteMockup";
 import BeforeAfterToggle from "@/components/cases/BeforeAfterToggle";
 
 export default function HomeHero({ locale }: { locale: Locale }) {
   const copy = home.hero;
-  const showcase = caseStudies[0];
+  const showcase = heroShowcase;
   const [mode, setMode] = useState<"before" | "after">("after");
 
   return (
