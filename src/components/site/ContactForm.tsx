@@ -225,7 +225,7 @@ export default function ContactForm({
       <button
         type="submit"
         disabled={status === "sending"}
-        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-3.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md disabled:opacity-70"
+        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark disabled:opacity-70"
       >
         {status === "sending" ? tx(copy.sending, locale) : tx(copy.submit, locale)}
         <ArrowRight className="h-4 w-4" />

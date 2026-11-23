@@ -25,7 +25,7 @@ export default function ReferencesView({ locale }: { locale: Locale }) {
       <main className="flex-1">
         <section className="hero-atmosphere py-12 sm:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
+            <p className="text-sm font-medium text-accent-dark">
               ClearPoint · Wien
             </p>
             <h1 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight break-words text-charcoal sm:text-4xl">
@@ -41,7 +41,7 @@ export default function ReferencesView({ locale }: { locale: Locale }) {
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Link
               href={withLocale("/kontakt/", locale)}
-              className="inline-flex rounded-2xl bg-accent px-6 py-3 text-sm font-medium text-charcoal"
+              className="inline-flex rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white"
             >
               {tx(ui.common.consultCta, locale)}
             </Link>

@@ -82,7 +82,7 @@ export default function PreiseView({ locale }: { locale: Locale }) {
             </div>
             <Link
               href={withLocale("/kontakt/", locale)}
-              className="group mt-10 inline-flex items-center gap-2 rounded-2xl bg-accent px-6 py-3 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white"
+              className="group mt-10 inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark"
             >
               {locale === "de" ? "Unverbindlich anfragen" : "Enquire without obligation"}
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />

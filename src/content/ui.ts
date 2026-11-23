@@ -9,7 +9,7 @@ export const ui = {
     about: c("Über uns", "About"),
     blog: c("Blog", "Blog"),
     contact: c("Kontakt", "Contact"),
-    cta: c("Beratung anfragen", "Request a consult"),
+    cta: c("Kostenloses Erstgespräch", "Free discovery call"),
     openMenu: c("Menü öffnen", "Open menu"),
     closeMenu: c("Menü schließen", "Close menu"),
     allServices: c("Alle Leistungen", "All services"),
@@ -80,7 +80,7 @@ export const ui = {
   },
   sticky: {
     label: c("Unverbindliche Beratung", "No-obligation consult"),
-    cta: c("Jetzt anfragen", "Enquire now"),
+    cta: c("Kostenloses Erstgespräch", "Free discovery call"),
   },
   breadcrumbs: {
     home: c("Home", "Home"),

@@ -138,7 +138,7 @@ export default function PriceCalculator({ locale }: { locale: Locale }) {
     <section id="kostenrechner" className="scroll-mt-24 py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <p className="inline-flex items-center gap-2 text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
+          <p className="inline-flex items-center gap-2 text-sm font-medium text-accent-dark">
             <Calculator className="h-4 w-4" strokeWidth={1.75} />
             {tx(t.eyebrow, locale)}
           </p>

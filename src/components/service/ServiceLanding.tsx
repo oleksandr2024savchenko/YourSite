@@ -26,9 +26,9 @@ import JsonLd from "@/components/site/JsonLd";
 import SiteShell from "@/components/site/SiteShell";
 
 const primaryButton =
-  "inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-3.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md sm:w-auto";
+  "inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark sm:w-auto";
 const secondaryButton =
-  "inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl border border-border bg-surface/80 px-6 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:border-accent/50 hover:bg-surface sm:w-auto";
+  "inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-border bg-surface/80 px-6 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:border-accent/50 hover:bg-surface sm:w-auto";
 
 function relatedHref(id: ServiceSlug | "website-check") {
   return id === "website-check" ? paths.websiteCheck : servicePath(id);
@@ -87,7 +87,7 @@ export default function ServiceLanding({
             />
             <div className="mt-10 grid gap-12 lg:grid-cols-12 lg:gap-16">
               <div className="lg:col-span-7">
-                <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
+                <p className="text-sm font-medium text-accent-dark">
                   ClearPoint · Wien
                 </p>
                 <h1 className="mt-4 text-[1.75rem] leading-[1.2] font-semibold tracking-tight break-words text-charcoal sm:text-4xl sm:leading-tight lg:text-[2.75rem] lg:leading-[1.15]">

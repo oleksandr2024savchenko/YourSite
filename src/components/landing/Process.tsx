@@ -14,7 +14,7 @@ export default function Process() {
     <section id="process" className="scroll-mt-20 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
+          <p className="text-sm font-medium text-accent-dark">
             {t.process.eyebrow}
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">

@@ -36,7 +36,7 @@ export default function ValueProposition() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
+            <p className="text-sm font-medium text-accent-dark">
               {t.about.eyebrow}
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">

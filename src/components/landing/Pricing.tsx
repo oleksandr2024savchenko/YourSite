@@ -113,7 +113,7 @@ export default function Pricing() {
     <section id="pricing" className="scroll-mt-20 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
+          <p className="text-sm font-medium text-accent-dark">
             {t.pricing.eyebrow}
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">
@@ -139,7 +139,7 @@ export default function Pricing() {
             </div>
             <Link
               href={withLocale(serviceHref(hubServiceSlug), locale)}
-              className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-3 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
+              className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark"
             >
               {t.pricing.details}
               <ArrowRight className="h-4 w-4" />
@@ -172,7 +172,7 @@ export default function Pricing() {
             </div>
             <Link
               href={withLocale("/preise/", locale)}
-              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-3.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md sm:w-auto"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark sm:w-auto"
             >
               {t.pricing.helper.cta}
               <ArrowRight className="h-4 w-4" />

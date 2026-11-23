@@ -19,7 +19,7 @@ export default function References({ variant = "home" }: { variant?: "home" | "p
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {!isPage && (
           <Reveal className="max-w-2xl">
-            <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">{t.work.eyebrow}</p>
+            <p className="text-sm font-medium text-accent-dark">{t.work.eyebrow}</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">{t.work.title}</h2>
             <p className="mt-5 text-lg leading-relaxed text-muted">{t.work.description}</p>
           </Reveal>

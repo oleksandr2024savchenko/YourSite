@@ -175,9 +175,9 @@ export const dictionaries = {
     },
     work: {
       eyebrow: "Work",
-      title: "Selected projects",
+      title: "Three industries, three starting points",
       description:
-        "Websites for Vienna businesses – a clear offer, a calm structure and a path to an enquiry.",
+        "Practice, law firm, trades: how we solve typical briefs from Vienna. Switch between before and after yourself.",
       voicesTitle: "Client voices",
       voicesDescription:
         "What clients say about working with ClearPoint – in their own words.",
@@ -822,9 +822,9 @@ export const dictionaries = {
     },
     work: {
       eyebrow: "Referenzen",
-      title: "Ausgewählte Projekte",
+      title: "Drei Branchen, drei Ausgangslagen",
       description:
-        "Websites für Wiener Unternehmen – klares Angebot, ruhige Struktur und ein Weg zur Anfrage.",
+        "Praxis, Kanzlei, Handwerk: So lösen wir typische Briefings aus Wien. Schalten Sie selbst zwischen vorher und nachher um.",
       voicesTitle: "Kundenstimmen",
       voicesDescription:
         "Was Auftraggeber über die Zusammenarbeit mit ClearPoint sagen – in eigenen Worten.",

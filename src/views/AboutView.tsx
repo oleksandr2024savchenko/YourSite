@@ -33,7 +33,7 @@ export default function AboutView({ locale }: { locale: Locale }) {
         <section className="hero-atmosphere py-12 sm:py-20">
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
             <div>
-              <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
+              <p className="text-sm font-medium text-accent-dark">
                 ClearPoint · Wien
               </p>
               <h1 className="mt-4 text-3xl font-semibold tracking-tight break-words text-charcoal sm:text-4xl">
@@ -105,7 +105,7 @@ export default function AboutView({ locale }: { locale: Locale }) {
               <FounderPortrait className="absolute inset-0 h-full w-full" />
             </div>
             <div>
-              <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
+              <p className="text-sm font-medium text-accent-dark">
                 {tx(page.founder.title, locale)}
               </p>
               <h2 className="mt-3 text-2xl font-semibold text-charcoal sm:text-3xl">
@@ -125,7 +125,7 @@ export default function AboutView({ locale }: { locale: Locale }) {
               <p className="mt-10 text-sm text-muted">{tx(page.note, locale)}</p>
               <Link
                 href={withLocale("/kontakt/", locale)}
-                className="group mt-8 inline-flex items-center gap-2 rounded-2xl bg-accent px-6 py-3 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
+                className="group mt-8 inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark"
               >
                 {tx(ui.common.consultCta, locale)}
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />

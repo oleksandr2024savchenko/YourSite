@@ -70,7 +70,7 @@ export default function BlogPostView({
           ))}
           <Link
             href={withLocale(post.targetHref, locale)}
-            className="mt-12 inline-flex rounded-2xl bg-accent px-6 py-3 text-sm font-medium text-charcoal"
+            className="mt-12 inline-flex rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white"
           >
             {tx(ui.common.consultCta, locale)}
           </Link>

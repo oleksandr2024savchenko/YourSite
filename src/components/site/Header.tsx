@@ -187,7 +187,7 @@ export default function Header() {
           <LanguageToggle locale={locale} />
           <Link
             href={withLocale(paths.contact, locale)}
-            className="inline-flex items-center rounded-2xl bg-accent px-5 py-2.5 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
+            className="inline-flex items-center rounded-full bg-charcoal px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark"
           >
             {tx(nav.cta, locale)}
           </Link>
@@ -259,7 +259,7 @@ export default function Header() {
             <LanguageToggle compact locale={locale} />
             <Link
               href={withLocale(paths.contact, locale)}
-              className="mt-2 inline-flex min-h-12 items-center justify-center rounded-2xl bg-accent px-5 py-3 text-sm font-medium text-charcoal"
+              className="mt-2 inline-flex min-h-12 items-center justify-center rounded-full bg-charcoal px-5 py-3 text-sm font-medium text-white"
               onClick={closeMenu}
             >
               {tx(nav.cta, locale)}

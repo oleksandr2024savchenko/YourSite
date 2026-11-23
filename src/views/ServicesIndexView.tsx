@@ -71,7 +71,7 @@ export default function ServicesIndexView({ locale }: { locale: Locale }) {
       <main className="flex-1">
         <section className="hero-atmosphere py-12 sm:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
+            <p className="text-sm font-medium text-accent-dark">
               ClearPoint
             </p>
             <h1 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight break-words text-charcoal sm:text-4xl">
@@ -113,7 +113,7 @@ export default function ServicesIndexView({ locale }: { locale: Locale }) {
                   </p>
                   <Link
                     href={withLocale(servicePath(hubServiceSlug), locale)}
-                    className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-3 text-sm font-medium text-charcoal shadow-sm transition-all duration-300 hover:bg-accent-deep hover:text-white hover:shadow-md"
+                    className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors duration-300 hover:bg-accent-dark"
                   >
                     {locale === "de" ? "Zur Leistungsseite" : "Open service page"}
                   </Link>

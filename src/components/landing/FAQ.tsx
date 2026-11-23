@@ -16,7 +16,7 @@ export default function FAQ() {
     <section id="faq" className="scroll-mt-20 bg-surface-soft/50 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center">
-          <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
+          <p className="text-sm font-medium text-accent-dark">
             {t.faq.eyebrow}
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">

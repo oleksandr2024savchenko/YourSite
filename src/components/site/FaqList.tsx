@@ -26,7 +26,7 @@ export default function FaqList({
         {(title || eyebrow) && (
           <Reveal className="text-center">
             {eyebrow ? (
-              <p className="text-sm font-medium tracking-[0.16em] text-accent-deep uppercase">
+              <p className="text-sm font-medium text-accent-dark">
                 {eyebrow}
               </p>
             ) : null}

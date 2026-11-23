@@ -34,6 +34,8 @@
   --color-charcoal: var(--charcoal);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  --font-hand: var(--font-caveat), ui-rounded, cursive;
 }
 
 html {
@@ -47,6 +49,23 @@ body {
   overflow-x: clip;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+/*
+ * Headlines use the display serif. Unlayered CSS wins over Tailwind's utility
+ * layer, so existing "font-semibold" classes on h1/h2 do not fake-bold the serif.
+ */
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+h1 em,
+h2 em {
+  font-style: italic;
+  color: var(--accent-dark);
 }
 
 .hero-atmosphere {
