@@ -611,6 +611,19 @@ function Phone({ theme, after }: { theme: MockTheme; after: boolean }) {
   return after ? <ClinicAfterPhone theme={theme} /> : <PortalBeforePhone theme={theme} />;
 }
 
+/** Both states stay mounted and crossfade, so switching never jumps. */
+function Layer({ visible, children }: { visible: boolean; children: React.ReactNode }) {
+  return (
+    <div
+      className={`absolute inset-0 transition-[opacity,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        visible ? "scale-100 opacity-100" : "pointer-events-none scale-[0.985] opacity-0"
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function SiteMockup({
   theme,
   mode,
@@ -643,12 +656,22 @@ export default function SiteMockup({
           </span>
         </div>
         <div className="@container relative aspect-[16/10]">
-          <Desktop theme={theme} after={after} />
+          <Layer visible={!after}>
+            <Desktop theme={theme} after={false} />
+          </Layer>
+          <Layer visible={after}>
+            <Desktop theme={theme} after />
+          </Layer>
         </div>
       </div>
       <div className="absolute right-0 bottom-0 w-[27%] rounded-[1.1rem] border-[3px] border-charcoal bg-charcoal p-[2px] shadow-[0_16px_40px_-14px_rgba(44,47,51,0.55)]">
-        <div className="@container aspect-[9/19] overflow-hidden rounded-[0.9rem]">
-          <Phone theme={theme} after={after} />
+        <div className="@container relative aspect-[9/19] overflow-hidden rounded-[0.9rem]">
+          <Layer visible={!after}>
+            <Phone theme={theme} after={false} />
+          </Layer>
+          <Layer visible={after}>
+            <Phone theme={theme} after />
+          </Layer>
         </div>
       </div>
     </div>

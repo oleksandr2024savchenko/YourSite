@@ -11,40 +11,7 @@ import { serviceHref } from "@/lib/services";
 import { withLocale } from "@/lib/routes";
 import { getService } from "@/content/service-pages";
 import SiteMockup from "./SiteMockup";
-
-function BeforeAfterToggle({
-  mode,
-  onChange,
-  locale,
-  label,
-}: {
-  mode: "before" | "after";
-  onChange: (mode: "before" | "after") => void;
-  locale: Locale;
-  label: string;
-}) {
-  const options = [
-    { value: "before" as const, text: tx(ui.cases.before, locale) },
-    { value: "after" as const, text: tx(ui.cases.after, locale) },
-  ];
-  return (
-    <div role="group" aria-label={label} className="inline-flex rounded-full border border-border bg-surface p-1 shadow-sm">
-      {options.map((option) => (
-        <button
-          key={option.value}
-          type="button"
-          aria-pressed={mode === option.value}
-          onClick={() => onChange(option.value)}
-          className={`rounded-full px-4 py-1.5 text-xs font-medium transition-all duration-300 ${
-            mode === option.value ? "bg-charcoal text-white shadow-sm" : "text-muted hover:text-charcoal"
-          }`}
-        >
-          {option.text}
-        </button>
-      ))}
-    </div>
-  );
-}
+import BeforeAfterToggle from "./BeforeAfterToggle";
 
 function Metrics({ item, locale, dense = false }: { item: CaseStudy; locale: Locale; dense?: boolean }) {
   return (

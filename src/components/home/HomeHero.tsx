@@ -10,6 +10,7 @@ import { ui } from "@/content/ui";
 import { caseStudies } from "@/content/portfolio";
 import { paths, withLocale } from "@/lib/routes";
 import SiteMockup from "@/components/cases/SiteMockup";
+import BeforeAfterToggle from "@/components/cases/BeforeAfterToggle";
 
 export default function HomeHero({ locale }: { locale: Locale }) {
   const copy = home.hero;
@@ -57,22 +58,8 @@ export default function HomeHero({ locale }: { locale: Locale }) {
             <SiteMockup theme={showcase.theme} mode={mode} />
           </figure>
           <div className="mt-5 flex items-center gap-4">
-            <div role="group" aria-label={showcase.client} className="inline-flex rounded-full border border-border bg-surface p-1 shadow-sm">
-              {(["before", "after"] as const).map((value) => (
-                <button
-                  key={value}
-                  type="button"
-                  aria-pressed={mode === value}
-                  onClick={() => setMode(value)}
-                  className={`rounded-full px-4 py-1.5 text-xs font-medium transition-colors duration-300 ${
-                    mode === value ? "bg-charcoal text-white" : "text-muted hover:text-charcoal"
-                  }`}
-                >
-                  {tx(value === "after" ? ui.cases.after : ui.cases.before, locale)}
-                </button>
-              ))}
-            </div>
-            <p className="hidden font-hand text-2xl leading-none text-accent-dark sm:block" aria-hidden>
+            <BeforeAfterToggle mode={mode} onChange={setMode} locale={locale} label={showcase.client} />
+            <p className="hidden font-hand text-2xl leading-none whitespace-nowrap text-accent-dark sm:block" aria-hidden>
               ← {tx(copy.note, locale)}
             </p>
           </div>

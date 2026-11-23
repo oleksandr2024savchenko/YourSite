@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { motion } from "framer-motion";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { AnimatePresence, motion, type Variants } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import type { Locale } from "@/i18n/dictionary";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { ui } from "@/content/ui";
@@ -13,6 +13,34 @@ import { tx } from "@/content/copy";
 import { servicePages } from "@/content/service-pages";
 import { isServiceSlug, serviceMenu } from "@/lib/services";
 import { paths, switchLocalePath, withLocale } from "@/lib/routes";
+
+const ease = [0.22, 1, 0.36, 1] as const;
+
+const panelVariants: Variants = {
+  hidden: { opacity: 0, y: -12 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.28, ease, delayChildren: 0.04, staggerChildren: 0.03 } },
+  exit: { opacity: 0, y: -8, transition: { duration: 0.2, ease } },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 8 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.28, ease } },
+};
+
+const noopSubscribe = () => () => {};
+
+/** Animated burger: three lines morph into an X. */
+function BurgerIcon({ open }: { open: boolean }) {
+  const line = "absolute left-0 h-[1.75px] w-5 rounded-full bg-current";
+  const t = { duration: 0.3, ease };
+  return (
+    <span className="relative block h-4 w-5" aria-hidden>
+      <motion.span className={line} style={{ top: 1 }} animate={open ? { top: 7, rotate: 45 } : { top: 1, rotate: 0 }} transition={t} />
+      <motion.span className={line} style={{ top: 7 }} animate={{ opacity: open ? 0 : 1, scaleX: open ? 0.4 : 1 }} transition={t} />
+      <motion.span className={line} style={{ top: 13 }} animate={open ? { top: 7, rotate: -45 } : { top: 13, rotate: 0 }} transition={t} />
+    </span>
+  );
+}
 
 function LanguageToggle({
   compact = false,
@@ -61,6 +89,7 @@ function LanguageToggle({
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const canPortal = useSyncExternalStore(noopSubscribe, () => true, () => false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const { locale } = useLanguage();
@@ -144,8 +173,15 @@ export default function Header() {
               {tx(nav.services, locale)}
               <ChevronDown className="h-4 w-4" />
             </button>
-            {servicesOpen && (
-              <div className="absolute left-0 top-full z-50 w-72 pt-3">
+            <AnimatePresence>
+              {servicesOpen && (
+              <motion.div
+                  className="absolute left-0 top-full z-50 w-72 pt-3"
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 4 }}
+                  transition={{ duration: 0.2, ease }}
+                >
                 <div className="rounded-2xl border border-border bg-surface p-2 shadow-lg">
                   <Link
                     href={withLocale(paths.services, locale)}
@@ -167,8 +203,9 @@ export default function Header() {
                     </Link>
                   ))}
                 </div>
-              </div>
-            )}
+              </motion.div>
+              )}
+            </AnimatePresence>
           </div>
           {links.map((link) => (
             <Link
@@ -201,71 +238,95 @@ export default function Header() {
           aria-expanded={open}
           aria-controls="mobile-menu"
         >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          <BurgerIcon open={open} />
         </button>
       </div>
 
-      {open &&
+      {canPortal &&
         createPortal(
-        <div
-          id="mobile-menu"
-          className="fixed inset-x-0 top-[calc(4rem+env(safe-area-inset-top,0px))] bottom-0 z-[60] overflow-y-auto overscroll-contain border-t border-border/60 bg-background px-4 pt-4 pb-[max(1.5rem,env(safe-area-inset-bottom,0px))] sm:px-6 lg:hidden"
-        >
-          <nav className="flex flex-col gap-1">
-            <button
-              type="button"
-              className="flex min-h-11 w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-medium text-charcoal transition-all duration-300 hover:bg-surface-soft"
-              aria-expanded={mobileServicesOpen}
-              onClick={() => setMobileServicesOpen((v) => !v)}
-            >
-              {tx(nav.services, locale)}
-              <ChevronDown
-                className={`h-4 w-4 text-muted transition-transform duration-300 ${
-                  mobileServicesOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-            {mobileServicesOpen && (
-              <div className="mb-1 flex flex-col gap-1 border-l border-border/80 pl-3">
-                <Link
-                  href={withLocale(paths.services, locale)}
-                  className="rounded-xl px-3 py-3 text-sm font-medium text-accent-dark hover:bg-accent-soft/60"
-                  onClick={closeMenu}
-                >
-                  {tx(nav.allServices, locale)}
-                </Link>
-                {serviceLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="rounded-xl px-3 py-3 text-sm font-medium text-muted hover:bg-surface-soft hover:text-charcoal"
-                    onClick={closeMenu}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="rounded-xl px-3 py-3 text-sm font-medium text-muted hover:bg-surface-soft hover:text-charcoal"
-                onClick={closeMenu}
+          <AnimatePresence>
+            {open && (
+              <motion.div
+                id="mobile-menu"
+                key="mobile-menu"
+                variants={panelVariants}
+                initial="hidden"
+                animate="show"
+                exit="exit"
+                className="fixed inset-x-0 top-[calc(4rem+env(safe-area-inset-top,0px))] bottom-0 z-[60] overflow-y-auto overscroll-contain border-t border-border/60 bg-background px-4 pt-4 pb-[max(1.5rem,env(safe-area-inset-bottom,0px))] sm:px-6 lg:hidden"
               >
-                {link.label}
-              </Link>
-            ))}
-            <LanguageToggle compact locale={locale} />
-            <Link
-              href={withLocale(paths.contact, locale)}
-              className="mt-2 inline-flex min-h-12 items-center justify-center rounded-full bg-charcoal px-5 py-3 text-sm font-medium text-white"
-              onClick={closeMenu}
-            >
-              {tx(nav.cta, locale)}
-            </Link>
-          </nav>
-        </div>,
+                <nav className="flex flex-col gap-1">
+                  <motion.button
+                    variants={itemVariants}
+                    type="button"
+                    className="flex min-h-12 w-full items-center justify-between rounded-xl px-3 py-3 text-base font-medium text-charcoal transition-colors duration-200 hover:bg-surface-soft"
+                    aria-expanded={mobileServicesOpen}
+                    onClick={() => setMobileServicesOpen((v) => !v)}
+                  >
+                    {tx(nav.services, locale)}
+                    <ChevronDown
+                      className={`h-4 w-4 text-muted transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""}`}
+                    />
+                  </motion.button>
+                  <AnimatePresence initial={false}>
+                    {mobileServicesOpen && (
+                      <motion.div
+                        key="services"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease }}
+                        className="overflow-hidden"
+                      >
+                        <div className="mb-1 flex flex-col gap-1 border-l border-border/80 pl-3">
+                          <Link
+                            href={withLocale(paths.services, locale)}
+                            className="rounded-xl px-3 py-3 text-sm font-medium text-accent-dark transition-colors duration-200 hover:bg-accent-soft/60"
+                            onClick={closeMenu}
+                          >
+                            {tx(nav.allServices, locale)}
+                          </Link>
+                          {serviceLinks.map((link) => (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              className="rounded-xl px-3 py-3 text-sm font-medium text-muted transition-colors duration-200 hover:bg-surface-soft hover:text-charcoal"
+                              onClick={closeMenu}
+                            >
+                              {link.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                  {links.map((link) => (
+                    <motion.div key={link.href} variants={itemVariants}>
+                      <Link
+                        href={link.href}
+                        className="block rounded-xl px-3 py-3 text-base font-medium text-muted transition-colors duration-200 hover:bg-surface-soft hover:text-charcoal"
+                        onClick={closeMenu}
+                      >
+                        {link.label}
+                      </Link>
+                    </motion.div>
+                  ))}
+                  <motion.div variants={itemVariants} className="mt-3">
+                    <LanguageToggle compact locale={locale} />
+                  </motion.div>
+                  <motion.div variants={itemVariants}>
+                    <Link
+                      href={withLocale(paths.contact, locale)}
+                      className="mt-2 flex min-h-12 items-center justify-center rounded-full bg-charcoal px-5 py-3 text-sm font-medium text-white transition-colors duration-300 hover:bg-accent-dark"
+                      onClick={closeMenu}
+                    >
+                      {tx(nav.cta, locale)}
+                    </Link>
+                  </motion.div>
+                </nav>
+              </motion.div>
+            )}
+          </AnimatePresence>,
           document.body,
         )}
     </header>

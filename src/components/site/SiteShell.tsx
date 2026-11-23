@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, type ReactNode } from "react";
+import { MotionConfig } from "framer-motion";
 import type { Locale } from "@/i18n/dictionary";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import Header from "./Header";
@@ -24,6 +25,7 @@ export default function SiteShell({
   children: ReactNode;
 }) {
   return (
+    <MotionConfig reducedMotion="user">
     <LanguageProvider initialLocale={locale}>
       <HtmlLang locale={locale} />
       <JsonLd data={localBusinessJsonLd()} />
@@ -34,5 +36,6 @@ export default function SiteShell({
       </div>
       <StickyCta />
     </LanguageProvider>
+    </MotionConfig>
   );
 }
